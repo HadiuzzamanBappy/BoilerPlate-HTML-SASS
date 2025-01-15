@@ -1,0 +1,17 @@
+{
+    "short_name": "Boilerplate",
+    "name": "HTML, CSS, SASS Boilerplate",
+    "icons": [
+      {
+        "src": "assets/media/icon/favicon.ico",
+        "sizes": "64x64",
+        "type": "image/x-icon"
+      }
+    ],
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#00A76F",
+    "description": "A frontend boilerplate for HTML, CSS, and SASS projects."
+  }
+  
