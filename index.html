@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Boilerplate</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- icon font CSS here -->
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- webfonts -->
+    <!-- analytics -->
+</head>
+
+<body>
+    <!-- header part -->
+    <header>
+        <h1>HTML5 Elements Coverage</h1>
+        <nav>
+            <ul>
+                <li><a href="#section1">Section 1</a></li>
+                <li><a href="#section2">Section 2</a></li>
+                <li><a href="#section3">Section 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main part -->
+    <main>
+        <section id="section1">
+            <h2>Section 1: Text Content</h2>
+            <article>
+                <h3>Article Heading</h3>
+                <p>This is a paragraph demonstrating <strong>bold text</strong>, <em>italic text</em>, and
+                    <mark>highlighted text</mark>. Here's a <a href="#">link</a>.</p>
+                <blockquote cite="https://example.com">This is a blockquote with a citation.</blockquote>
+                <pre><code>Code block example</code></pre>
+                <ul>
+                    <li>Unordered list item 1</li>
+                    <li>Unordered list item 2</li>
+                </ul>
+                <ol>
+                    <li>Ordered list item 1</li>
+                    <li>Ordered list item 2</li>
+                </ol>
+                <dl>
+                    <dt>Definition Term</dt>
+                    <dd>Definition Description</dd>
+                </dl>
+            </article>
+        </section>
+
+        <section id="section2">
+            <h2>Section 2: Media Content</h2>
+            <figure>
+                <img src="example.jpg" alt="Example image">
+                <figcaption>Image caption</figcaption>
+            </figure>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section>
+
+        <section id="section3">
+            <h2>Section 3: Interactive Elements</h2>
+            <form>
+                <label for="textInput">Text Input:</label>
+                <input type="text" id="textInput" name="textInput">
+
+                <label for="emailInput">Email Input:</label>
+                <input type="email" id="emailInput" name="emailInput">
+
+                <label for="numberInput">Number Input:</label>
+                <input type="number" id="numberInput" name="numberInput">
+
+                <label for="dateInput">Date Input:</label>
+                <input type="date" id="dateInput" name="dateInput">
+
+                <label for="rangeInput">Range Input:</label>
+                <input type="range" id="rangeInput" name="rangeInput">
+
+                <label for="textarea">Textarea:</label>
+                <textarea id="textarea" name="textarea"></textarea>
+
+                <fieldset>
+                    <legend>Radio Buttons</legend>
+                    <label><input type="radio" name="radioGroup" value="option1"> Option 1</label>
+                    <label><input type="radio" name="radioGroup" value="option2"> Option 2</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Checkboxes</legend>
+                    <label><input type="checkbox" name="checkboxGroup" value="check1"> Check 1</label>
+                    <label><input type="checkbox" name="checkboxGroup" value="check2"> Check 2</label>
+                </fieldset>
+
+                <label for="selectMenu">Select Menu:</label>
+                <select id="selectMenu" name="selectMenu">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                </select>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- footer part -->
+    <aside>
+        <h2>Aside Content</h2>
+        <p>This is some additional content in an aside element.</p>
+    </aside>
+
+    <footer>
+        <p>&copy; 2025 Example Website. All rights reserved.</p>
+        <address>
+            Contact us at <a href="mailto:info@example.com">info@example.com</a>
+        </address>
+    </footer>
+
+    <dialog open>
+        <p>This is a dialog element.</p>
+        <button>Close</button>
+    </dialog>
+
+    <details>
+        <summary>More Info</summary>
+        <p>This is additional information.</p>
+    </details>
+
+    <progress value="70" max="100">70%</progress>
+    <meter value="0.7" min="0" max="1">70%</meter>
+
+    <canvas id="canvasExample" width="400" height="200">Your browser does not support the canvas element.</canvas>
+
+    <script>
+        const canvas = document.getElementById('canvasExample');
+        if (canvas.getContext) {
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(50, 50, 200, 100);
+        }
+    </script>
+
+    <!-- script files -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

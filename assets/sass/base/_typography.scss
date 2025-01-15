@@ -1,0 +1,154 @@
+@use '../abstracts';
+
+body {
+    font-size: $body-text-rg;
+    line-height: $line-height-body;
+    color: $text-primary;
+    font-weight: $fw-regular;
+    height: 100%;
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,
+address,p,pre,blockquote,table,hr,dd {
+    margin-bottom: $spacing-3;
+}
+
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
+    color: inherit;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: $fw-medium;
+    letter-spacing: -0.025em;
+    line-height: $line-height-head;
+}
+
+h1,.h1 {
+    font-size: $heading1;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    h1,.h1 {
+        font-size: $base-size*8;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    h1,.h1 {
+        font-size: $base-size*8;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    h1,.h1 {
+        font-size: $base-size*6;
+    }
+}
+
+h2,.h2 {
+    font-size: $heading2;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    h2,.h2 {
+        font-size: $base-size*7;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    h2,.h2 {
+        font-size: $base-size*7;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    h2,.h2 {
+        font-size: $base-size*4.5;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    h2,.h2 {
+        font-size: $base-size*4.25;
+    }
+}
+
+h3,.h3 {
+    font-size: $heading3;
+    line-height: $line-height-head-sm;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    h3,.h3 {
+        font-size: $base-size*5;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    h3,.h3 {
+        font-size: $base-size*4.25;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    h3,.h3 {
+        font-size: $base-size*4;
+    }
+}
+
+h4,.h4 {
+    font-size: $heading4;
+    line-height: $line-height-head-sm;
+}
+
+@media only screen and (max-width: 991px) {
+    h4,.h4 {
+        font-size: $base-size*3.25;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    h4,.h4 {
+        font-size: $base-size*2.5;
+    }
+}
+
+h5,.h5 {
+    font-size: $heading5;
+    line-height: $line-height-head-sm;
+}
+
+@media only screen and (max-width: 767px) {
+    h5,.h5 {
+        font-size: $base-size*2.5;
+    }
+}
+
+h6,.h6 {
+    font-size: $heading6;
+    line-height: $line-height-head-sm;
+}
+
+@media only screen and (max-width: 767px) {
+    h6,.h6 {
+        font-size: $base-size*2.25;
+    }
+}
+
+p {
+    font-size: $body-text-rg;
+    line-height: $line-height-body;
+    margin-bottom: $spacing-4;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+em, i, dfn, cite {
+  font-style: italic;
+}

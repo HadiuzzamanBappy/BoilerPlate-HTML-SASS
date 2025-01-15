@@ -1,0 +1,17 @@
+@use '../abstracts';
+  
+  .container {
+    max-width: abstracts.$max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+
+  .hide-text {
+    overflow: hidden;
+    padding: 0;
+    text-indent: 101%;
+    white-space: nowrap;
+  }

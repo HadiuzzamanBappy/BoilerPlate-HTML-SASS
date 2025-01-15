@@ -1,0 +1,333 @@
+/*---------------------------------------------*/
+// Sizes
+/*---------------------------------------------*/
+
+/* base --------------------------------------*/
+$base-size: 8px;
+
+/* Font Sizes --------------------------------------*/
+$heading1: $base-size * 10;
+$heading2: $base-size * 8;
+$heading3: $base-size * 6;
+$heading4: $base-size * 4;
+$heading5: $base-size * 3;
+$heading6: $base-size * 2.5;
+
+$sub-h1: $base-size * 2.5;
+$sub-h2: $base-size * 2.25;
+
+$body-text-lg: $base-size * 2.25;
+$body-text-rg: $base-size * 2;
+$body-text-sm: $base-size * 1.75;
+
+$label: $base-size * 1.5;
+$caption: $base-size * 1.25;
+
+$line-height-head: 1.5;
+$line-height-head-sm: 1.2;
+$line-height-body: 1.1;
+
+/* Font Weight --------------------------------------*/
+$fw-thin: 100;
+$fw-extra-light: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+$fw-black: 900;  
+
+
+/* Spacing --------------------------------------*/
+$spacing-0-25: $base-size*0.25;
+$spacing-0-50: $base-size*0.50;
+$spacing-0-75: $base-size*0.75;
+$spacing-1: $base-size;
+$spacing-1-25: $base-size*1.25;
+$spacing-1-50: $base-size*1.50;
+$spacing-1-75: $base-size*1.75;
+$spacing-2: $base-size*2;
+$spacing-2-25: $base-size*2.25;
+$spacing-2-50: $base-size*2.50;
+$spacing-2-75: $base-size*2.75;
+$spacing-3: $base-size*3;
+$spacing-3-50: $base-size*3.50;
+$spacing-4: $base-size*4;
+$spacing-5: $base-size*5;
+$spacing-6: $base-size*6;
+$spacing-7: $base-size*7;
+$spacing-8: $base-size*8;
+$spacing-9: $base-size*9;
+$spacing-10: $base-size*10;
+$spacing-11: $base-size*11;
+$spacing-12: $base-size*12;
+$spacing-13: $base-size*13;
+$spacing-14: $base-size*14;
+$spacing-15: $base-size*15;
+$spacing-16: $base-size*16;
+$spacing-17: $base-size*17;
+$spacing-18: $base-size*18;
+$spacing-19: $base-size*19;
+$spacing-20: $base-size*20;
+
+
+/* Radius --------------------------------------*/
+$radius-0-50: $base-size*0.50;
+$radius-1: $base-size*1;
+$radius-1-50: $base-size*1.50;
+$radius-2: $base-size*2;
+$radius-2-50: $base-size*2.50;
+$radius-3: $base-size*3;
+$radius-4: $base-size*4;
+$radius-5: $base-size*5;
+$radius-6: $base-size*6;
+$radius-7: $base-size*7;
+$radius-8: $base-size*8;
+$radius-999: $base-size*100;
+
+
+/*---------------------------------------------*/
+// Colors - Main
+/*---------------------------------------------*/
+
+/* White --------------------------------------*/
+$white-main: #ffffff;
+
+$white-8: rgba($white-main,8%);
+$white-12: rgba($white-main,12%);
+$white-16: rgba($white-main,16%);
+$white-20: rgba($white-main,20%);
+$white-24: rgba($white-main,24%);
+$white-32: rgba($white-main,32%);
+$white-40: rgba($white-main,40%);
+$white-48: rgba($white-main,48%);
+$white-56: rgba($white-main,56%);
+$white-64: rgba($white-main,64%);
+$white-72: rgba($white-main,72%);
+$white-80: rgba($white-main,80%);
+
+/* Black -------------------------------------*/
+$black-main: #000000;
+
+$black-8: rgba($black-main,8%);
+$black-12: rgba($black-main,12%);
+$black-16: rgba($black-main,16%);
+$black-20: rgba($black-main,20%);
+$black-24: rgba($black-main,24%);
+$black-32: rgba($black-main,32%);
+$black-40: rgba($black-main,40%);
+$black-48: rgba($black-main,48%);
+$black-56: rgba($black-main,56%);
+$black-64: rgba($black-main,64%);
+$black-72: rgba($black-main,72%);
+$black-80: rgba($black-main,80%);
+
+/* Grey -------------------------------------*/
+$grey-main: #919EAB;
+
+$grey-100: lighten($grey-main, 70%);
+$grey-200: lighten($grey-main, 60%);
+$grey-300: lighten($grey-main, 50%);
+$grey-400: lighten($grey-main, 40%);
+$grey-500: $grey-main;
+$grey-600: darken($grey-main, 10%);
+$grey-700: darken($grey-main, 20%);
+$grey-800: darken($grey-main, 30%);
+$grey-900: darken($grey-main, 40%);
+$grey-8: rgba($grey-main,8%);
+$grey-12: rgba($grey-main,12%);
+$grey-16: rgba($grey-main,16%);
+$grey-20: rgba($grey-main,20%);
+$grey-24: rgba($grey-main,24%);
+$grey-32: rgba($grey-main,32%);
+$grey-40: rgba($grey-main,40%);
+$grey-48: rgba($grey-main,48%);
+$grey-56: rgba($grey-main,56%);
+$grey-64: rgba($grey-main,64%);
+$grey-72: rgba($grey-main,72%);
+$grey-80: rgba($grey-main,80%);
+
+/* Primary -------------------------------------*/
+$primary-main: #00A76F;
+
+$primary-lighter: lighten($primary-main, 50%);
+$primary-light: lighten($primary-main, 30%);
+$primary-dark: darken($primary-main, 30%);
+$primary-darker: darken($primary-main, 50%);
+$primary-contrast-text: $white-main;
+$primary-8: rgba($primary-main,8%);
+$primary-12: rgba($primary-main,12%);
+$primary-16: rgba($primary-main,16%);
+$primary-20: rgba($primary-main,20%);
+$primary-24: rgba($primary-main,24%);
+$primary-32: rgba($primary-main,32%);
+$primary-40: rgba($primary-main,40%);
+
+/* Secondary -------------------------------------*/
+$secondary-main: #8E33FF;
+
+$secondary-lighter: lighten($secondary-main, 50%);
+$secondary-light: lighten($secondary-main, 30%);
+$secondary-dark: darken($secondary-main, 30%);
+$secondary-darker: darken($secondary-main, 50%);
+$secondary-contrast-text: $white-main;
+$secondary-8: rgba($secondary-main,8%);
+$secondary-12: rgba($secondary-main,12%);
+$secondary-16: rgba($secondary-main,16%);
+$secondary-20: rgba($secondary-main,20%);
+$secondary-24: rgba($secondary-main,24%);
+$secondary-32: rgba($secondary-main,32%);
+$secondary-40: rgba($secondary-main,40%);
+
+/* Info -------------------------------------*/
+$info-main: #00B8D9;
+
+$info-lighter: lighten($info-main, 50%);
+$info-light: lighten($info-main, 30%);
+$info-dark: darken($info-main, 30%);
+$info-darker: darken($info-main, 50%);
+$info-contrast-text: $white-main;
+$info-8: rgba($info-main,8%);
+$info-12: rgba($info-main,12%);
+$info-16: rgba($info-main,16%);
+$info-20: rgba($info-main,20%);
+$info-24: rgba($info-main,24%);
+$info-32: rgba($info-main,32%);
+$info-40: rgba($info-main,40%);
+
+/* Success -------------------------------------*/
+$success-main: #22C55E;
+
+$success-lighter: lighten($success-main, 50%);
+$success-light: lighten($success-main, 30%);
+$success-dark: darken($success-main, 30%);
+$success-darker: darken($success-main, 50%);
+$success-contrast-text: $white-main;
+$success-8: rgba($success-main,8%);
+$success-12: rgba($success-main,12%);
+$success-16: rgba($success-main,16%);
+$success-20: rgba($success-main,20%);
+$success-24: rgba($success-main,24%);
+$success-32: rgba($success-main,32%);
+$success-40: rgba($success-main,40%);
+
+/* Warning -------------------------------------*/
+$warning-main: #FFAB00;
+
+$warning-lighter: lighten($warning-main, 50%);
+$warning-light: lighten($warning-main, 30%);
+$warning-dark: darken($warning-main, 30%);
+$warning-darker: darken($warning-main, 50%);
+$warning-contrast-text: $grey-800;
+$warning-8: rgba($warning-main,8%);
+$warning-12: rgba($warning-main,12%);
+$warning-16: rgba($warning-main,16%);
+$warning-20: rgba($warning-main,20%);
+$warning-24: rgba($warning-main,24%);
+$warning-32: rgba($warning-main,32%);
+$warning-40: rgba($warning-main,40%);
+
+/* Error -------------------------------------*/
+$error-main: #FF5630;
+
+$error-lighter: lighten($error-main, 50%);
+$error-light: lighten($error-main, 30%);
+$error-dark: darken($error-main, 30%);
+$error-darker: darken($error-main, 50%);
+$error-contrast-text: $white-main;
+$error-8: rgba($error-main,8%);
+$error-12: rgba($error-main,12%);
+$error-16: rgba($error-main,16%);
+$error-20: rgba($error-main,20%);
+$error-24: rgba($error-main,24%);
+$error-32: rgba($error-main,32%);
+$error-40: rgba($error-main,40%);
+
+/* Others --------------------------------------*/
+$others-facebook: #1877F2;
+$others-twitter: #00AAEC;
+$others-linkedin: #007EBB;
+$others-instagram: #E02D69;
+
+/*---------------------------------------------*/
+// Colors - Theme
+/*---------------------------------------------*/
+
+/* Global ----------------------------------*/
+$global-inherit-color: $white-main;
+$global-inherit-bg: $grey-800;
+$global-inherit-bg-hovered: $grey-700;
+
+$global-default-color: $grey-800;
+$global-default-bg: $grey-300;
+$global-default-bg-hovered: $grey-400;
+
+/* Text --------------------------------------*/
+$text-primary: $grey-800;
+$text-secondary: $grey-600;
+$text-disables: $grey-500;
+
+/* Action --------------------------------------*/
+$action-active: $grey-600;
+$action-hover: $grey-8;
+$action-selected: $grey-16;
+$action-focus: $grey-24;
+$action-disabled: $grey-80;
+$action-disabled-bg: $grey-20;
+
+/* Links ----------------------------------*/
+$link-color: $primary-main;
+$link-hover: $primary-light;
+$link-visited: $primary-light;
+
+/* Background ----------------------------------*/
+$bg-default: $white-main;
+$bg-paper: $white-main;
+$bg-paper-alt: $grey-200;
+
+/* Components - Paper ----------------------------------*/
+$paper-outline: $grey-16;
+$paper-bg-blur: $white-80;
+
+/* Components - Button ----------------------------------*/
+$button-outline: $grey-32;
+
+/* Components - Tooltip ----------------------------------*/
+$tooltip-color: $white-main;
+$tooltip-bg: $grey-800;
+
+/* Components - Textfield ----------------------------------*/
+$textfield-filled: $grey-8;
+$textfield-underline: $grey-32;
+$textfield-outline: $grey-20;
+
+/*---------------------------------------------*/
+// Animations
+/*---------------------------------------------*/
+$transition-all:all 0.3s ease-in-out;
+
+/*---------------------------------------------*/
+// Breakpoints  (xs < 576)
+/*---------------------------------------------*/
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-2xl: 1400px;
+$breakpoint-3xl: 1600px;
+$breakpoint-4xl: 1800px;
+
+// widths & media queries
+$max-container-width: $breakpoint-xl;
+$max-container-width-header: $max-container-width;
+$nav-breakpoint: $breakpoint-lg;
+
+
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+$base-url: '/assets/' !default;

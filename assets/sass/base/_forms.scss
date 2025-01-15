@@ -1,0 +1,58 @@
+@use '../abstracts';
+
+legend {
+    margin-bottom: 1em;
+}
+
+label {
+    display: block;
+}
+
+input,
+select,
+textarea {
+    padding: $spacing-1;
+    color: $white-main;
+    border: .1rem solid $textfield-outline;
+    width: 100%;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.btn,
+.button {
+  display: inline-block;
+  clear: both;
+  width: auto;
+  padding: $spacing-1 $spacing-2;
+  font-size: $body-text-sm;
+  font-weight: $fw-semi-bold;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: $global-default-color;
+  background-color: $global-default-bg;
+  transition: $transition-all;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: lighten($global-default-bg, 5%);
+  }
+}
+
+label.hidden {
+    margin-left: -10000em;
+    width: 0;
+    float: none;
+  }
+
+input:hover,
+input:focus,
+input:active,
+textarea:hover,
+textarea:focus,
+textarea:active,
+select:hover,
+select:focus,
+select:active {
+  border-color: $action-hover;
+}

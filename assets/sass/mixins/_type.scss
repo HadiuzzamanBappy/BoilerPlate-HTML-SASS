@@ -1,0 +1,35 @@
+@mixin font-face(
+  $family,
+  $weight,
+  $type,
+  $style: normal,
+  $path: "fonts/Poppins"
+) {
+  @font-face {
+    font-family: $family;
+    src: url("#{$path}/#{$family}-#{$type}#{$style}.ttf") format("truetype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+// Define font weights and styles in a map
+$font-weights: (
+  100: "Thin",
+  300: "Light",
+  400: "Regular",
+  500: "Medium",
+  600: "SemiBold",
+  700: "Bold",
+  800: "ExtraBold",
+  900: "Black",
+);
+
+$font-styles: ("", "Italic"); // Define font styles
+
+// Loop through font weights and styles to generate includes
+@each $weight, $name in $font-weights {
+  @each $style in $font-styles {
+    @include font-face("Poppins", $weight, $name, $style, "fonts/Poppins");
+  }
+}
