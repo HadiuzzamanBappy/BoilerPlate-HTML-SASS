@@ -1,9 +1,0 @@
-@mixin generate-visibility-utilities {
-  .visible { visibility: visible; }
-  .invisible { visibility: hidden; }
-  .block { display: block; }
-  .inline-block { display: inline-block; }
-  .hidden { display: none; }
-}
-
-@include generate-visibility-utilities;

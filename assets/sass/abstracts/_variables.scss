@@ -5,6 +5,9 @@
 /* base --------------------------------------*/
 $base-size: 8px;
 
+$font-head: "Poppins";
+$font-body: "Poppins";
+
 /* Font Sizes --------------------------------------*/
 $heading1: $base-size * 10;
 $heading2: $base-size * 8;
@@ -310,24 +313,16 @@ $transition-all:all 0.3s ease-in-out;
 /*---------------------------------------------*/
 // Breakpoints  (xs < 576)
 /*---------------------------------------------*/
-$breakpoint-sm: 576px;
+$breakpoint-sm: 430px;
 $breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
-$breakpoint-2xl: 1400px;
-$breakpoint-3xl: 1600px;
-$breakpoint-4xl: 1800px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1400px;
+$breakpoint-2xl: 1600px;
+$breakpoint-3xl: 1800px;
 
 // widths & media queries
 $max-container-width: $breakpoint-xl;
 $max-container-width-header: $max-container-width;
 $nav-breakpoint: $breakpoint-lg;
-
-
-$breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
-) !default;
 
 $base-url: '/assets/' !default;

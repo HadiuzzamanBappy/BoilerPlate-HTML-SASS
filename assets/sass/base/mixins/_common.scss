@@ -1,0 +1,324 @@
+// ==========================
+// General Utilities
+// ==========================
+// Font-family mixin
+@mixin font-family($family, $fallback: sans-serif) {
+  font-family: $family, $fallback;
+}
+
+@mixin font-style(
+  $font-size: $body-text-rg, 
+  $font-weight: $fw-regular, 
+  $line-height: $line-height-body, 
+  $color: $text-primary, 
+  $align: left) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+  text-align: $align;
+}
+
+// Text Ellipsis Mixin
+@mixin text-ellipsis($width) {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: $width;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+@mixin list-style($list-style-type: none, $margin: 0, $padding: 0, $inline: false) {
+  list-style-type: $list-style-type;
+  margin: $margin;
+  padding: $padding;
+  @if $inline {
+    display: inline-block;
+  } @else {
+    display: block;
+  }
+}
+
+@mixin clearfix {
+  &::before,
+  &::after {
+    display: table;
+    content: " ";
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+// ==========================
+// Styling Utilities
+// ==========================
+// Background Variant Mixin
+@mixin bg-variant($parent, $color) {
+  #{$parent} {
+    background-color: $color !important;
+  }
+}
+
+@mixin gradient-bg($start-color, $end-color, $angle: 45deg) {
+  background: linear-gradient($angle, $start-color, $end-color);
+}
+
+// Box-shadow Mixin
+@mixin box-shadow($args) {
+  -webkit-box-shadow: $args;
+  -moz-box-shadow: $args;
+  box-shadow: $args;
+}
+
+// Custom scroll bars
+@mixin custom-scrollbar($width, $track-color, $thumb-color) {
+  scrollbar-width: $width;
+  scrollbar-color: $thumb-color $track-color;
+
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+  &::-webkit-scrollbar-track {
+    background: $track-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+  }
+}
+
+@mixin overflow-scroll {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin hero-bg-img($image-url, $position: 50% 50%, $repeat: no-repeat, $size: cover) {
+  background-image: url($image-url);
+  background-position: $position;
+  background-repeat: $repeat;
+  background-size: $size;
+}
+
+@mixin spacing-border-radius(
+  $padding: 0,
+  $margin: 0,
+  $border: none,
+  $border-radius: 0
+) {
+  padding: $padding;
+  margin: $margin;
+  border: $border;
+  border-radius: $border-radius;
+}
+
+@mixin img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Rotate Mixin
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+// Calc Mixin
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    padding-top: ($height / $width) * 100%;
+  }
+}
+
+@mixin visibility($visibility: visible, $display: block, $opacity: 1) {
+  visibility: $visibility;
+  display: $display;
+  opacity: $opacity;
+}
+
+// ==========================
+// Shapes and Effects
+// ==========================
+// Triangle Mixin
+@mixin triangle($size, $color, $direction) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+
+  @if $direction == 'up' {
+    border-width: 0 $size $size $size;
+    border-color: transparent transparent $color transparent;
+  } @else if $direction == 'down' {
+    border-width: $size $size 0 $size;
+    border-color: $color transparent transparent transparent;
+  } @else if $direction == 'left' {
+    border-width: $size $size $size 0;
+    border-color: transparent $color transparent transparent;
+  } @else if $direction == 'right' {
+    border-width: $size 0 $size $size;
+    border-color: transparent transparent transparent $color;
+  } @else {
+    @warn "Invalid direction '#{$direction}' specified.";
+  }
+}
+
+@mixin circle($size, $color: transparent) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: $color;
+}
+
+@mixin skew($x-angle, $y-angle: 0) {
+  transform: skew($x-angle, $y-angle);
+}
+
+// Transition Mixin
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin z-index($z-index, $position: relative) {
+  position: $position;
+  z-index: $z-index;
+}
+
+$shadows: (
+  none: $shadow-none,
+  sm: $shadow-sm,
+  md: $shadow-md,
+  lg: $shadow-lg,
+  xl: $shadow-xl,
+  "2xl": $shadow-2xl,
+  inner: $shadow-inner
+);
+@mixin shadows($shadows) {
+  @each $key, $value in $shadows {
+    .shadow-#{$key} {
+      box-shadow: $value;
+    }
+  }
+}
+
+// ==========================
+// Animation Utilities
+// ==========================
+// Animation Mixin
+@mixin keyframe($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($name, $duration: 1s, $timing-function: ease, $delay: 0s) {
+  -webkit-animation: $name $duration $timing-function $delay;
+  -moz-animation: $name $duration $timing-function $delay;
+  animation: $name $duration $timing-function $delay;
+}
+
+// ==========================
+// Component Utilities
+// ==========================
+@mixin theme-button(
+  $bg-color: $global-inherit-bg,
+  $text-color: $global-inherit-color,
+  $hover-bg-color: darken($global-inherit-bg, 10%),
+  $hover-text-color: $global-inherit-color,
+  $border-color: $global-inherit-bg,
+  $hover-border-color: $hover-bg-color,
+  $padding: $spacing*1 $spacing*2,
+  $font-size: $body-text-sm,
+  $border-radius: $radius-0-50,
+  $transition: $transition-all
+) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: 1px solid $border-color;
+  padding: $padding;
+  font-size: $font-size;
+  border-radius: $border-radius;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    background-color: $hover-bg-color;
+    color: $hover-text-color;
+    border-color: $hover-border-color;
+  }
+
+  &:disabled {
+    background-color: lighten($bg-color, 20%);
+    color: lighten($text-color, 30%);
+    border-color: lighten($border-color, 20%);
+    cursor: not-allowed;
+  }
+}
+
+// ==========================
+// Layout Utilities
+// ==========================
+// Flex Mixin
+@mixin display-flex($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin display-grid($columns: 1, $rows: 1, $gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-template-rows: repeat($rows, 1fr);
+  gap: $gap;
+}
+
+// Responsive Mixin
+$breakpoints: (
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg,
+  xl: $breakpoint-xl,
+  3xl: $breakpoint-2xl,
+  4xl: $breakpoint-3xl,
+) !default;
+@mixin responsive($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' not found in \$breakpoints map.";
+  }
+}

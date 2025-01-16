@@ -1,0 +1,92 @@
+//--------------------------------------
+// Color - bg, text, border 
+//-----------------------------------
+@mixin color-utilities($key,$value) {
+    // Generate Background Color Classes
+    .bg-#{$key} {
+      background-color: $value;
+    }
+    .bg-#{$key}-dark {
+      background-color: darken($value, 20%);
+    }
+    .bg-#{$key}-light {
+      background-color: lighten($value, 20%);
+    }
+
+    // Using @each for fractional values
+    @each $opacity in (8, 12, 16, 20, 24, 32, 40) {
+      .bg-#{$key}-#{$opacity} {
+        background-color: rgba($value, $opacity / 100);
+      }
+    }
+
+    // Generate Text Color Classes
+    .text-#{$key} {
+      color: $value;
+    }
+    .text-#{$key}-dark {
+      color: darken($value, 20%);
+    }
+    .text-#{$key}-light {
+      color: lighten($value, 20%);
+    }
+
+    @each $opacity in (8, 12, 16, 20, 24, 32, 40) {
+      .text-#{$key}-#{$opacity} {
+        color: rgba($value, $opacity / 100);
+      }
+    }
+
+    // Generate Border Color Classes
+    .border-#{$key} {
+      border-color: $value;
+    }
+    .border-#{$key}-dark {
+      border-color: darken($value, 20%);
+    }
+    .border-#{$key}-light {
+      border-color: lighten($value, 20%);
+    }
+
+    @each $opacity in (8, 12, 16, 20, 24, 32, 40) {
+      .border-#{$key}-#{$opacity} {
+        border-color: rgba($value, $opacity / 100);
+      }
+    }
+}
+
+$colors: (
+  primary: $primary-main,
+  secondary: $secondary-main,
+  info: $info-main,
+  error: $error-main,
+  success: $success-main,
+  warning: $warning-main,
+);
+
+@each $key, $value in $colors {
+  @include color-utilities($key, $value);
+}
+
+//--------------------------------------
+// Shadows 
+//-----------------------------------
+@mixin shadow-utilities($shadows) {
+  .shadow-#{$key} {
+      box-shadow: #{$value};
+  }
+}
+
+$shadows: (
+  none: $shadow-none,
+  sm: $shadow-sm,
+  md: $shadow-md,
+  lg: $shadow-lg,
+  xl: $shadow-xl,
+  "2xl": $shadow-2xl,
+  inner: $shadow-inner
+);
+
+@each $key, $value in $shadows {
+    @include shadow-utilities($key, $value);
+}

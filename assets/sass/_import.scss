@@ -1,0 +1,19 @@
+// Abstracts (variables, fonts, etc.)
+@use 'abstracts/index' as abs; // Namespace: abs
+
+// Base (resets, typography, mixins, etc.)
+@use 'base/index' as base; // Namespace: base
+
+// Components (buttons, cards, etc.)
+@use 'components/index' as comp; // Namespace: comp
+
+// Layout (header, footer, navbar, etc.)
+@use 'layout/index' as layout; // Namespace: layout
+
+// Themes (light/dark, etc.)
+@use 'themes/index' as themes; // Namespace: themes
+
+// Pages (page-specific styles)
+@use 'pages/index' as pages; // Namespace: pages
+
+
