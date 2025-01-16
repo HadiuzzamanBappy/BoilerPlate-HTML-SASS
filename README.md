@@ -160,8 +160,8 @@ Example from `sass/index.scss`:
 ---
 
 ## Author
-Frontend enthusiast passionate about scalable designs and responsive interfaces. Feel free to connect!
-If anyone have any Enquiry: **hbappy79@gmail.com**
+- Frontend enthusiast passionate about scalable designs and responsive interfaces. Feel free to connect!
+- If anyone have any Enquiry: **hbappy79@gmail.com**
 ---
 
 ## **License**
