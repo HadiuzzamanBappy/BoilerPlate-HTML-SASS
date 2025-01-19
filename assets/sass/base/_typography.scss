@@ -1,4 +1,4 @@
-@use '../abstracts/index';
+@use '../abstracts' as *;
 
 body {
     font-size: $body-text-rg;

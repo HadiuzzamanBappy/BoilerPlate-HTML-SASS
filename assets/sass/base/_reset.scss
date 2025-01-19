@@ -1,4 +1,4 @@
-@use '../abstracts/index';
+@use '../abstracts' as *;
 
 html {
     line-height: 1.15;

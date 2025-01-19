@@ -152,12 +152,12 @@ $grey-72: rgba($grey-main,72%);
 $grey-80: rgba($grey-main,80%);
 
 /* Primary -------------------------------------*/
-$primary-main: #00A76F;
+$primary-main: #07ac75;
 
-$primary-lighter: lighten($primary-main, 50%);
-$primary-light: lighten($primary-main, 30%);
-$primary-dark: darken($primary-main, 30%);
-$primary-darker: darken($primary-main, 50%);
+$primary-lighter: lighten($primary-main, 25%);
+$primary-light: lighten($primary-main, 15%);
+$primary-dark: darken($primary-main, 15%);
+$primary-darker: darken($primary-main, 25%);
 $primary-contrast-text: $white-main;
 $primary-8: rgba($primary-main,8%);
 $primary-12: rgba($primary-main,12%);
@@ -306,9 +306,20 @@ $textfield-underline: $grey-32;
 $textfield-outline: $grey-20;
 
 /*---------------------------------------------*/
+// Shadows and Effects
+/*---------------------------------------------*/
+$shadow-none: none;
+$shadow-sm: 0px 1px 3px rgba(0, 0, 0, 0.12);
+$shadow-md: 0px 4px 6px rgba(0, 0, 0, 0.16);
+$shadow-lg: 0px 10px 15px rgba(0, 0, 0, 0.24);
+$shadow-xl: 0px 20px 25px rgba(0, 0, 0, 0.32);
+$shadow-2xl: 0px 30px 35px rgba(0, 0, 0, 0.4);
+$shadow-inner: inset 0px 2px 4px rgba(0, 0, 0, 0.12);
+
+/*---------------------------------------------*/
 // Animations
 /*---------------------------------------------*/
-$transition-all:all 0.3s ease-in-out;
+$transition-all: all 0.3s ease-in-out;
 
 /*---------------------------------------------*/
 // Breakpoints  (xs < 576)

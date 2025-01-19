@@ -1,3 +1,6 @@
+@use "../../abstracts" as *;
+@use "sass:math";
+
 //--------------------------------------
 // Color - bg, text, border 
 //-----------------------------------
@@ -16,7 +19,7 @@
     // Using @each for fractional values
     @each $opacity in (8, 12, 16, 20, 24, 32, 40) {
       .bg-#{$key}-#{$opacity} {
-        background-color: rgba($value, $opacity / 100);
+        background-color: rgba($value, math.div($opacity , 100));
       }
     }
 
@@ -33,7 +36,7 @@
 
     @each $opacity in (8, 12, 16, 20, 24, 32, 40) {
       .text-#{$key}-#{$opacity} {
-        color: rgba($value, $opacity / 100);
+        color: rgba($value, math.div($opacity , 100));
       }
     }
 
@@ -50,7 +53,7 @@
 
     @each $opacity in (8, 12, 16, 20, 24, 32, 40) {
       .border-#{$key}-#{$opacity} {
-        border-color: rgba($value, $opacity / 100);
+        border-color: rgba($value, math.div($opacity , 100));
       }
     }
 }
@@ -71,7 +74,7 @@ $colors: (
 //--------------------------------------
 // Shadows 
 //-----------------------------------
-@mixin shadow-utilities($shadows) {
+@mixin shadow-utilities($key, $value) {
   .shadow-#{$key} {
       box-shadow: #{$value};
   }

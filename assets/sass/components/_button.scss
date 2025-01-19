@@ -1,0 +1,102 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+@mixin button-primary {
+    @include theme-button(
+      $bg-color: $primary-main,
+      $text-color: $primary-contrast-text,
+      $hover-bg-color: $primary-dark,
+      $pressed-bg-color: $primary-darker,
+      $focus-outline: 0 0 0 3px $primary-24
+    );
+  }
+
+  @mixin button-primary-outlined {
+    @include theme-button(
+      $bg-color: unset !important,
+      $hover-bg-color: $primary-24 !important,
+      $pressed-bg-color: $primary-32 !important,
+      $border-color: $primary-main !important,
+      $text-color: $primary-main !important,      
+    );
+  }
+
+  @mixin button-primary-text {
+    @include theme-button(
+      $bg-color: unset !important,
+      $hover-bg-color: $primary-24 !important,
+      $pressed-bg-color: $primary-32 !important,
+      $border-color: unset !important,
+      $text-color: $primary-main !important,
+    );
+  }
+
+  @mixin button-primary-soft {
+    @include theme-button(
+      $bg-color: $primary-main,
+      $text-color: $primary-contrast-text,
+      $hover-bg-color: $primary-dark,
+      $pressed-bg-color: $primary-darker,
+      $focus-outline: 0 0 0 3px $primary-24
+    );
+  }
+  
+  @mixin button-secondary {
+    @include theme-button(
+      $bg-color: $secondary-main,
+      $text-color: $secondary-contrast-text,
+      $hover-bg-color: $secondary-dark,
+      $pressed-bg-color: $secondary-darker,
+      $focus-outline: 0 0 0 3px $secondary-24
+    );
+  }
+  
+  @mixin button-success {
+    @include theme-button(
+      $bg-color: $success-main,
+      $text-color: $success-contrast-text,
+      $hover-bg-color: $success-dark,
+      $pressed-bg-color: $success-darker,
+      $focus-outline: 0 0 0 3px $success-24
+    );
+  }
+
+  @mixin button-info {
+    @include theme-button(
+      $bg-color: $info-main,
+      $text-color: $info-contrast-text,
+      $hover-bg-color: $info-dark,
+      $pressed-bg-color: $info-darker,
+      $focus-outline: 0 0 0 3px $info-24
+    );
+  }
+  
+  @mixin button-warning {
+    @include theme-button(
+      $bg-color: $warning-main,
+      $text-color: $warning-contrast-text,
+      $hover-bg-color: $warning-dark,
+      $pressed-bg-color: $warning-darker,
+      $focus-outline: 0 0 0 3px $warning-24
+    );
+  }
+  
+  @mixin button-error {
+    @include theme-button(
+      $bg-color: $error-main,
+      $text-color: $error-contrast-text,
+      $hover-bg-color: $error-dark,
+      $pressed-bg-color: $error-darker,
+      $focus-outline: 0 0 0 3px $error-24
+    );
+  }
+
+  @mixin button-small {
+    padding: $spacing-1 $spacing-1-50;
+    font-size: $body-text-sm;
+  }
+  
+  @mixin button-large {
+    padding: $spacing-2 $spacing-3;
+    font-size: $body-text-lg;
+  }

@@ -1,4 +1,4 @@
-@use '../abstracts/index';
+@use '../abstracts' as *;
 
 legend {
     margin-bottom: 1em;
@@ -18,9 +18,7 @@ textarea {
 }
 input[type="button"],
 input[type="submit"],
-input[type="reset"],
-.btn,
-.button {
+input[type="reset"]{
   display: inline-block;
   clear: both;
   width: auto;

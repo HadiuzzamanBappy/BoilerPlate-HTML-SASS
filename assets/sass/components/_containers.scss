@@ -1,3 +1,6 @@
+@use "../abstracts/index" as *;
+@use "../base/index" as *;
+
 .container,
 .container-full-width {
   max-width: $max-container-width;
