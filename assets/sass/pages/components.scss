@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 24px !important;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.component-library {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Component Button Section */
+.component-section{
+  border: 2px solid #ddd;
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.section-heading {
+  position: absolute;
+  top: -32px; /* Adjust to center the heading over the border */
+  left: 20px;
+  background-color: #f9f9f9;
+  font-size: 20px;
+  padding: 0 16px;
+  color: #333;
+}
+
+hr {
+  height: 1px;
+  color: #333;
+  margin: 0 !important;
+  opacity: 0.2;
+}
+
+/* Button Grid Layout */
+.component-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Gap between rows */
+  padding-top: 24px;
+}
+
+.component-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Gap between buttons */
+  align-items: center;
+}
+
+.component-row .btn {
+  flex: 0 0 auto; /* Prevent buttons from stretching or shrinking */
+}/*# sourceMappingURL=components.css.map */

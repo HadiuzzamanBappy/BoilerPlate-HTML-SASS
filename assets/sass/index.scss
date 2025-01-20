@@ -3,8 +3,36 @@
 @use "components" as *;
 
 //css class
-.button {
+.btn {
     @include theme-button;
+
+    &--default-outlined {
+        @include button-default-outlined;
+    }
+
+    &--default-text {
+        @include button-default-text;
+    }
+
+    &--default-soft {
+        @include button-default-soft;
+    }
+
+    &--inherit {
+        @include button-inherit;
+    }
+
+    &--inherit-outlined {
+        @include button-inherit-outlined;
+    }
+
+    &--inherit-text {
+        @include button-inherit-text;
+    }
+
+    &--inherit-soft {
+        @include button-inherit-soft;
+    }
 
     &--primary {
         @include button-primary;
@@ -18,31 +46,119 @@
         @include button-primary-text;
     }
 
+    &--primary-soft {
+        @include button-primary-soft;
+    }
+
     &--secondary {
         @include button-secondary;
+    }
+
+    &--secondary-outlined {
+        @include button-secondary-outlined;
+    }
+
+    &--secondary-text {
+        @include button-secondary-text;
+    }
+
+    &--secondary-soft {
+        @include button-secondary-soft;
     }
 
     &--success {
         @include button-success;
     }
 
+    &--success-outlined {
+        @include button-success-outlined;
+    }
+
+    &--success-text {
+        @include button-success-text;
+    }
+
+    &--success-soft {
+        @include button-success-soft;
+    }
+
     &--info {
         @include button-info;
+    }
+
+    &--info-outlined {
+        @include button-info-outlined;
+    }
+
+    &--info-text {
+        @include button-info-text;
+    }
+
+    &--info-soft {
+        @include button-info-soft;
     }
 
     &--warning {
         @include button-warning;
     }
 
+    &--warning-outlined {
+        @include button-warning-outlined;
+    }
+
+    &--warning-text {
+        @include button-warning-text;
+    }
+
+    &--warning-soft {
+        @include button-warning-soft;
+    }
+
     &--error {
         @include button-error;
     }
 
-    &--small {
+    &--error-outlined {
+        @include button-error-outlined;
+    }
+
+    &--error-text {
+        @include button-error-text;
+    }
+
+    &--error-soft {
+        @include button-error-soft;
+    }
+
+    &--disabled {
+        @include button-disabled;
+    }
+
+    &--sm {
         @include button-small;
     }
 
-    &--large {
+    &--md {
+        @include button-medium;
+    }
+
+    &--lg {
         @include button-large;
+    }
+
+    &--icon-xsm{
+        @include button-icon-extra-small;
+    }
+
+    &--icon-sm{
+        @include button-icon-small;
+    }
+
+    &--icon-md{
+        @include button-icon-medium;
+    }
+
+    &--icon-lg{
+        @include button-icon-large;
     }
 }

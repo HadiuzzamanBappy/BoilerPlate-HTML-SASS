@@ -129,10 +129,10 @@ $black-80: rgba($black-main,80%);
 /* Grey -------------------------------------*/
 $grey-main: #919EAB;
 
-$grey-100: lighten($grey-main, 70%);
-$grey-200: lighten($grey-main, 60%);
-$grey-300: lighten($grey-main, 50%);
-$grey-400: lighten($grey-main, 40%);
+$grey-100: lighten($grey-main, 40%);
+$grey-200: lighten($grey-main, 30%);
+$grey-300: lighten($grey-main, 20%);
+$grey-400: lighten($grey-main, 10%);
 $grey-500: $grey-main;
 $grey-600: darken($grey-main, 10%);
 $grey-700: darken($grey-main, 20%);
@@ -272,7 +272,7 @@ $text-secondary: $grey-600;
 $text-disables: $grey-500;
 
 /* Action --------------------------------------*/
-$action-active: $grey-600;
+$action-active: $grey-700;
 $action-hover: $grey-8;
 $action-selected: $grey-16;
 $action-focus: $grey-24;

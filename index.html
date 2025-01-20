@@ -11,123 +11,118 @@
     <meta name="author" content="">
     <!-- icon font CSS here -->
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/components.css">
     <link rel="stylesheet" href="./assets/css/index.css">
     <!-- webfonts -->
-    <!-- analytics -->
 </head>
+
 <body>
-    <div class="components">
-        <h3>Button</h3>
-        <div class="variants">
-            <button class="button button--small">
-                <i class="fa-regular fa-registered"></i>
-                Default
-            </button>
-            <button class="button button--primary button--small">
-                <i class="fa-regular fa-registered"></i>
-                Primary
-            </button>
-            <button class="button button--secondary button--small">
-                <i class="fa-regular fa-registered"></i>
-                Secondary
-            </button>
-            <button class="button button--success button--small">
-                <i class="fa-regular fa-registered"></i>
-                Success
-            </button>
-            <button class="button button--info button--small">
-                <i class="fa-regular fa-registered"></i>
-                Info
-            </button>
-            <button class="button button--warning button--small">
-                <i class="fa-regular fa-registered"></i>
-                Warning
-            </button>
-            <button class="button button--error button--small">
-                <i class="fa-regular fa-registered"></i>
-                error
-            </button>
-            <button class="button button--small" disabled>
-                <i class="fa-regular fa-registered"></i>
-                Disabled
-            </button>
-            <br>
-            <button class="button">
-                <i class="fa-regular fa-registered"></i>
-                Default
-            </button>
-            <button class="button button--primary">
-                <i class="fa-regular fa-registered"></i>
-                Primary
-            </button>
-            <button class="button button--secondary">
-                <i class="fa-regular fa-registered"></i>
-                Secondary
-            </button>
-            <button class="button button--success">
-                <i class="fa-regular fa-registered"></i>
-                Success
-            </button>
-            <button class="button button--info">
-                <i class="fa-regular fa-registered"></i>
-                Info
-            </button>
-            <button class="button button--warning">
-                <i class="fa-regular fa-registered"></i>
-                Warning
-            </button>
-            <button class="button button--error">
-                <i class="fa-regular fa-registered"></i>
-                error
-            </button>
-            <button class="button" disabled>
-                <i class="fa-regular fa-registered"></i>
-                Disabled
-            </button>
-            <br>
-            <button class="button button--large">
-                <i class="fa-regular fa-registered"></i>
-                Default
-            </button>
-            <button class="button button--primary button--large">
-                <i class="fa-regular fa-registered"></i>
-                Primary
-            </button>
-            <button class="button button--secondary button--large">
-                <i class="fa-regular fa-registered"></i>
-                Secondary
-            </button>
-            <button class="button button--success button--large">
-                <i class="fa-regular fa-registered"></i>
-                Success
-            </button>
-            <button class="button button--info button--large">
-                <i class="fa-regular fa-registered"></i>
-                Info
-            </button>
-            <button class="button button--warning button--large">
-                <i class="fa-regular fa-registered"></i>
-                Warning
-            </button>
-            <button class="button button--error button--large">
-                <i class="fa-regular fa-registered"></i>
-                error
-            </button>
-            <button class="button button--large" disabled>
-                <i class="fa-regular fa-registered"></i>
-                Disabled
-            </button>
-            <br>
-            <button class="button button--primary button--primary-outlined">
-                <i class="fa-regular fa-registered"></i>
-                Primary
-            </button>
-            <button class="button button--primary button--primary-text">
-                <i class="fa-regular fa-registered"></i>
-                Primary
-            </button>
-        </div>
+    <div class="component-library">
+        <!-- Button Section -->
+        <section class="component-section component-button">
+            <h2 class="section-heading">Buttons</h2>
+
+            <!-- Button Grid -->
+            <div class="component-grid">
+                <!-- Default Buttons -->
+                <div class="component-row">
+                    <button class="btn">Default</button>
+                    <button class="btn btn--inherit">Inherit</button>
+                    <button class="btn btn--primary">Primary</button>
+                    <button class="btn btn--secondary">Secondary</button>
+                    <button class="btn btn--success">Success</button>
+                    <button class="btn btn--info">Info</button>
+                    <button class="btn btn--warning">Warning</button>
+                    <button class="btn btn--error">Error</button>
+                </div>
+                <div class="component-row">
+                    <button class="btn btn--default-outlined">Default</button>
+                    <button class="btn btn--inherit-outlined">Inherit</button>
+                    <button class="btn btn--primary-outlined">Primary</button>
+                    <button class="btn btn--secondary-outlined">Secondary</button>
+                    <button class="btn btn--success-outlined">Success</button>
+                    <button class="btn btn--info-outlined">Info</button>
+                    <button class="btn btn--warning-outlined">Warning</button>
+                    <button class="btn btn--error-outlined">Error</button>
+                </div>
+                <div class="component-row">
+                    <button class="btn btn--default-soft">Default</button>
+                    <button class="btn btn--inherit-soft">Inherit</button>
+                    <button class="btn btn--primary-soft">Primary</button>
+                    <button class="btn btn--secondary-soft">Secondary</button>
+                    <button class="btn btn--success-soft">Success</button>
+                    <button class="btn btn--info-soft">Info</button>
+                    <button class="btn btn--warning-soft">Warning</button>
+                    <button class="btn btn--error-soft">Error</button>
+                </div>
+                <div class="component-row">
+                    <button class="btn btn--default-text">Default</button>
+                    <button class="btn btn--inherit-text">Inherit</button>
+                    <button class="btn btn--primary-text">Primary</button>
+                    <button class="btn btn--secondary-text">Secondary</button>
+                    <button class="btn btn--success-text">Success</button>
+                    <button class="btn btn--info-text">Info</button>
+                    <button class="btn btn--warning-text">Warning</button>
+                    <button class="btn btn--error-text">Error</button>
+                </div>
+                <hr>
+                <div class="component-row">
+                    <button class="btn btn--primary btn--sm"><i class="fa-regular fa-registered"></i>Small</button>
+                    <button class="btn btn--primary">Medium<i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--primary btn--lg"><i class="fa-regular fa-registered"></i>Large<i class="fa-regular fa-registered"></i></button>
+                    <button class="btn" disabled>Disabled</button>
+                </div>
+
+                <hr>
+
+                <!-- Icon Buttons -->
+                <div class="component-row">
+                    <button class="btn btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--inherit btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--primary btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--secondary btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--info btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--warning btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--error btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--success btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                </div>
+                <div class="component-row">
+                    <button class="btn btn--default-soft btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--inherit-soft btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--primary-soft btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--secondary-soft btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--info-soft btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--warning-soft btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--error-soft btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--success-soft btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                </div>                
+                <div class="component-row">
+                    <button class="btn btn--default-outlined btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--inherit-outlined btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--primary-outlined btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--secondary-outlined btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--info-outlined btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--warning-outlined btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--error-outlined btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--success-outlined btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                </div>
+                <hr>
+                <div class="component-row">
+                    <button class="btn btn--primary btn--icon-xsm"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--primary btn--icon-sm"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--primary btn--icon-md"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--primary btn--icon-lg"><i class="fa-regular fa-registered"></i></button>
+                    <button class="btn btn--icon-md" disabled><i class="fa-regular fa-registered"></i></button>
+                </div>
+            </div>
+        </section>
+        <section class="component-section component-button">
+            <h2 class="section-heading">Buttons</h2>
+        </section>
+        
     </div>
 
     <!-- script files -->
