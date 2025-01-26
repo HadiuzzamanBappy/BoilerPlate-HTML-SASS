@@ -10,7 +10,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 40px;
 }
 
 /* Component Button Section */
@@ -21,6 +21,9 @@ body {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .section-heading {
@@ -53,6 +56,13 @@ hr {
   flex-wrap: wrap;
   gap: 16px; /* Gap between buttons */
   align-items: center;
+}
+
+.col-3 {
+  flex: 0 0 30%; /* 25% of the parent container */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .component-row .btn {

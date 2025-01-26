@@ -2,7 +2,7 @@
 @use "base" as *;
 @use "components" as *;
 
-//css class
+//default button
 .btn {
     @include theme-button;
 
@@ -133,7 +133,10 @@
     &--disabled {
         @include button-disabled;
     }
+}
 
+//sizes
+.btn {
     &--sm {
         @include button-small;
     }
@@ -146,19 +149,70 @@
         @include button-large;
     }
 
-    &--icon-xsm{
+    &--icon-xsm {
         @include button-icon-extra-small;
     }
 
-    &--icon-sm{
+    &--icon-sm {
         @include button-icon-small;
     }
 
-    &--icon-md{
+    &--icon-md {
         @include button-icon-medium;
     }
 
-    &--icon-lg{
+    &--icon-lg {
         @include button-icon-large;
     }
+}
+
+//toggle button
+.tgl-btn {
+    @include toggle-button-default;
+
+    &.active {
+        @include toggle-button-active;
+    }
+
+    &.active-primary {
+        @include toggle-button-active-primary;
+    }
+
+    &.active-secondary {
+        @include toggle-button-active-secondary;
+    }
+
+    &.active-info {
+        @include toggle-button-active-info;
+    }
+
+    &.active-warning {
+        @include toggle-button-active-warning;
+    }
+
+    &.active-error {
+        @include toggle-button-active-error;
+    }
+
+    &.active-success {
+        @include toggle-button-active-success;
+    }
+}
+
+//toggle button group
+.tgl-btn-group {
+    @include toggle-button-group;
+}
+
+//Input Field
+.input-group {
+    @include input-field-outline;
+}
+
+.input-group-soft {
+    @include input-field-soft;
+}
+
+.input-group-standard {
+    @include input-field-standard;
 }

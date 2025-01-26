@@ -8,11 +8,11 @@
   font-family: $family, $fallback;
 }
 
-@mixin font-style(
-  $font-size: $body-text-rg, 
-  $font-weight: $fw-regular, 
-  $line-height: $line-height-body, 
-  $color: $text-primary, 
+// Font-style mixin
+@mixin font-style($font-size: $body-text-rg,
+  $font-weight: $fw-regular,
+  $line-height: $line-height-body,
+  $color: $text-primary,
   $align: left) {
   font-size: $font-size;
   font-weight: $font-weight;
@@ -29,6 +29,7 @@
   width: $width;
 }
 
+// Text Truncate Mixin
 @mixin visually-hidden {
   position: absolute;
   width: 1px;
@@ -38,23 +39,30 @@
   white-space: nowrap;
 }
 
+// List style Mixin
 @mixin list-style($list-style-type: none, $margin: 0, $padding: 0, $inline: false) {
   list-style-type: $list-style-type;
   margin: $margin;
   padding: $padding;
+
   @if $inline {
     display: inline-block;
-  } @else {
+  }
+
+  @else {
     display: block;
   }
 }
 
+// Clearfix Mixin
 @mixin clearfix {
+
   &::before,
   &::after {
     display: table;
     content: " ";
   }
+
   &::after {
     clear: both;
   }
@@ -70,6 +78,7 @@
   }
 }
 
+// Gradient Mixin
 @mixin gradient-bg($start-color, $end-color, $angle: 45deg) {
   background: linear-gradient($angle, $start-color, $end-color);
 }
@@ -89,19 +98,23 @@
   &::-webkit-scrollbar {
     width: $width;
   }
+
   &::-webkit-scrollbar-track {
     background: $track-color;
   }
+
   &::-webkit-scrollbar-thumb {
     background-color: $thumb-color;
   }
 }
 
+// Overflow Scroll Mixin
 @mixin overflow-scroll {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
 
+// Hero Image Mixin
 @mixin hero-bg-img($image-url, $position: 50% 50%, $repeat: no-repeat, $size: cover) {
   background-image: url($image-url);
   background-position: $position;
@@ -109,18 +122,18 @@
   background-size: $size;
 }
 
-@mixin spacing-border-radius(
-  $padding: 0,
+// Spacing, Border and Radius Mixin
+@mixin spacing-border-radius($padding: 0,
   $margin: 0,
   $border: none,
-  $border-radius: 0
-) {
+  $border-radius: 0) {
   padding: $padding;
   margin: $margin;
   border: $border;
   border-radius: $border-radius;
 }
 
+// Responsive Image Mixin
 @mixin img-responsive {
   display: block;
   max-width: 100%;
@@ -143,8 +156,10 @@
   #{$property}: calc(#{$expression});
 }
 
+// Aspect Ratio Mixin
 @mixin aspect-ratio($width, $height) {
   position: relative;
+
   &::before {
     content: '';
     display: block;
@@ -152,6 +167,7 @@
   }
 }
 
+// Visibility Mixin
 @mixin visibility($visibility: visible, $display: block, $opacity: 1) {
   visibility: $visibility;
   display: $display;
@@ -167,23 +183,32 @@
   height: 0;
   border-style: solid;
 
-  @if $direction == 'up' {
+  @if $direction =='up' {
     border-width: 0 $size $size $size;
     border-color: transparent transparent $color transparent;
-  } @else if $direction == 'down' {
+  }
+
+  @else if $direction =='down' {
     border-width: $size $size 0 $size;
     border-color: $color transparent transparent transparent;
-  } @else if $direction == 'left' {
+  }
+
+  @else if $direction =='left' {
     border-width: $size $size $size 0;
     border-color: transparent $color transparent transparent;
-  } @else if $direction == 'right' {
+  }
+
+  @else if $direction =='right' {
     border-width: $size 0 $size $size;
     border-color: transparent transparent transparent $color;
-  } @else {
+  }
+
+  @else {
     @warn "Invalid direction '#{$direction}' specified.";
   }
 }
 
+// Circle Mixin
 @mixin circle($size, $color: transparent) {
   width: $size;
   height: $size;
@@ -191,6 +216,7 @@
   background-color: $color;
 }
 
+// Skew Mixin
 @mixin skew($x-angle, $y-angle: 0) {
   transform: skew($x-angle, $y-angle);
 }
@@ -203,6 +229,7 @@
   transition: $args;
 }
 
+// Z-index Mixin
 @mixin z-index($z-index, $position: relative) {
   position: $position;
   z-index: $z-index;
@@ -211,20 +238,23 @@
 // ==========================
 // Animation Utilities
 // ==========================
-// Animation Mixin
+// Keyframe Mixin
 @mixin keyframe($animation-name) {
   @-webkit-keyframes #{$animation-name} {
     @content;
   }
+
   @-moz-keyframes #{$animation-name} {
     @content;
   }
+
   @keyframes #{$animation-name} {
     @content;
   }
 }
 
-@mixin animation($name, $duration: 1s, $timing-function: ease, $delay: 0s) {
+// Animate Mixin
+@mixin animate($name, $duration: 1s, $timing-function: ease, $delay: 0s) {
   -webkit-animation: $name $duration $timing-function $delay;
   -moz-animation: $name $duration $timing-function $delay;
   animation: $name $duration $timing-function $delay;
@@ -233,8 +263,8 @@
 // ==========================
 // Component Utilities
 // ==========================
-@mixin theme-button(
-  $bg-color: $global-default-bg,
+// Button Mixin
+@mixin theme-button($bg-color: $global-default-bg,
   $text-color: $global-default-color,
   $hover-bg-color: $global-default-bg-hovered,
   $hover-text-color: $global-default-color,
@@ -251,8 +281,7 @@
   $font-weight: $fw-medium,
   $border-radius: $radius-999,
   $transition: $transition-all,
-  $icon-spacing: $spacing-1
-) {
+  $icon-spacing: $spacing-1) {
   background-color: $bg-color;
   color: $text-color;
   border: 1px solid $border-color;
@@ -296,6 +325,212 @@
   }
 }
 
+// Toggle Button Mixin
+@mixin theme-toggle-button($bg-color: transparent,
+  $text-color: $text-secondary,
+  $icon-color: $action-active,
+  $border-color: $button-outline,
+  $disabled-bg-color: $action-disabled-bg,
+  $disabled-text-color: $action-disabled,
+) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: 1px solid $text-color;
+  border-radius: $radius-999;
+  padding: $spacing-1-50 $spacing-2-50;
+  font-size: $body-text-rg;
+  font-weight: $fw-medium;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-1;
+  cursor: pointer;
+  transition: $transition-all;
+
+  i {
+    color: $icon-color;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: $bg-color !important;
+    color: $disabled-text-color !important;
+    border: 1px solid $disabled-bg-color !important;
+    cursor: not-allowed;
+  }
+
+  &.tgl-group {
+    border: transparent !important;
+  }
+
+  &.tgl-group {
+    border: transparent !important;
+  }
+}
+
+// Theme Input Field Mixin
+@mixin theme-input-field(
+  $label-color: $text-secondary,
+  $label-font-size: $body-text-rg,
+  $label-floating-font-size: $label,
+  $label-floating-bg-color: $bg-paper,
+  $border-color: $button-outline,
+  $hover-border-color: $text-primary,
+  $focus-border-color: $text-primary,
+  $main-padding: $spacing-1-50 $spacing-0-50,
+  $icon-color: $action-active,
+  $icon-size: $body-text-rg,
+  $font-color: $text-primary,
+  $font-size: $body-text-rg,
+  $success: $success-main,
+  $error: $error-main,
+  $disabled: $action-disabled,
+) {
+  position: relative;
+  width: 100%;
+
+  .input-main {
+    position: relative;
+    @include display-flex;
+    border: 1px solid $border-color;
+    border-radius: $spacing-1;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    padding: $main-padding;
+
+    &:hover {
+      border-color: $hover-border-color;
+    }
+
+    &:focus-within {
+      border-color: $focus-border-color;
+    }
+  }
+
+  .icon-left,
+  .icon-right {
+    @include display-flex(row, center, center);
+    padding: 0 $spacing-1;
+    color: $icon-color;
+    font-size: $icon-size;
+  }
+
+  .icon-left {
+    order: 1;
+
+    i {
+      color: $action-disabled;
+    }
+  }
+
+  .icon-right {
+    order: 3;
+  }
+
+  .input-field {
+    flex: 1;
+    order: 2;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: $font-size;
+    color: $font-color;
+    padding: 0;
+
+    &::placeholder {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:focus::placeholder,
+    &:not(:placeholder-shown)::placeholder {
+      opacity: 1;
+    }
+  }
+
+  .input-label {
+    position: absolute;
+    top: 50%;
+    left: $spacing-5;
+    transform: translateY(-50%);
+    color: $label-color;
+    font-size: $label-font-size;
+    pointer-events: none;
+    transition: $transition-all;
+  }
+
+  .input-field:focus+.input-label,
+  .input-field:not(:placeholder-shown)+.input-label,
+  .input-label.floating {
+    top: 0;
+    left: 20px;
+    font-size: $label-floating-font-size;
+    background-color: $label-floating-bg-color;
+    padding: $spacing-0-25 $spacing-0-50;
+  }
+
+  .input-helper {
+    @include display-flex(row, flex-start, center);
+    margin-top: $spacing-1;
+    margin-left: $spacing-1;
+    font-size: $caption;
+    color: $text-secondary;
+    gap: $spacing-1;
+  }
+
+  &.success {
+    .input-main {
+      border-color: $success;
+
+      .input-field:focus+.input-label,
+      .input-field:not(:placeholder-shown)+.input-label,
+      .input-label.floating {
+        color: $success;
+      }
+    }
+
+    .input-helper {
+      color: $success;
+    }
+  }
+
+  &.error {
+    .input-main {
+      border-color: $error;
+
+      .input-field:focus+.input-label,
+      .input-field:not(:placeholder-shown)+.input-label,
+      .input-label.floating {
+        color: $error;
+      }
+    }
+
+    .input-helper {
+      color: $error;
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+
+    .input-main {
+      .input-field {
+        color: $disabled;
+      }
+
+      .icon-left,
+      .icon-right {
+        i {
+          color: $disabled;
+        }
+      }
+    }
+
+    .input-helper {
+      color: $disabled;
+    }
+  }
+}
+
 // ==========================
 // Layout Utilities
 // ==========================
@@ -307,6 +542,7 @@
   align-items: $align;
 }
 
+// Grid Mixin
 @mixin display-grid($columns: 1, $rows: 1, $gap: 0) {
   display: grid;
   grid-template-columns: repeat($columns, 1fr);
@@ -322,13 +558,16 @@ $breakpoints: (
   xl: $breakpoint-xl,
   3xl: $breakpoint-2xl,
   4xl: $breakpoint-3xl,
-) !default;
+  ) !default;
+
 @mixin responsive($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     @media (min-width: map-get($breakpoints, $breakpoint)) {
       @content;
     }
-  } @else {
+  }
+
+  @else {
     @warn "Breakpoint '#{$breakpoint}' not found in \$breakpoints map.";
   }
 }

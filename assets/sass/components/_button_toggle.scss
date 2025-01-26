@@ -1,0 +1,66 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+@mixin toggle-button-default {
+    @include theme-toggle-button;
+}
+
+@mixin toggle-button-active($bg-color: $action-hover,
+    $text-color: $text-primary,
+) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: 1px solid $text-color;
+
+    i {
+        color: $text-color;
+    }
+
+    &:disabled,
+    &.disabled {
+        background-color: $action-disabled-bg !important;
+        color: $action-disabled !important;
+        border: 1px solid $action-disabled-bg !important;
+        cursor: not-allowed;
+    }
+
+    &.tgl-group {
+        border: transparent !important;
+    }
+}
+
+@mixin toggle-button-active-inherit {
+    @include toggle-button-active();
+}
+
+@mixin toggle-button-active-primary {
+    @include toggle-button-active($primary-8, $primary-main);
+}
+
+@mixin toggle-button-active-secondary {
+    @include toggle-button-active($secondary-8, $secondary-main);
+}
+
+@mixin toggle-button-active-info {
+    @include toggle-button-active($info-8, $info-main);
+}
+
+@mixin toggle-button-active-warning {
+    @include toggle-button-active($warning-8, $warning-main);
+}
+
+@mixin toggle-button-active-error {
+    @include toggle-button-active($error-8, $error-main);
+}
+
+@mixin toggle-button-active-success {
+    @include toggle-button-active($success-8, $success-main);
+}
+
+
+@mixin toggle-button-group {
+    @include display-flex;
+    border: 1px solid $button-outline;
+    padding: $spacing-0-50;
+    border-radius: $radius-999;
+}

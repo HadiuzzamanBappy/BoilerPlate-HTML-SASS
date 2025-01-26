@@ -1,0 +1,79 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+// Input Field Default
+@mixin input-field-outline{
+    @include theme-input-field;
+}
+
+// Input Field Soft
+@mixin input-field-soft{
+    @include theme-input-field;
+
+    .input-main{
+        background-color: $grey-8;
+        border: none;
+        .input-label{
+            background: none;
+        }
+    }
+
+    &.success .input-main{
+        background-color: $success-8;
+    }
+
+    &.error .input-main{
+        background-color: $error-8;
+    }
+
+    &.disabled .input-main{
+        background-color: $grey-8;
+    }
+}
+
+// Input Field Standard
+@mixin input-field-standard($border-color: $textfield-outline,
+    $success-border-color: $success-main,
+    $error-border-color: $error-main,
+    $disabled-bg-color: $grey-8) {
+    @include theme-input-field;
+
+    .input-main {
+        border: none ;
+        border-bottom: 1px solid $border-color;
+        border-radius: 0;
+        background-color: $grey-8;
+        .input-label{
+            background: none;
+        }
+    }
+}
+
+// Input Helper
+@mixin input-helper($font-size: $caption,
+    $color: $text-secondary,
+    $success-color: $success-main,
+    $error-color: $error-main,
+    $disabled-color: $action-disabled) {
+    .input-helper {
+        display: flex;
+        align-items: center;
+        margin-top: 8px;
+        margin-left: 8px;
+        font-size: $font-size;
+        color: $color;
+        gap: 8px;
+
+        &.success {
+            color: $success-color;
+        }
+
+        &.error {
+            color: $error-color;
+        }
+
+        &.disabled {
+            color: $disabled-color;
+        }
+    }
+}
