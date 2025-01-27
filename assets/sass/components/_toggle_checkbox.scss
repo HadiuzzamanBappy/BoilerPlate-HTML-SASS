@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+// Default checkbox Button
+@mixin toggle-checkbox-default {
+    @include theme-toggle-checkbox;
+}
+
+// Primary checkbox Button
+@mixin toggle-checkbox-primary {
+    @include theme-toggle-checkbox($mark-color: $primary-main);
+}
+
+// Secondary checkbox Button
+@mixin toggle-checkbox-secondary {
+    @include theme-toggle-checkbox($mark-color: $secondary-main);
+}
+
+// Info checkbox Button
+@mixin toggle-checkbox-info {
+    @include theme-toggle-checkbox($mark-color: $info-main);
+}
+
+// Warning checkbox Button
+@mixin toggle-checkbox-warning {
+    @include theme-toggle-checkbox($mark-color: $warning-main);
+}
+
+// Error checkbox Button
+@mixin toggle-checkbox-error {
+    @include theme-toggle-checkbox($mark-color: $error-main);
+}
+
+// Success checkbox Button
+@mixin toggle-checkbox-success {
+    @include theme-toggle-checkbox($mark-color: $success-main);
+}

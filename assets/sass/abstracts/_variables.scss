@@ -154,10 +154,10 @@ $grey-80: rgba($grey-main,80%);
 /* Primary -------------------------------------*/
 $primary-main: #07ac75;
 
-$primary-lighter: lighten($primary-main, 25%);
+$primary-lighter: lighten($primary-main, 30%);
 $primary-light: lighten($primary-main, 15%);
 $primary-dark: darken($primary-main, 15%);
-$primary-darker: darken($primary-main, 25%);
+$primary-darker: darken($primary-main, 30%);
 $primary-contrast-text: $white-main;
 $primary-8: rgba($primary-main,8%);
 $primary-12: rgba($primary-main,12%);
@@ -170,10 +170,10 @@ $primary-40: rgba($primary-main,40%);
 /* Secondary -------------------------------------*/
 $secondary-main: #8E33FF;
 
-$secondary-lighter: lighten($secondary-main, 50%);
-$secondary-light: lighten($secondary-main, 30%);
-$secondary-dark: darken($secondary-main, 30%);
-$secondary-darker: darken($secondary-main, 50%);
+$secondary-lighter: lighten($secondary-main, 30%);
+$secondary-light: lighten($secondary-main, 15%);
+$secondary-dark: darken($secondary-main, 15%);
+$secondary-darker: darken($secondary-main, 30%);
 $secondary-contrast-text: $white-main;
 $secondary-8: rgba($secondary-main,8%);
 $secondary-12: rgba($secondary-main,12%);
@@ -186,10 +186,10 @@ $secondary-40: rgba($secondary-main,40%);
 /* Info -------------------------------------*/
 $info-main: #00B8D9;
 
-$info-lighter: lighten($info-main, 50%);
-$info-light: lighten($info-main, 30%);
-$info-dark: darken($info-main, 30%);
-$info-darker: darken($info-main, 50%);
+$info-lighter: lighten($info-main, 30%);
+$info-light: lighten($info-main, 15%);
+$info-dark: darken($info-main, 15%);
+$info-darker: darken($info-main, 30%);
 $info-contrast-text: $white-main;
 $info-8: rgba($info-main,8%);
 $info-12: rgba($info-main,12%);
@@ -202,10 +202,10 @@ $info-40: rgba($info-main,40%);
 /* Success -------------------------------------*/
 $success-main: #22C55E;
 
-$success-lighter: lighten($success-main, 50%);
-$success-light: lighten($success-main, 30%);
-$success-dark: darken($success-main, 30%);
-$success-darker: darken($success-main, 50%);
+$success-lighter: lighten($success-main, 30%);
+$success-light: lighten($success-main, 15%);
+$success-dark: darken($success-main, 15%);
+$success-darker: darken($success-main, 30%);
 $success-contrast-text: $white-main;
 $success-8: rgba($success-main,8%);
 $success-12: rgba($success-main,12%);
@@ -218,10 +218,10 @@ $success-40: rgba($success-main,40%);
 /* Warning -------------------------------------*/
 $warning-main: #FFAB00;
 
-$warning-lighter: lighten($warning-main, 50%);
-$warning-light: lighten($warning-main, 30%);
-$warning-dark: darken($warning-main, 30%);
-$warning-darker: darken($warning-main, 50%);
+$warning-lighter: lighten($warning-main, 30%);
+$warning-light: lighten($warning-main, 15%);
+$warning-dark: darken($warning-main, 15%);
+$warning-darker: darken($warning-main, 30%);
 $warning-contrast-text: $grey-800;
 $warning-8: rgba($warning-main,8%);
 $warning-12: rgba($warning-main,12%);
@@ -234,10 +234,10 @@ $warning-40: rgba($warning-main,40%);
 /* Error -------------------------------------*/
 $error-main: #FF5630;
 
-$error-lighter: lighten($error-main, 50%);
-$error-light: lighten($error-main, 30%);
-$error-dark: darken($error-main, 30%);
-$error-darker: darken($error-main, 50%);
+$error-lighter: lighten($error-main, 30%);
+$error-light: lighten($error-main, 15%);
+$error-dark: darken($error-main, 15%);
+$error-darker: darken($error-main, 30%);
 $error-contrast-text: $white-main;
 $error-8: rgba($error-main,8%);
 $error-12: rgba($error-main,12%);

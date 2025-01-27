@@ -1,3 +1,4 @@
 // Forwarding mixins
-@forward 'common';    // Forward common mixins
-@forward 'generated'; // Forward generated mixins
+@forward 'generated';
+@forward 'common';
+@forward 'component';

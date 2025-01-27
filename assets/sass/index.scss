@@ -207,12 +207,99 @@
 //Input Field
 .input-group {
     @include input-field-outline;
+
+    &-soft {
+        @include input-field-soft;
+    }
+
+    &-standard {
+        @include input-field-standard;
+    }
 }
 
-.input-group-soft {
-    @include input-field-soft;
+//toggle switch
+.tgl-switch {
+    @include toggle-switch-default;
+
+    &-primary {
+        @include toggle-switch-primary;
+    }
+
+    &-secondary {
+        @include toggle-switch-secondary;
+    }
+
+    &-info {
+        @include toggle-switch-info;
+    }
+
+    &-warning {
+        @include toggle-switch-warning;
+    }
+
+    &-error {
+        @include toggle-switch-error;
+    }
+
+    &-success {
+        @include toggle-switch-success;
+    }
 }
 
-.input-group-standard {
-    @include input-field-standard;
+// Radio Button Styles
+.tgl-radio {
+    @include toggle-radio-default;
+
+    &-primary {
+        @include toggle-radio-primary;
+    }
+
+    &-secondary {
+        @include toggle-radio-secondary;
+    }
+
+    &-info {
+        @include toggle-radio-info;
+    }
+
+    &-warning {
+        @include toggle-radio-warning;
+    }
+
+    &-error {
+        @include toggle-radio-error;
+    }
+
+    &-success {
+        @include toggle-radio-success;
+    }
+}
+
+// Apply Mixins
+.tgl-checkbox {
+    @include toggle-checkbox-default;
+
+    &-primary {
+        @include toggle-checkbox-primary;
+    }
+
+    &-secondary {
+        @include toggle-checkbox-secondary;
+    }
+
+    &-info {
+        @include toggle-checkbox-info;
+    }
+
+    &-warning {
+        @include toggle-checkbox-warning;
+    }
+
+    &-error {
+        @include toggle-checkbox-error;
+    }
+
+    &-success {
+        @include toggle-checkbox-success;
+    }
 }

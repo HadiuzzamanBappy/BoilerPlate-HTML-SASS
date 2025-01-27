@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+@mixin toggle-switch-default {
+    @include theme-toggle-switch;
+}
+
+@mixin toggle-switch-primary {
+    @include theme-toggle-switch($checked-bg: $primary-main);
+}
+
+@mixin toggle-switch-secondary {
+    @include theme-toggle-switch($checked-bg: $secondary-main);
+}
+
+@mixin toggle-switch-info {
+    @include theme-toggle-switch($checked-bg: $info-main);
+}
+
+@mixin toggle-switch-warning {
+    @include theme-toggle-switch($checked-bg: $warning-main);
+}
+
+@mixin toggle-switch-error {
+    @include theme-toggle-switch($checked-bg: $error-main);
+}
+
+@mixin toggle-switch-success {
+    @include theme-toggle-switch($checked-bg: $success-main);
+}

@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- icon font CSS here -->
-    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/media/icon/sass.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -23,9 +23,9 @@
 <body>
     <div class="component-library">
 
-        <div style="display: none;">
+        <div class="component-section" style="display: none;">
             <!-- Button Section -->
-            <section class="component-section component-button">
+            <section class="component-block buttons">
                 <h2 class="section-heading">Buttons</h2>
 
                 <!-- Button Grid -->
@@ -142,7 +142,7 @@
             </section>
 
             <!-- Toggle Button Section -->
-            <section class="component-section component-button">
+            <section class="component-block toggle-buttons">
                 <h2 class="section-heading">Toggle Button</h2>
 
                 <div class="component-row">
@@ -191,173 +191,1177 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Input Section -->
+            <section class="component-block inputs">
+                <h2 class="section-heading">Inputs</h2>
+
+                <div class="component-row">
+                    <div class="col-3">
+                        <div class="input-group">
+                            <div class="input-main">
+                                <span class="icon-left"><i class="fa-solid fa-user"></i></span>
+                                <label for="inputs" class="input-label">Label</label>
+                                <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
+                                <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group error">
+                            <div class="input-main">
+                                <span class="icon-left"><i class="fa-solid fa-user"></i></span>
+                                <label for="inputs" class="input-label">Label</label>
+                                <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
+                                <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group success">
+                            <div class="input-main">
+                                <span class="icon-left"><i class="fa-solid fa-user"></i></span>
+                                <label for="inputs" class="input-label">Label</label>
+                                <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
+                                <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group disabled">
+                            <div class="input-main">
+                                <span class="icon-left"><i class="fa-solid fa-user"></i></span>
+                                <label for="inputs" class="input-label">Label</label>
+                                <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
+                                <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="input-group-soft">
+                            <div class="input-main">
+                                <span class="icon-left"><i class="fa-solid fa-user"></i></span>
+                                <label for="inputs" class="input-label">Label</label>
+                                <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
+                                <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group-soft error">
+                            <div class="input-main">
+                                <span class="icon-left"><i class="fa-solid fa-user"></i></span>
+                                <label for="inputs" class="input-label">Label</label>
+                                <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
+                                <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group-soft success">
+                            <div class="input-main">
+                                <span class="icon-left"><i class="fa-solid fa-user"></i></span>
+                                <label for="inputs" class="input-label">Label</label>
+                                <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
+                                <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group-soft disabled">
+                            <div class="input-main">
+                                <span class="icon-left"><i class="fa-solid fa-user"></i></span>
+                                <label for="inputs" class="input-label">Label</label>
+                                <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
+                                <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="input-group-standard">
+                            <div class="input-main">
+                                <span class="icon-left"><i class="fa-solid fa-user"></i></span>
+                                <label for="inputs" class="input-label">Label</label>
+                                <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
+                                <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group-standard error">
+                            <div class="input-main">
+                                <span class="icon-left"><i class="fa-solid fa-user"></i></span>
+                                <label for="inputs" class="input-label">Label</label>
+                                <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
+                                <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group-standard success">
+                            <div class="input-main">
+                                <span class="icon-left"><i class="fa-solid fa-user"></i></span>
+                                <label for="inputs" class="input-label">Label</label>
+                                <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
+                                <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group-standard disabled">
+                            <div class="input-main">
+                                <span class="icon-left"><i class="fa-solid fa-user"></i></span>
+                                <label for="inputs" class="input-label">Label</label>
+                                <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
+                                <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <!-- Textarea Section -->
+            <section class="component-block textareas">
+                <h2 class="section-heading">Textarea</h2>
+
+                <div class="component-row">
+                    <div class="col-3">
+                        <div class="input-group">
+                            <div class="input-main">
+                                <label for="inputs" class="input-label area">Label</label>
+                                <textarea id="text-area" name="input-field" class="input-field area" rows="3" cols="50"
+                                    placeholder="Enter your comments here..."></textarea>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group error">
+                            <div class="input-main">
+                                <label for="inputs" class="input-label area">Label</label>
+                                <textarea id="text-area" name="input-field" class="input-field area" rows="3" cols="50"
+                                    placeholder="Enter your comments here..."></textarea>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group success">
+                            <div class="input-main">
+                                <label for="inputs" class="input-label area">Label</label>
+                                <textarea id="text-area" name="input-field" class="input-field area" rows="3" cols="50"
+                                    placeholder="Enter your comments here..."></textarea>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group disabled">
+                            <div class="input-main">
+                                <label for="inputs" class="input-label area">Label</label>
+                                <textarea id="text-area" name="input-field" class="input-field area" rows="3" cols="50"
+                                    placeholder="Enter your comments here..."></textarea>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="input-group-soft">
+                            <div class="input-main">
+                                <label for="inputs" class="input-label area">Label</label>
+                                <textarea id="text-area" name="input-field" class="input-field area" rows="3" cols="50"
+                                    placeholder="Enter your comments here..."></textarea>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group-soft error">
+                            <div class="input-main">
+                                <label for="inputs" class="input-label area">Label</label>
+                                <textarea id="text-area" name="input-field" class="input-field area" rows="3" cols="50"
+                                    placeholder="Enter your comments here..."></textarea>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group-soft success">
+                            <div class="input-main">
+                                <label for="inputs" class="input-label area">Label</label>
+                                <textarea id="text-area" name="input-field" class="input-field area" rows="3" cols="50"
+                                    placeholder="Enter your comments here..."></textarea>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group-soft disabled">
+                            <div class="input-main">
+                                <label for="inputs" class="input-label area">Label</label>
+                                <textarea id="text-area" name="input-field" class="input-field area" rows="3" cols="50"
+                                    placeholder="Enter your comments here..."></textarea>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="input-group-standard">
+                            <div class="input-main">
+                                <label for="inputs" class="input-label area">Label</label>
+                                <textarea id="text-area" name="input-field" class="input-field area" rows="3" cols="50"
+                                    placeholder="Enter your comments here..."></textarea>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group-standard error">
+                            <div class="input-main">
+                                <label for="inputs" class="input-label area">Label</label>
+                                <textarea id="text-area" name="input-field" class="input-field area" rows="3" cols="50"
+                                    placeholder="Enter your comments here..."></textarea>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group-standard success">
+                            <div class="input-main">
+                                <label for="inputs" class="input-label area">Label</label>
+                                <textarea id="text-area" name="input-field" class="input-field area" rows="3" cols="50"
+                                    placeholder="Enter your comments here..."></textarea>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group-standard disabled">
+                            <div class="input-main">
+                                <label for="inputs" class="input-label area">Label</label>
+                                <textarea id="text-area" name="input-field" class="input-field area" rows="3" cols="50"
+                                    placeholder="Enter your comments here..."></textarea>
+                            </div>
+                            <div class="input-helper">
+                                <i class="fa fa-eye"></i>
+                                <span class="helper-text">Helper Text</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Toggle Switch Section -->
+            <section class="component-block toggle-switches">
+                <h2 class="section-heading">Toggle Switch</h2>
+
+                <div class="component-row">
+                    <div class="tgl-switch">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input">
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Inactive</span>
+                    </div>
+
+                    <div class="tgl-switch">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-primary">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-secondary">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-info">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-warning">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-error">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-success">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+                </div>
+                <div class="component-row">
+                    <div class="tgl-switch disabled">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input">
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Inactive</span>
+                    </div>
+
+                    <div class="tgl-switch disabled">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-primary disabled">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-secondary disabled">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-info disabled">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-warning disabled">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-error disabled">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-success disabled">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="component-row">
+                    <div class="tgl-switch tgl-sm">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input">
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Inactive</span>
+                    </div>
+
+                    <div class="tgl-switch tgl-sm">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-primary tgl-sm">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-secondary tgl-sm">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-info tgl-sm">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-warning tgl-sm">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-error tgl-sm">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-success tgl-sm">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+                </div>
+                <div class="component-row">
+                    <div class="tgl-switch tgl-sm disabled">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input">
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Inactive</span>
+                    </div>
+
+                    <div class="tgl-switch tgl-sm disabled">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-primary tgl-sm disabled">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-secondary tgl-sm disabled">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-info tgl-sm disabled">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-warning tgl-sm disabled">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-error tgl-sm disabled">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+
+                    <div class="tgl-switch-success tgl-sm disabled">
+                        <label class="tgl-switch-action">
+                            <input type="checkbox" class="switch-input" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                        <span class="tgl-switch-label">Enabled</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Toggle Radio Section -->
+            <section class="component-block toggle-radios">
+                <h2 class="section-heading">Toggle Switch</h2>
+
+                <div class="component-row">
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" name="radio-group">
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Unchecked</span>
+                    </div>
+
+                    <!-- Checked Radio Button -->
+                    <div class="tgl-radio">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Checked Radio Button -->
+                    <div class="tgl-radio-primary">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Checked Radio Button -->
+                    <div class="tgl-radio-secondary">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Checked Radio Button -->
+                    <div class="tgl-radio-info">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Checked Radio Button -->
+                    <div class="tgl-radio-warning">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Checked Radio Button -->
+                    <div class="tgl-radio-error">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Checked Radio Button -->
+                    <div class="tgl-radio-success">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+                </div>
+
+                <div class="component-row">
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio disabled">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input">
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Unchecked</span>
+                    </div>
+
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio disabled">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio-primary disabled">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio-secondary disabled">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio-info disabled">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio-warning disabled">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio-error disabled">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio-success disabled">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="component-row">
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio radio-sm">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" name="radio-group">
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Unchecked</span>
+                    </div>
+
+                    <!-- Checked Radio Button -->
+                    <div class="tgl-radio radio-sm">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Checked Radio Button -->
+                    <div class="tgl-radio-primary radio-sm">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Checked Radio Button -->
+                    <div class="tgl-radio-secondary radio-sm">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Checked Radio Button -->
+                    <div class="tgl-radio-info radio-sm">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Checked Radio Button -->
+                    <div class="tgl-radio-warning radio-sm">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Checked Radio Button -->
+                    <div class="tgl-radio-error radio-sm">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Checked Radio Button -->
+                    <div class="tgl-radio-success radio-sm">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+                </div>
+
+                <div class="component-row">
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio radio-sm disabled">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input">
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Unchecked</span>
+                    </div>
+
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio radio-sm disabled">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio-primary radio-sm disabled">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio-secondary radio-sm disabled">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio-info radio-sm disabled">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio-warning radio-sm disabled">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio-error radio-sm disabled">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+
+                    <!-- Unchecked Radio Button -->
+                    <div class="tgl-radio-success radio-sm disabled">
+                        <label class="tgl-radio-action">
+                            <input type="radio" class="radio-input" checked>
+                            <span class="radio-dot"></span>
+                        </label>
+                        <span class="tgl-radio-label">Checked</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Toggle Checkbox Section -->
+            <section class="component-block toggle-checkbox">
+                <h2 class="section-heading">Toggle Switch</h2>
+    
+                <div class="component-row">
+                    <div class="tgl-checkbox">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input">
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Unchecked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-primary">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-secondary">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-info">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-warning">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-error">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-success">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+                </div>
+                <div class="component-row">
+                    <div class="tgl-checkbox disabled">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input">
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Unchecked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox disabled">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-primary disabled">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-secondary disabled">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-info disabled">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-warning disabled">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-error disabled">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-success disabled">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+                </div>
+    
+                <hr>
+    
+                <div class="component-row">
+                    <div class="tgl-checkbox checkbox-sm">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input">
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Unchecked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox checkbox-sm">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-primary checkbox-sm">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-secondary checkbox-sm">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-info checkbox-sm">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-warning checkbox-sm">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-error checkbox-sm">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-success checkbox-sm">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+                </div>
+                <div class="component-row">
+                    <div class="tgl-checkbox checkbox-sm disabled">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input">
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Unchecked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox checkbox-sm disabled">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-primary checkbox-sm disabled">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-secondary checkbox-sm disabled">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-info checkbox-sm disabled">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-warning checkbox-sm disabled">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-error checkbox-sm disabled">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+    
+                    <div class="tgl-checkbox-success checkbox-sm disabled">
+                        <label class="tgl-checkbox-action">
+                            <input type="checkbox" class="checkbox-input" checked>
+                            <span class="checkbox-mark"></span>
+                        </label>
+                        <span class="tgl-checkbox-label">Checked</span>
+                    </div>
+                </div>
+            </section>
         </div>
 
-        <section class="component-section component-button">
-            <h2 class="section-heading">Inputs</h2>
+        <section class="component-block toggle-checkbox">
+            <h2 class="section-heading">Toggle Switch</h2>
 
             <div class="component-row">
-                <div class="col-3">
-                    <div class="input-group">
-                        <div class="input-main">
-                            <span class="icon-left"><i class="fa-solid fa-user"></i></span>
-                            <label for="inputs" class="input-label">Label</label>
-                            <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
-                            <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
-                        </div>
-                        <div class="input-helper">
-                            <i class="fa fa-eye"></i>
-                            <span class="helper-text">Helper Text</span>
-                        </div>
-                    </div>
-    
-                    <div class="input-group error">
-                        <div class="input-main">
-                            <span class="icon-left"><i class="fa-solid fa-user"></i></span>
-                            <label for="inputs" class="input-label">Label</label>
-                            <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
-                            <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
-                        </div>
-                        <div class="input-helper">
-                            <i class="fa fa-eye"></i>
-                            <span class="helper-text">Helper Text</span>
-                        </div>
-                    </div>
-
-                    <div class="input-group success">
-                        <div class="input-main">
-                            <span class="icon-left"><i class="fa-solid fa-user"></i></span>
-                            <label for="inputs" class="input-label">Label</label>
-                            <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
-                            <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
-                        </div>
-                        <div class="input-helper">
-                            <i class="fa fa-eye"></i>
-                            <span class="helper-text">Helper Text</span>
-                        </div>
-                    </div>
-
-                    <div class="input-group disabled">
-                        <div class="input-main">
-                            <span class="icon-left"><i class="fa-solid fa-user"></i></span>
-                            <label for="inputs" class="input-label">Label</label>
-                            <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
-                            <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
-                        </div>
-                        <div class="input-helper">
-                            <i class="fa fa-eye"></i>
-                            <span class="helper-text">Helper Text</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-3">
-                    <div class="input-group-soft">
-                        <div class="input-main">
-                            <span class="icon-left"><i class="fa-solid fa-user"></i></span>
-                            <label for="inputs" class="input-label">Label</label>
-                            <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
-                            <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
-                        </div>
-                        <div class="input-helper">
-                            <i class="fa fa-eye"></i>
-                            <span class="helper-text">Helper Text</span>
-                        </div>
-                    </div>
-    
-                    <div class="input-group-soft error">
-                        <div class="input-main">
-                            <span class="icon-left"><i class="fa-solid fa-user"></i></span>
-                            <label for="inputs" class="input-label">Label</label>
-                            <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
-                            <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
-                        </div>
-                        <div class="input-helper">
-                            <i class="fa fa-eye"></i>
-                            <span class="helper-text">Helper Text</span>
-                        </div>
-                    </div>
-
-                    <div class="input-group-soft success">
-                        <div class="input-main">
-                            <span class="icon-left"><i class="fa-solid fa-user"></i></span>
-                            <label for="inputs" class="input-label">Label</label>
-                            <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
-                            <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
-                        </div>
-                        <div class="input-helper">
-                            <i class="fa fa-eye"></i>
-                            <span class="helper-text">Helper Text</span>
-                        </div>
-                    </div>
-
-                    <div class="input-group-soft disabled">
-                        <div class="input-main">
-                            <span class="icon-left"><i class="fa-solid fa-user"></i></span>
-                            <label for="inputs" class="input-label">Label</label>
-                            <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
-                            <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
-                        </div>
-                        <div class="input-helper">
-                            <i class="fa fa-eye"></i>
-                            <span class="helper-text">Helper Text</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-3">
-                    <div class="input-group-standard">
-                        <div class="input-main">
-                            <span class="icon-left"><i class="fa-solid fa-user"></i></span>
-                            <label for="inputs" class="input-label">Label</label>
-                            <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
-                            <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
-                        </div>
-                        <div class="input-helper">
-                            <i class="fa fa-eye"></i>
-                            <span class="helper-text">Helper Text</span>
-                        </div>
-                    </div>
-    
-                    <div class="input-group-standard error">
-                        <div class="input-main">
-                            <span class="icon-left"><i class="fa-solid fa-user"></i></span>
-                            <label for="inputs" class="input-label">Label</label>
-                            <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
-                            <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
-                        </div>
-                        <div class="input-helper">
-                            <i class="fa fa-eye"></i>
-                            <span class="helper-text">Helper Text</span>
-                        </div>
-                    </div>
-
-                    <div class="input-group-standard success">
-                        <div class="input-main">
-                            <span class="icon-left"><i class="fa-solid fa-user"></i></span>
-                            <label for="inputs" class="input-label">Label</label>
-                            <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
-                            <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
-                        </div>
-                        <div class="input-helper">
-                            <i class="fa fa-eye"></i>
-                            <span class="helper-text">Helper Text</span>
-                        </div>
-                    </div>
-
-                    <div class="input-group-standard disabled">
-                        <div class="input-main">
-                            <span class="icon-left"><i class="fa-solid fa-user"></i></span>
-                            <label for="inputs" class="input-label">Label</label>
-                            <input type="text" class="input-field" placeholder="Placeholder" name="inputs" />
-                            <span class="icon-right"> <i class="fa-solid fa-eye"></i></span>
-                        </div>
-                        <div class="input-helper">
-                            <i class="fa fa-eye"></i>
-                            <span class="helper-text">Helper Text</span>
-                        </div>
-                    </div>
-                </div>
+            </div>
         </section>
     </div>
 

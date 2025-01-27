@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+// Default Radio Button
+@mixin toggle-radio-default {
+    @include theme-toggle-radio;
+}
+
+// Primary Radio Button
+@mixin toggle-radio-primary {
+    @include theme-toggle-radio($dot-color: $primary-main);
+}
+
+// Secondary Radio Button
+@mixin toggle-radio-secondary {
+    @include theme-toggle-radio($dot-color: $secondary-main);
+}
+
+// Info Radio Button
+@mixin toggle-radio-info {
+    @include theme-toggle-radio($dot-color: $info-main);
+}
+
+// Warning Radio Button
+@mixin toggle-radio-warning {
+    @include theme-toggle-radio($dot-color: $warning-main);
+}
+
+// Error Radio Button
+@mixin toggle-radio-error {
+    @include theme-toggle-radio($dot-color: $error-main);
+}
+
+// Success Radio Button
+@mixin toggle-radio-success {
+    @include theme-toggle-radio($dot-color: $success-main);
+}

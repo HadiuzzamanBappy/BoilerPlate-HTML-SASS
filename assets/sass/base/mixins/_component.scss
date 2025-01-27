@@ -1,0 +1,640 @@
+@use "../../abstracts" as *;
+@use "common" as *;
+
+// ==========================
+// Component Utilities
+// ==========================
+// Button Mixin
+@mixin theme-button($bg-color: $global-default-bg,
+    $text-color: $global-default-color,
+    $hover-bg-color: $global-default-bg-hovered,
+    $hover-text-color: $global-default-color,
+    $pressed-bg-color: $global-default-bg-hovered,
+    $pressed-text-color: $global-default-color,
+    $focus-outline: 0 0 0 3px $action-focus,
+    $border-color: $button-outline,
+    $hover-border-color: $button-outline,
+    $disabled-bg-color: $action-disabled-bg,
+    $disabled-text-color: $action-disabled,
+    $disabled-border-color: $action-disabled-bg,
+    $padding: $spacing-1-50 $spacing-2-50,
+    $font-size: $body-text-rg,
+    $font-weight: $fw-medium,
+    $border-radius: $radius-999,
+    $transition: $transition-all,
+    $icon-spacing: $spacing-1) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: 1px solid $border-color;
+    padding: $padding;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    border-radius: $border-radius;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $icon-spacing;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover:not(:disabled) {
+        background-color: $hover-bg-color;
+        color: $hover-text-color;
+        border-color: $hover-border-color;
+    }
+
+    &:active:not(:disabled) {
+        background-color: $pressed-bg-color;
+        color: $pressed-text-color;
+        transform: scale(0.98);
+    }
+
+    &:focus:not(:disabled) {
+        outline: none;
+        background-color: $hover-bg-color;
+        color: $text-color;
+        box-shadow: $focus-outline;
+    }
+
+    &:disabled {
+        background-color: $disabled-bg-color;
+        color: $disabled-text-color;
+        border-color: $disabled-border-color;
+        cursor: not-allowed;
+    }
+}
+
+// Toggle Button Mixin
+@mixin theme-toggle-button($bg-color: transparent,
+    $text-color: $text-secondary,
+    $icon-color: $action-active,
+    $border-color: $button-outline,
+    $disabled-bg-color: $action-disabled-bg,
+    $disabled-text-color: $action-disabled,
+) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: 1px solid $text-color;
+    border-radius: $radius-999;
+    padding: $spacing-1-50 $spacing-2-50;
+    font-size: $body-text-rg;
+    font-weight: $fw-medium;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-1;
+    cursor: pointer;
+    transition: $transition-all;
+
+    i {
+        color: $icon-color;
+    }
+
+    &:disabled,
+    &.disabled {
+        background-color: $bg-color !important;
+        color: $disabled-text-color !important;
+        border: 1px solid $disabled-bg-color !important;
+        cursor: not-allowed;
+    }
+
+    &.tgl-group {
+        border: transparent !important;
+    }
+
+    &.tgl-group {
+        border: transparent !important;
+    }
+}
+
+// Theme Toggle Switch
+@mixin theme-toggle-switch($width: $spacing-4,
+    $height: $spacing-2-50,
+    $height-sm: $spacing-2,
+    $slider-size: $spacing-1-75,
+    $slider-size-sm: $spacing-1-50,
+    $slider-padding: $spacing-0-75,
+    $unchecked-bg: $grey-48,
+    $checked-bg: $global-inherit-bg,
+    $slider-color: $white-main,
+    $transition: $transition-all,
+    $title-color: $text-primary,
+    $title-font-size: $body-text-sm,
+    $hover-border-color: $grey-8,
+    $hover-border-size: $spacing-1,
+) {
+    display: flex;
+    align-items: center;
+    gap: $spacing-1;
+
+    .tgl-switch-action {
+        position: relative;
+        display: inline-block;
+        overflow: visible;
+        width: $width;
+        height: $height;
+
+        .switch-input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+
+            &:checked+.switch-slider {
+                background-color: $checked-bg;
+
+                &::before {
+                    transform: translateX($width - $slider-size - $slider-padding);
+                }
+            }
+
+            &:hover:not(:disabled)+.switch-slider {
+                &::before {
+                    box-shadow: 0 0 0 $hover-border-size rgba($hover-border-color, 20%);
+                }
+            }
+
+            &:checked:hover:not(:disabled)+.switch-slider {
+                &::before {
+                    box-shadow: 0 0 0 $spacing-1 rgba($checked-bg, 20%); // Add border outside the circle
+                }
+            }
+        }
+
+        .switch-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $unchecked-bg;
+            transition: $transition;
+            border-radius: $height;
+
+            &::before {
+                position: absolute;
+                content: "";
+                height: $slider-size;
+                width: $slider-size;
+                left: calc(($height - $slider-size) / 2);
+                bottom: calc(($height - $slider-size) / 2);
+                background-color: $slider-color;
+                transition: $transition;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .tgl-switch-label {
+        color: $title-color;
+        font-size: $title-font-size;
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+
+        .tgl-switch-action,
+        .tgl-switch-label {
+            pointer-events: none; // Disable pointer events
+        }
+    }
+
+    &.tgl-sm {
+        .tgl-switch-action {
+            height: $height-sm;
+
+            .switch-input:checked+.switch-slider::before {
+                transform: translateX($width - $slider-size - calc($slider-padding/2));
+            }
+
+            .switch-slider::before {
+                height: $slider-size-sm;
+                width: $slider-size-sm;
+                left: calc(($height-sm - $slider-size-sm) / 2);
+                bottom: calc(($height-sm - $slider-size-sm) / 2);
+            }
+        }
+    }
+}
+
+// Radio Button Mixin
+@mixin theme-toggle-radio($size: $spacing-2-50,
+    $size-sm: $spacing-2,
+    $hover-border-size: $spacing-1,
+    $dot-color: $text-primary,
+    $transition: $transition-all,
+    $label-color: $text-primary,
+    $label-font-size: $body-text-sm) {
+    display: flex;
+    align-items: center;
+    gap: $spacing-1;
+
+    .tgl-radio-action {
+        position: relative;
+        display: inline-block;
+        width: $size;
+        height: $size;
+
+        .radio-input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+
+            // Checked State
+            &:checked+.radio-dot {
+                border-color: $dot-color;
+
+                &::before {
+                    transform: scale(1);
+                }
+            }
+
+            // Hover State
+            &:hover:not(:disabled)+.radio-dot {
+                box-shadow: 0 0 0 $hover-border-size rgba($dot-color, 20%);
+            }
+
+            &:checked:hover:not(:disabled)+.radio-dot {
+                box-shadow: 0 0 0 $hover-border-size rgba($dot-color, 20%);
+            }
+
+            // Disabled State
+            &:disabled+.radio-dot {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+        }
+
+        .radio-dot {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid $dot-color;
+            border-radius: 50%;
+            transition: $transition;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            // Inner Dot
+            &::before {
+                content: "";
+                transform: scale(0);
+                width: calc($size / 2) + 2px;
+                height: calc($size / 2) + 2px;
+                background-color: $dot-color;
+                border-radius: 50%;
+                transition: $transition;
+            }
+        }
+    }
+
+    .tgl-radio-label {
+        color: $label-color;
+        font-size: $label-font-size;
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+
+        .tgl-radio-action {
+            pointer-events: none;
+        }
+
+        .tgl-radio-label {
+            pointer-events: none;
+        }
+    }
+
+    &.radio-sm {
+        .tgl-radio-action {
+            width: $size-sm;
+            height: $size-sm;
+
+            .radio-dot::before {
+                width: calc($size-sm / 2) + 2px;
+                height: calc($size-sm / 2) + 2px;
+            }
+
+            .radio-input {
+
+                // Hover State
+                &:hover:not(:disabled)+.radio-dot {
+                    box-shadow: 0 0 0 calc($hover-border-size / 2) rgba($dot-color, 20%) !important;
+                }
+
+                &:checked:hover:not(:disabled)+.radio-dot {
+                    box-shadow: 0 0 0 calc($hover-border-size / 2) rgba($dot-color, 20%) !important;
+                }
+            }
+        }
+    }
+}
+
+// Checkbox Mixin
+@mixin theme-toggle-checkbox($size: $spacing-2-50,
+    $size-sm: $spacing-2,
+    $hover-border-size: $spacing-1,
+    $mark-color: $text-primary,
+    $transition: $transition-all,
+    $label-color: $text-primary,
+    $label-font-size: $body-text-sm) {
+    display: flex;
+    align-items: center;
+    gap: $spacing-1;
+
+    .tgl-checkbox-action {
+        position: relative;
+        display: inline-block;
+        width: $size;
+        height: $size;
+
+        .checkbox-input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+
+            // Checked State
+            &:checked+.checkbox-mark {
+                border-color: $mark-color;
+                background-color: $mark-color;
+
+                &::before {
+                    -webkit-transform: scale(1) rotate(45deg);
+                    -ms-transform: scale(1) rotate(45deg);
+                    transform: scale(1) rotate(45deg);
+                }
+            }
+
+            // Hover State
+            &:hover:not(:disabled)+.checkbox-mark {
+                box-shadow: 0 0 0 $hover-border-size rgba($mark-color, 20%);
+            }
+
+            &:checked:hover:not(:disabled)+.checkbox-mark {
+                box-shadow: 0 0 0 $hover-border-size rgba($mark-color, 20%);
+            }
+
+            // Disabled State
+            &:disabled+.checkbox-mark {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+        }
+
+        .checkbox-mark {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid $mark-color;
+            border-radius: $spacing-0-50;
+            transition: $transition;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            // Inner mark
+            &::before {
+                content: "";
+                width: calc($size / 2) + 2px;
+                height: calc($size / 2) + 2px;
+                transition: $transition;
+                width: calc($size / 3);
+                height: calc($size / 2);
+                border: solid $global-inherit-color;;
+                border-width: 0 2px 2px 0;
+                position: absolute;
+                top: 15%;
+                left: 30%;
+            }
+        }
+    }
+
+    .tgl-checkbox-label {
+        color: $label-color;
+        font-size: $label-font-size;
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+
+        .tgl-checkbox-action {
+            pointer-events: none;
+        }
+
+        .tgl-checkbox-label {
+            pointer-events: none;
+        }
+    }
+
+    &.checkbox-sm {
+        .tgl-checkbox-action {
+            width: $size-sm;
+            height: $size-sm;
+
+            .checkbox-mark::before {
+                width: calc($size-sm / 3);
+                height: calc($size-sm / 2);
+            }
+
+            .checkbox-input {
+
+                // Hover State
+                &:hover:not(:disabled)+.checkbox-mark {
+                    box-shadow: 0 0 0 calc($hover-border-size / 2) rgba($mark-color, 20%) !important;
+                }
+
+                &:checked:hover:not(:disabled)+.checkbox-mark {
+                    box-shadow: 0 0 0 calc($hover-border-size / 2) rgba($mark-color, 20%) !important;
+                }
+            }
+        }
+    }
+}
+
+// Theme Input Field Mixin
+@mixin theme-input-field($label-color: $text-secondary,
+    $label-font-size: $body-text-rg,
+    $label-floating-font-size: $label,
+    $label-floating-bg-color: $bg-paper,
+    $border-color: $button-outline,
+    $border-radius: $spacing-1,
+    $hover-border-color: $text-primary,
+    $focus-border-color: $text-primary,
+    $main-padding: $spacing-1-50 $spacing-0-50,
+    $icon-color: $action-active,
+    $icon-size: $body-text-rg,
+    $font-color: $text-primary,
+    $font-size: $body-text-rg,
+    $success: $success-main,
+    $error: $error-main,
+    $disabled: $action-disabled,
+) {
+    position: relative;
+    width: 100%;
+
+    .input-main {
+        position: relative;
+        @include display-flex;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        padding: $main-padding;
+
+        &:hover {
+            border-color: $hover-border-color;
+        }
+
+        &:focus-within {
+            border-color: $focus-border-color;
+        }
+    }
+
+    .icon-left,
+    .icon-right {
+        @include display-flex(row, center, center);
+        padding: 0 $spacing-1;
+        color: $icon-color;
+        font-size: $icon-size;
+    }
+
+    .icon-left {
+        order: 1;
+
+        i {
+            color: $action-disabled;
+        }
+    }
+
+    .icon-right {
+        order: 3;
+    }
+
+    .input-field {
+        flex: 1;
+        order: 2;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: $font-size;
+        color: $font-color;
+        padding: 0;
+
+        &.area {
+            padding: 0 $spacing-1 !important;
+        }
+
+        &::placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        &:focus::placeholder,
+        &:not(:placeholder-shown)::placeholder {
+            opacity: 1;
+        }
+    }
+
+    .input-label {
+        position: absolute;
+        top: 50%;
+        left: $spacing-5;
+        transform: translateY(-50%);
+        color: $label-color;
+        font-size: $label-font-size;
+        pointer-events: none;
+        transition: $transition-all;
+
+        &.area {
+            top: 20% !important;
+            left: 5% !important;
+        }
+    }
+
+    .input-field:focus+.input-label,
+    .input-field:not(:placeholder-shown)+.input-label,
+    .input-label.floating {
+        top: 0 !important;
+        left: 10% !important;
+        font-size: $label-floating-font-size;
+        background-color: $label-floating-bg-color;
+        padding: $spacing-0-25 $spacing-0-50;
+
+        &.area {
+            left: 5% !important;
+        }
+    }
+
+    .input-helper {
+        @include display-flex(row, flex-start, center);
+        margin-top: $spacing-1;
+        margin-left: $spacing-1;
+        font-size: $caption;
+        color: $text-secondary;
+        gap: $spacing-1;
+    }
+
+    &.success {
+        .input-main {
+            border-color: $success;
+
+            .input-field:focus+.input-label,
+            .input-field:not(:placeholder-shown)+.input-label,
+            .input-label.floating {
+                color: $success;
+            }
+        }
+
+        .input-helper {
+            color: $success;
+        }
+    }
+
+    &.error {
+        .input-main {
+            border-color: $error;
+
+            .input-field:focus+.input-label,
+            .input-field:not(:placeholder-shown)+.input-label,
+            .input-label.floating {
+                color: $error;
+            }
+        }
+
+        .input-helper {
+            color: $error;
+        }
+    }
+
+    &.disabled {
+        pointer-events: none;
+
+        .input-main {
+            .input-field {
+                color: $disabled;
+            }
+
+            .icon-left,
+            .icon-right {
+                i {
+                    color: $disabled;
+                }
+            }
+        }
+
+        .input-helper {
+            color: $disabled;
+        }
+    }
+}

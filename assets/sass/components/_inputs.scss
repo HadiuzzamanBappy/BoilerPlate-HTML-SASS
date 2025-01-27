@@ -32,48 +32,16 @@
 }
 
 // Input Field Standard
-@mixin input-field-standard($border-color: $textfield-outline,
-    $success-border-color: $success-main,
-    $error-border-color: $error-main,
-    $disabled-bg-color: $grey-8) {
+@mixin input-field-standard{
     @include theme-input-field;
 
     .input-main {
         border: none ;
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid $textfield-outline;
         border-radius: 0;
         background-color: $grey-8;
         .input-label{
             background: none;
-        }
-    }
-}
-
-// Input Helper
-@mixin input-helper($font-size: $caption,
-    $color: $text-secondary,
-    $success-color: $success-main,
-    $error-color: $error-main,
-    $disabled-color: $action-disabled) {
-    .input-helper {
-        display: flex;
-        align-items: center;
-        margin-top: 8px;
-        margin-left: 8px;
-        font-size: $font-size;
-        color: $color;
-        gap: 8px;
-
-        &.success {
-            color: $success-color;
-        }
-
-        &.error {
-            color: $error-color;
-        }
-
-        &.disabled {
-            color: $disabled-color;
         }
     }
 }

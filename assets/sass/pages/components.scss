@@ -23,7 +23,20 @@ body {
   width: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 40px;
+}
+
+.component-block{
+  border: 2px solid #ddd;
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  width: -moz-fill-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .section-heading {
