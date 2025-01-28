@@ -698,6 +698,7 @@
     }
 }
 
+// alert Component
 @mixin theme-alert($bg-color: $info-main,
     $text-color: $info-contrast-text,
     $icon-color: $info-contrast-text,
@@ -705,7 +706,7 @@
     $border-radius: $spacing-0-50,
     $icon-size: $spacing-3,
     $padding: $spacing-1,
-    ) {
+) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -715,6 +716,7 @@
     border: 2px solid $border-color;
     border-radius: $border-radius;
     font-family: Poppins;
+    flex-grow: 1;
 
     .alert-icon {
         font-size: $icon-size;
@@ -738,5 +740,18 @@
 
     .alert-text {
         flex-grow: 1;
+        font-size: $body-text-sm;
     }
+}
+
+//Dialogue Component
+@mixin theme-dialog-title-action($bg-color: $bg-paper,
+    $padding: $spacing-3,
+    $gap: $spacing-2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $padding;
+    gap: $gap;
+    background-color: $bg-color;
 }

@@ -1,0 +1,24 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+@mixin component-dialog-title(){
+    @include theme-dialog-title-action;
+
+    .title{
+        flex-grow: 1;
+        font-size: $heading6;
+        font-weight: $fw-medium;
+        color: $text-primary;
+    }
+}
+
+@mixin component-dialog-action(){
+    @include theme-dialog-title-action;
+    justify-content: end;
+
+    &.full{
+        .btn{
+            flex-grow: 1;
+        }
+    }
+}

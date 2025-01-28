@@ -6,162 +6,162 @@
 .btn {
     @include theme-button;
 
-    &--default-outlined {
+    &-default-outlined {
         @include button-default-outlined;
     }
 
-    &--default-text {
+    &-default-text {
         @include button-default-text;
     }
 
-    &--default-soft {
+    &-default-soft {
         @include button-default-soft;
     }
 
-    &--inherit {
+    &-inherit {
         @include button-inherit;
     }
 
-    &--inherit-outlined {
+    &-inherit-outlined {
         @include button-inherit-outlined;
     }
 
-    &--inherit-text {
+    &-inherit-text {
         @include button-inherit-text;
     }
 
-    &--inherit-soft {
+    &-inherit-soft {
         @include button-inherit-soft;
     }
 
-    &--primary {
+    &-primary {
         @include button-primary;
     }
 
-    &--primary-outlined {
+    &-primary-outlined {
         @include button-primary-outlined;
     }
 
-    &--primary-text {
+    &-primary-text {
         @include button-primary-text;
     }
 
-    &--primary-soft {
+    &-primary-soft {
         @include button-primary-soft;
     }
 
-    &--secondary {
+    &-secondary {
         @include button-secondary;
     }
 
-    &--secondary-outlined {
+    &-secondary-outlined {
         @include button-secondary-outlined;
     }
 
-    &--secondary-text {
+    &-secondary-text {
         @include button-secondary-text;
     }
 
-    &--secondary-soft {
+    &-secondary-soft {
         @include button-secondary-soft;
     }
 
-    &--success {
+    &-success {
         @include button-success;
     }
 
-    &--success-outlined {
+    &-success-outlined {
         @include button-success-outlined;
     }
 
-    &--success-text {
+    &-success-text {
         @include button-success-text;
     }
 
-    &--success-soft {
+    &-success-soft {
         @include button-success-soft;
     }
 
-    &--info {
+    &-info {
         @include button-info;
     }
 
-    &--info-outlined {
+    &-info-outlined {
         @include button-info-outlined;
     }
 
-    &--info-text {
+    &-info-text {
         @include button-info-text;
     }
 
-    &--info-soft {
+    &-info-soft {
         @include button-info-soft;
     }
 
-    &--warning {
+    &-warning {
         @include button-warning;
     }
 
-    &--warning-outlined {
+    &-warning-outlined {
         @include button-warning-outlined;
     }
 
-    &--warning-text {
+    &-warning-text {
         @include button-warning-text;
     }
 
-    &--warning-soft {
+    &-warning-soft {
         @include button-warning-soft;
     }
 
-    &--error {
+    &-error {
         @include button-error;
     }
 
-    &--error-outlined {
+    &-error-outlined {
         @include button-error-outlined;
     }
 
-    &--error-text {
+    &-error-text {
         @include button-error-text;
     }
 
-    &--error-soft {
+    &-error-soft {
         @include button-error-soft;
     }
 
-    &--disabled {
+    &-disabled {
         @include button-disabled;
     }
 }
 
 //sizes
 .btn {
-    &--sm {
+    &-sm {
         @include button-small;
     }
 
-    &--md {
+    &-md {
         @include button-medium;
     }
 
-    &--lg {
+    &-lg {
         @include button-large;
     }
 
-    &--icon-xsm {
+    &-icon-xsm {
         @include button-icon-extra-small;
     }
 
-    &--icon-sm {
+    &-icon-sm {
         @include button-icon-small;
     }
 
-    &--icon-md {
+    &-icon-md {
         @include button-icon-medium;
     }
 
-    &--icon-lg {
+    &-icon-lg {
         @include button-icon-large;
     }
 }
@@ -328,4 +328,21 @@
     &-outline{
         @include component-alert-outline;
     }
+}
+
+// Dialog Title
+.dialog{
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.dialog-title{
+    @include component-dialog-title;
+}
+
+.dialog-action{
+    @include component-dialog-action;
 }
