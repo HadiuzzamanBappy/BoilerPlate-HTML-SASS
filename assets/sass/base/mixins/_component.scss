@@ -411,7 +411,8 @@
                 transition: $transition;
                 width: calc($size / 3);
                 height: calc($size / 2);
-                border: solid $global-inherit-color;;
+                border: solid $global-inherit-color;
+                ;
                 border-width: 0 2px 2px 0;
                 position: absolute;
                 top: 15%;
@@ -636,5 +637,106 @@
         .input-helper {
             color: $disabled;
         }
+    }
+}
+
+// Rating Component Mixin
+@mixin theme-rating($star-count: 5,
+    $gap: $spacing-0-50,
+    $star-size: $spacing-2-50,
+    $filled-color: $warning-main,
+    $unfilled-color: $grey-300,
+    $disabled-opacity: 0.5,
+    $border-radius: $spacing-0-25,
+    $transition: $transition-all) {
+    display: inline-flex;
+    align-items: center;
+    gap: $gap;
+
+    // Star Base Styling
+    .star {
+        display: inline-block;
+        width: $star-size;
+        height: $star-size;
+        cursor: pointer;
+        transition: $transition;
+        background-color: $unfilled-color;
+        clip-path: polygon(50% 0%,
+                61% 35%,
+                98% 35%,
+                68% 57%,
+                79% 91%,
+                50% 70%,
+                21% 91%,
+                32% 57%,
+                2% 35%,
+                39% 35%);
+
+        // Filled State
+        &.filled {
+            background-color: $filled-color;
+        }
+
+        // Hover State (only when not disabled)
+        &:hover:not(.filled) {
+            background-color: darken($unfilled-color, 10%);
+        }
+
+        &:hover.filled {
+            background-color: darken($filled-color, 10%);
+        }
+    }
+
+    // Disabled State
+    &.disabled {
+        cursor: not-allowed;
+
+        .star {
+            pointer-events: none; // Disable interactions
+            background-color: $unfilled-color;
+        }
+    }
+}
+
+@mixin theme-alert($bg-color: $info-main,
+    $text-color: $info-contrast-text,
+    $icon-color: $info-contrast-text,
+    $border-color: transparent,
+    $border-radius: $spacing-0-50,
+    $icon-size: $spacing-3,
+    $padding: $spacing-1,
+    ) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $padding;
+    background-color: $bg-color;
+    color: $text-color;
+    border: 2px solid $border-color;
+    border-radius: $border-radius;
+    font-family: Poppins;
+
+    .alert-icon {
+        font-size: $icon-size;
+        padding: $spacing-0-50;
+
+        &.left {
+            margin-right: 0.5rem;
+            color: $icon-color;
+        }
+
+        &.right {
+            margin-left: 0.5rem;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .alert-text {
+        flex-grow: 1;
     }
 }

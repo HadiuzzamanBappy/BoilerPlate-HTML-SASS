@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+// Size Variants
+@mixin rating-small{
+    @include theme-rating($star-size: $spacing-2, $gap: $spacing-0-25);
+}
+
+@mixin rating-large{
+    @include theme-rating($star-size: $spacing-3);
+}

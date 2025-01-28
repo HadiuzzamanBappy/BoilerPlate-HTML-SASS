@@ -204,19 +204,6 @@
     @include toggle-button-group;
 }
 
-//Input Field
-.input-group {
-    @include input-field-outline;
-
-    &-soft {
-        @include input-field-soft;
-    }
-
-    &-standard {
-        @include input-field-standard;
-    }
-}
-
 //toggle switch
 .tgl-switch {
     @include toggle-switch-default;
@@ -301,5 +288,44 @@
 
     &-success {
         @include toggle-checkbox-success;
+    }
+}
+
+//Input Field
+.input-group {
+    @include input-field-outline;
+
+    &-soft {
+        @include input-field-soft;
+    }
+
+    &-standard {
+        @include input-field-standard;
+    }
+}
+
+// Default Rating
+.rating {
+    @include theme-rating;
+    
+    &-sm{
+        @include rating-small;
+    }
+
+    &-lg{
+        @include rating-large;
+    }
+}
+
+// Default Alert
+.alert{
+    @include component-alert;
+
+    &-soft{
+        @include component-alert-soft;
+    }
+
+    &-outline{
+        @include component-alert-outline;
     }
 }

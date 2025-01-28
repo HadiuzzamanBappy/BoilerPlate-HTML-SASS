@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+@mixin component-alert{
+    @include theme-alert;
+
+    &.alert-warning{
+        @include theme-alert($bg-color: $warning-main,$text-color: $warning-contrast-text, $icon-color: $warning-contrast-text);
+    }
+
+    &.alert-error{
+        @include theme-alert($bg-color: $error-main,$text-color: $error-contrast-text, $icon-color: $error-contrast-text);
+    }
+
+    &.alert-success{
+        @include theme-alert($bg-color: $success-main,$text-color: $success-contrast-text, $icon-color: $success-contrast-text);
+    }
+}
+
+@mixin component-alert-soft{
+    @include theme-alert($bg-color: $info-lighter,$text-color: $info-darker, $icon-color: $info-main);
+
+    &.alert-warning{
+        @include theme-alert($bg-color: $warning-lighter,$text-color: $warning-darker, $icon-color: $warning-main);
+    }
+
+    &.alert-error{
+        @include theme-alert($bg-color: $error-lighter,$text-color: $error-darker, $icon-color: $error-main);
+    }
+
+    &.alert-success{
+        @include theme-alert($bg-color: $success-lighter,$text-color: $success-darker, $icon-color: $success-main);
+    }
+}
+
+@mixin component-alert-outline{
+    @include theme-alert($bg-color: $info-8,$text-color: $info-main, $icon-color: $info-main, $border-color: $info-16);
+
+    &.alert-warning{
+        @include theme-alert($bg-color: $warning-8,$text-color: $warning-main, $icon-color: $warning-main, $border-color: $warning-16);
+    }
+
+    &.alert-error{
+        @include theme-alert($bg-color: $error-8,$text-color: $error-main, $icon-color: $error-main, $border-color: $error-16);
+    }
+
+    &.alert-success{
+        @include theme-alert($bg-color: $success-8,$text-color: $success-main, $icon-color: $success-main, $border-color: $success-16);
+    }
+}
