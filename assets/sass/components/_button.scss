@@ -224,22 +224,34 @@
   padding: $spacing-0-75;
   font-size: $spacing-2;
   font-weight: $fw-regular !important;
+  i{
+    width: $spacing-2;
+  }
 }
 
 @mixin button-icon-small {
   padding: $spacing-1;
   font-size: $spacing-2;
   font-weight: $fw-regular !important;
+  i{
+    width: $spacing-2;
+  }
 }
 
 @mixin button-icon-medium {
   padding: $spacing-1-50;
   font-size: $spacing-3;
   font-weight: $fw-regular !important;
+  i{
+    width: $spacing-3;
+  }
 }
 
 @mixin button-icon-large {
   padding: $spacing-2;
   font-size: $spacing-3;
   font-weight: $fw-regular !important;
+  i{
+    width: $spacing-3;
+  }
 }

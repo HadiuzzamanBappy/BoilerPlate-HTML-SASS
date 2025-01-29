@@ -412,11 +412,11 @@
                 width: calc($size / 3);
                 height: calc($size / 2);
                 border: solid $global-inherit-color;
-                ;
                 border-width: 0 2px 2px 0;
                 position: absolute;
                 top: 15%;
                 left: 30%;
+                transform: scale(0);
             }
         }
     }
@@ -713,7 +713,7 @@
     padding: $padding;
     background-color: $bg-color;
     color: $text-color;
-    border: 2px solid $border-color;
+    border: 1px solid $border-color;
     border-radius: $border-radius;
     font-family: Poppins;
     flex-grow: 1;
