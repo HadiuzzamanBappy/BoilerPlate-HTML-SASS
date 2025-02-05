@@ -45,11 +45,13 @@
     &.status-md{
         height: calc($size - $spacing-0-25) !important;
         width: calc($size - $spacing-0-25) !important;
+        border-width: 3px;
     }
 
     &.status-sm{
         height: calc($size - $spacing-0-50) !important;
         width: calc($size - $spacing-0-50) !important;
+        border-width: 2px;
     }
 }
 

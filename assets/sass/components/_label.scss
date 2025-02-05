@@ -1,0 +1,45 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+
+@mixin label-types($bg-color: $text-primary, $color: $global-inherit-color){
+        @include theme-label($bg-color: $bg-color);
+
+    &-soft{
+        @include theme-label($bg-color: rgba($bg-color,12%), $color: darken($bg-color, 20%));
+    }
+
+    &-outlined{
+        @include theme-label($bg-color: transparent, $border: 2px solid $bg-color, $color: $bg-color);
+    }
+}
+
+@mixin component-label{
+    &-inherit{
+        @include label-types;
+    }
+
+    &-primary{
+        @include label-types($bg-color: $primary-main, $color: $primary-main);
+    }
+
+    &-secondary{
+        @include label-types($bg-color: $secondary-main, $color: $secondary-main);
+    }
+
+    &-info{
+        @include label-types($bg-color: $info-main, $color: $info-main);
+    }
+
+    &-warning{
+        @include label-types($bg-color: $warning-main, $color: $warning-main);
+    }
+
+    &-error{
+        @include label-types($bg-color: $error-main, $color: $error-main);
+    }
+
+    &-success{
+        @include label-types($bg-color: $success-main, $color: $success-main);
+    }
+}

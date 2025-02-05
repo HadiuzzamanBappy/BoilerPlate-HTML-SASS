@@ -411,3 +411,13 @@
 .divider{
     @include theme-divider;
 }
+
+// Avatar
+.avatar{
+    @include component-avatar;
+}
+
+// Label
+.label{
+    @include component-label;
+}

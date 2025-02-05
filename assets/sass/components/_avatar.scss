@@ -1,0 +1,20 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+@mixin component-avatar{
+@for $i from 2 through 10 { // 2 * 8 = 16, 10 * 8 = 80
+    $size: $i * 8px;
+  
+    &-circle-#{$i}{
+        @include theme-avatar($size: $size, $shape: 'circle');
+    }
+
+    &-square-#{$i} {
+        @include theme-avatar($size: $size, $shape: 'square');
+    }
+
+    &-rounded-#{$i} {
+        @include theme-avatar($size: $size, $shape: 'rounded');
+    }
+  }
+}

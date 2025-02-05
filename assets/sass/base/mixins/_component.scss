@@ -406,14 +406,14 @@
             // Inner mark
             &::before {
                 content: "";
-                width: calc($size / 2) + 2px;
-                height: calc($size / 2) + 2px;
+                width: calc($size / 2) - $spacing-0-25;
+                height: calc($size / 2) + $spacing-0-25;
                 transition: $transition;
                 border: solid $global-inherit-color;
                 border-width: 0 2px 2px 0;
                 position: absolute;
-                top: 15%;
-                left: 30%;
+                top: 5%;
+                left: 25%;
                 transform: scale(0);
             }
         }
@@ -805,7 +805,7 @@
     $text-color: $global-default-color,
     $size: $spacing-2-50,
     $dot-size: $spacing-1-25,
-    $status-size:$spacing-1-50) {
+    $status-size: $spacing-1-50) {
     background-color: $bg-color;
     color: $text-color;
     border-radius: $radius-999;
@@ -836,7 +836,7 @@
 }
 
 @mixin theme-badge-status($bg-color: $success-main,
-$size: $spacing-1-50){
+    $size: $spacing-1-50) {
     width: $size;
     height: $size;
     background-color: $bg-color;
@@ -867,8 +867,8 @@ $size: $spacing-1-50){
 }
 
 @mixin theme-circular-progress-bar($size: $spacing-12,
-$progress-color: $text-primary,
-$progress-border: $spacing-0-50){
+    $progress-color: $text-primary,
+    $progress-border: $spacing-0-50) {
     position: relative;
     width: $size;
     height: $size;
@@ -877,8 +877,8 @@ $progress-border: $spacing-0-50){
     align-items: center;
     justify-content: center;
     background: conic-gradient($progress-color 3.6deg, $bg-paper 0deg);
-    
-    &::before{
+
+    &::before {
         content: "";
         position: absolute;
         height: calc($size - $spacing-1);
@@ -887,8 +887,68 @@ $progress-border: $spacing-0-50){
         background-color: $bg-paper;
     }
 
-    > * {
+    >* {
         position: relative;
         z-index: 1;
-      }
+    }
+}
+
+
+// Avatar Component
+@mixin theme-avatar($size: $spacing-5, $shape: 'circle') {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: $size;
+    height: $size;
+    color: $text-secondary;
+    background-color: $grey-8;
+    border-radius: if($shape =='circle', 50%, if($shape =='rounded', $spacing-1, 0));
+    overflow: hidden;
+    padding: $spacing-0-25;
+
+    >* {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    img,
+    svg {
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        object-fit: cover;
+    }
+}
+
+// Label Component
+@mixin theme-label($bg-color: $text-primary,
+    $color: $global-inherit-color,
+    $border: 2px solid transparent,
+    $icon-size: $spacing-2) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-0-50;
+    background-color: $bg-color;
+    padding: $spacing-0-50 $spacing-0-75;
+    border: $border;
+    border-radius: $spacing-0-50;
+
+    .icon i {
+        width: $icon-size;
+        height: $icon-size;
+        color: $color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text {
+        color: $color;
+        font-size: $caption;
+        font-weight: $fw-medium;
+        line-height: $caption;
+    }
 }
