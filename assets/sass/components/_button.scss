@@ -11,7 +11,7 @@
     $hover-bg-color: $hover-bg-color,
     $pressed-bg-color: $hover-bg-color,
     $focus-outline: 0 0 0 3px darken($hover-bg-color, 10%),
-    $border-color: $color,
+    $border-color: lighten($color,0.8),
     $hover-border-color: $color );
 }
 
@@ -38,7 +38,8 @@
 }
 
 @mixin button-default-outlined {
-  @include button-outlined($action-active, $action-hover);
+  @include button-outlined($text-primary, $action-hover);
+  border-color: $button-outline;
 }
 
 @mixin button-default-text {

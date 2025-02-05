@@ -409,8 +409,6 @@
                 width: calc($size / 2) + 2px;
                 height: calc($size / 2) + 2px;
                 transition: $transition;
-                width: calc($size / 3);
-                height: calc($size / 2);
                 border: solid $global-inherit-color;
                 border-width: 0 2px 2px 0;
                 position: absolute;
@@ -698,7 +696,7 @@
     }
 }
 
-// alert Component
+// Alert Component
 @mixin theme-alert($bg-color: $info-main,
     $text-color: $info-contrast-text,
     $icon-color: $info-contrast-text,
@@ -744,7 +742,7 @@
     }
 }
 
-//Dialogue Component
+// Dialogue Component
 @mixin theme-dialog-title-action($bg-color: $bg-paper,
     $padding: $spacing-3,
     $gap: $spacing-2) {
@@ -754,4 +752,143 @@
     padding: $padding;
     gap: $gap;
     background-color: $bg-color;
+}
+
+// Snackbar Component
+@mixin theme-snackbar($main-bg: $global-inherit-bg,
+    $on-main: $global-inherit-color,
+    $action-bg: $primary-8,
+    $on-action: $primary-main,
+    $icon-size: $spacing-3) {
+    display: flex;
+    gap: $spacing-1-50;
+    align-items: center;
+    padding: $spacing-1 $spacing-1-50;
+    background-color: $main-bg;
+    border-radius: $radius-999;
+    color: $on-main;
+    box-shadow: $shadow-md;
+
+    .snack-icon {
+        font-size: $icon-size;
+        padding: $spacing-1;
+        color: $on-action;
+
+        &.left {
+            display: flex;
+            background-color: $action-bg;
+            border-radius: $radius-999;
+
+            i {
+                width: $icon-size;
+            }
+        }
+
+        &.right {
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+            color: $action-active;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .snack-text {
+        flex-grow: 1;
+    }
+}
+
+// Badge Component
+@mixin theme-badge($bg-color: $global-default-bg,
+    $text-color: $global-default-color,
+    $size: $spacing-2-50,
+    $dot-size: $spacing-1-25,
+    $status-size:$spacing-1-50) {
+    background-color: $bg-color;
+    color: $text-color;
+    border-radius: $radius-999;
+    padding: 0 $spacing-1;
+    height: $size;
+    display: flex;
+    align-items: center;
+
+    .badge-text,
+    p,
+    span {
+        font-size: $caption;
+        line-height: $caption;
+    }
+
+    &-dot {
+        background-color: $bg-color;
+        width: $dot-size;
+        height: $dot-size;
+        border-radius: $radius-999;
+
+        .badge-text,
+        p,
+        span {
+            display: none;
+        }
+    }
+}
+
+@mixin theme-badge-status($bg-color: $success-main,
+$size: $spacing-1-50){
+    width: $size;
+    height: $size;
+    background-color: $bg-color;
+    border-radius: $radius-999;
+    position: relative;
+}
+
+// Progress Bar
+@mixin theme-linear-progress-bar($color: $text-primary,
+    $height: $spacing-0-50,
+    $border-radius: $radius-999) {
+    width: 100%;
+    height: $height;
+    background-color: rgba($color, 0.3);
+    border-radius: $border-radius;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        background-color: $color;
+        height: 100%;
+        width: 0%;
+        transition: width 1s ease;
+        border-radius: $border-radius;
+    }
+}
+
+@mixin theme-circular-progress-bar($size: $spacing-12,
+$progress-color: $text-primary,
+$progress-border: $spacing-0-50){
+    position: relative;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient($progress-color 3.6deg, $bg-paper 0deg);
+    
+    &::before{
+        content: "";
+        position: absolute;
+        height: calc($size - $spacing-1);
+        width: calc($size - $spacing-1);
+        border-radius: 50%;
+        background-color: $bg-paper;
+    }
+
+    > * {
+        position: relative;
+        z-index: 1;
+      }
 }

@@ -71,4 +71,36 @@ $(document).ready(function () {
       $label.removeClass("floating");
     }
   });
+
+  let styleContent = ""; // Store styles
+
+  $("[class*='progress-']").each(function () {
+    let percentage = $(this).attr("data-percentage") || 0;
+    let classList = $(this).attr("class").split(" ");
+    let targetClass = classList.find(
+      (cls) =>
+        cls.startsWith("progress-linear-") ||
+        cls.startsWith("progress-circular-")
+    );
+
+    if (!targetClass) return;
+
+    if (targetClass.startsWith("progress-linear-")) {
+      styleContent += `.${targetClass}::after { width: ${percentage}%; transition: width 1s ease-in-out; }\n`;
+    } else if (targetClass.startsWith("progress-circular-")) {
+      let currentBackground = $(this).css("background") || "";
+      let newBackground = currentBackground.replace(
+        /(\d+(\.\d+)?)deg/,
+        `${percentage * 3.6}deg`
+      );
+      $(this).css({
+        background: newBackground,
+        transition: "background 1s ease-in-out",
+      });
+    }
+  });
+
+  if (styleContent) {
+    $("head").append(`<style>${styleContent}</style>`);
+  }
 });

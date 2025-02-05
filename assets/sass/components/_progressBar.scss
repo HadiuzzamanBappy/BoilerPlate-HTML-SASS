@@ -1,0 +1,66 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+@mixin component-linear-progress {
+    &-linear {
+        &-inherit {
+            @include theme-linear-progress-bar;
+        }
+
+        &-primary {
+            @include theme-linear-progress-bar($color: $primary-main);
+        }
+
+        &-secondary {
+            @include theme-linear-progress-bar($color: $secondary-main);
+        }
+
+        &-info {
+            @include theme-linear-progress-bar($color: $info-main);
+        }
+
+        &-warning {
+            @include theme-linear-progress-bar($color: $warning-main);
+        }
+
+        &-error {
+            @include theme-linear-progress-bar($color: $error-main);
+        }
+
+        &-success {
+            @include theme-linear-progress-bar($color: $success-main);
+        }
+    }
+}
+
+@mixin component-circular-progress {
+    &-circular {
+        &-inherit {
+            @include theme-circular-progress-bar;
+        }
+
+        &-primary {
+            @include theme-circular-progress-bar($progress-color: $primary-main);
+        }
+
+        &-secondary {
+            @include theme-circular-progress-bar($progress-color: $secondary-main);
+        }
+
+        &-info {
+            @include theme-circular-progress-bar($progress-color: $info-main);
+        }
+
+        &-warning {
+            @include theme-circular-progress-bar($progress-color: $warning-main);
+        }
+
+        &-error {
+            @include theme-circular-progress-bar($progress-color: $error-main);
+        }
+
+        &-success {
+            @include theme-circular-progress-bar($progress-color: $success-main);
+        }
+    }
+}

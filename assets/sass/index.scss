@@ -307,31 +307,31 @@
 // Default Rating
 .rating {
     @include theme-rating;
-    
-    &-sm{
+
+    &-sm {
         @include rating-small;
     }
 
-    &-lg{
+    &-lg {
         @include rating-large;
     }
 }
 
 // Default Alert
-.alert{
+.alert {
     @include component-alert;
 
-    &-soft{
+    &-soft {
         @include component-alert-soft;
     }
 
-    &-outline{
+    &-outline {
         @include component-alert-outline;
     }
 }
 
 // Dialog Title
-.dialog{
+.dialog {
     width: 400px;
     height: auto;
     display: flex;
@@ -339,10 +339,75 @@
     gap: 24px;
 }
 
-.dialog-title{
+.dialog-title {
     @include component-dialog-title;
 }
 
-.dialog-action{
+.dialog-action {
     @include component-dialog-action;
+}
+
+//Snackbar
+.snackbar {
+    @include component-snackbar-default;
+
+    &-info {
+        @include component-snackbar-info;
+    }
+
+    &-success {
+        @include component-snackbar-success;
+    }
+
+    &-warning {
+        @include component-snackbar-warning;
+    }
+
+    &-error {
+        @include component-snackbar-error;
+    }
+}
+
+//Badge
+.badge {
+    @include component-badge-default;
+
+    &-primary {
+        @include component-badge-primary;
+    }
+
+    &-secondary {
+        @include component-badge-secondary;
+    }
+
+    &-info {
+        @include component-badge-info;
+    }
+
+    &-warning {
+        @include component-badge-warning;
+    }
+
+    &-error {
+        @include component-badge-error;
+    }
+
+    &-success {
+        @include component-badge-success;
+    }
+}
+
+.badge-status {
+    @include component-badge-status;
+}
+
+// Linear Progress Bar
+.progress {
+    @include component-linear-progress;
+    @include component-circular-progress;
+}
+
+// Divider
+.divider{
+    @include theme-divider;
 }

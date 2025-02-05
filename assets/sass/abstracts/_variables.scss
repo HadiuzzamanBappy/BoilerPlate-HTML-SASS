@@ -267,7 +267,7 @@ $global-default-bg: $grey-300;
 $global-default-bg-hovered: $grey-400;
 
 /* Text --------------------------------------*/
-$text-primary: $grey-800;
+$text-primary: $grey-900;
 $text-secondary: $grey-600;
 $text-disables: $grey-500;
 
@@ -288,6 +288,10 @@ $link-visited: $primary-light;
 $bg-default: $white-main;
 $bg-paper: $white-main;
 $bg-paper-alt: $grey-200;
+
+/* Components - General ----------------------------------*/
+$divider: $grey-20;
+$backdrop: $black-72;
 
 /* Components - Paper ----------------------------------*/
 $paper-outline: $grey-16;
@@ -310,10 +314,10 @@ $textfield-outline: $grey-20;
 /*---------------------------------------------*/
 $shadow-none: none;
 $shadow-sm: 0px 1px 3px rgba(0, 0, 0, 0.12);
-$shadow-md: 0px 4px 6px rgba(0, 0, 0, 0.16);
-$shadow-lg: 0px 10px 15px rgba(0, 0, 0, 0.24);
-$shadow-xl: 0px 20px 25px rgba(0, 0, 0, 0.32);
-$shadow-2xl: 0px 30px 35px rgba(0, 0, 0, 0.4);
+$shadow-md: 0px 4px 6px rgba(0, 0, 0, 0.12);
+$shadow-lg: 0px 10px 15px rgba(0, 0, 0, 0.12);
+$shadow-xl: 0px 20px 25px rgba(0, 0, 0, 0.12);
+$shadow-2xl: 0px 30px 35px rgba(0, 0, 0, 0.12);
 $shadow-inner: inset 0px 2px 4px rgba(0, 0, 0, 0.12);
 
 /*---------------------------------------------*/

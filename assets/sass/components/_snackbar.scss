@@ -1,0 +1,79 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+@use "button" as *;
+
+@mixin component-snackbar-default{
+    @include theme-snackbar;
+    padding-left: $spacing-2;
+
+    .snack-icon.left{
+        display: none;
+    }
+
+    .snack-action{
+        .sa-primary{
+            @include button-primary;
+        }
+
+        .sa-secondary{
+            @include button-default-outlined;
+            color: $global-inherit-color;
+        }
+    }
+}
+
+@mixin component-snackbar-info{
+    @include theme-snackbar($main-bg: $bg-paper,$on-main: $text-primary,$action-bg:$info-8,$on-action: $info-main);
+
+    .snack-action{
+        .sa-primary{
+            @include button-info;
+        }
+
+        .sa-secondary{
+            @include button-default-outlined;
+        }
+    }
+}
+
+@mixin component-snackbar-success{
+    @include theme-snackbar($main-bg: $bg-paper,$on-main: $text-primary,$action-bg:$success-8,$on-action: $success-main);
+
+    .snack-action{
+        .sa-primary{
+            @include button-success;
+        }
+
+        .sa-secondary{
+            @include button-default-outlined;
+        }
+    }
+}
+
+@mixin component-snackbar-warning{
+    @include theme-snackbar($main-bg: $bg-paper,$on-main: $text-primary,$action-bg:$warning-8,$on-action: $warning-main);
+
+    .snack-action{
+        .sa-primary{
+            @include button-warning;
+        }
+
+        .sa-secondary{
+            @include button-default-outlined;
+        }
+    }
+}
+
+@mixin component-snackbar-error{
+    @include theme-snackbar($main-bg: $bg-paper,$on-main: $text-primary,$action-bg:$error-8,$on-action: $error-main);
+
+    .snack-action{
+        .sa-primary{
+            @include button-error;
+        }
+
+        .sa-secondary{
+            @include button-default-outlined;
+        }
+    }
+}

@@ -17,13 +17,15 @@
     <link rel="stylesheet" href="./assets/css/layout.css">
     <link rel="stylesheet" href="./assets/css/index.css">
     <!-- Script -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"
+        charset="utf-8"></script>
 </head>
 
 <body>
     <div class="component-library">
 
-        <div class="component-section" style="display: flex;">
+        <div class="component-section" style="display: none;">
             <!-- Button Section -->
             <section class="component-block buttons-components">
                 <h2 class="section-heading">Buttons</h2>
@@ -1550,7 +1552,7 @@
 
             </section>
 
-
+            <!-- DialogBox components -->
             <section class="component-block rating-component">
                 <h2 class="section-heading">Dialog</h2>
 
@@ -1578,13 +1580,283 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Snackbar Component -->
+            <section class="component-block rating-component">
+                <h2 class="section-heading">Snackbar</h2>
+
+                <div class="component-row">
+                    <div class="snackbar">
+                        <span class="snack-icon left">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </span>
+                        <span class="snack-text">
+                            This is an Info Snackbar — check it out!
+                        </span>
+                        <span class="snack-icon right">
+                            <i class="fa-solid fa-xmark"></i>
+                        </span>
+                    </div>
+
+                    <div class="snackbar">
+                        <span class="snack-icon left">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </span>
+                        <span class="snack-text">
+                            This is an Info Snackbar — check it out!
+                        </span>
+                        <div class="snack-action">
+                            <button class="sa-primary"> Action</button>
+                            <button class="sa-secondary"> Action</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="component-row">
+                    <div class="snackbar-info">
+                        <span class="snack-icon left">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </span>
+                        <span class="snack-text">
+                            This is an Info Snackbar — check it out!
+                        </span>
+                        <span class="snack-icon right">
+                            <i class="fa-solid fa-xmark"></i>
+                        </span>
+                    </div>
+
+                    <div class="snackbar-info">
+                        <span class="snack-icon left">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </span>
+                        <span class="snack-text">
+                            This is an Info Snackbar — check it out!
+                        </span>
+                        <div class="snack-action">
+                            <button class="sa-primary"> Action</button>
+                            <button class="sa-secondary"> Action</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="component-row">
+                    <div class="snackbar-success">
+                        <span class="snack-icon left">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </span>
+                        <span class="snack-text">
+                            This is an Info Snackbar — check it out!
+                        </span>
+                        <span class="snack-icon right">
+                            <i class="fa-solid fa-xmark"></i>
+                        </span>
+                    </div>
+
+                    <div class="snackbar-success">
+                        <span class="snack-icon left">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </span>
+                        <span class="snack-text">
+                            This is an Info Snackbar — check it out!
+                        </span>
+                        <div class="snack-action">
+                            <button class="sa-primary"> Action</button>
+                            <button class="sa-secondary"> Action</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="component-row">
+                    <div class="snackbar-warning">
+                        <span class="snack-icon left">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </span>
+                        <span class="snack-text">
+                            This is an Info Snackbar — check it out!
+                        </span>
+                        <span class="snack-icon right">
+                            <i class="fa-solid fa-xmark"></i>
+                        </span>
+                    </div>
+
+                    <div class="snackbar-warning">
+                        <span class="snack-icon left">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </span>
+                        <span class="snack-text">
+                            This is an Info Snackbar — check it out!
+                        </span>
+                        <div class="snack-action">
+                            <button class="sa-primary"> Action</button>
+                            <button class="sa-secondary"> Action</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="component-row">
+                    <div class="snackbar-error">
+                        <span class="snack-icon left">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </span>
+                        <span class="snack-text">
+                            This is an Info Snackbar — check it out!
+                        </span>
+                        <span class="snack-icon right">
+                            <i class="fa-solid fa-xmark"></i>
+                        </span>
+                    </div>
+
+                    <div class="snackbar-error">
+                        <span class="snack-icon left">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </span>
+                        <span class="snack-text">
+                            This is an Info Snackbar — check it out!
+                        </span>
+                        <div class="snack-action">
+                            <button class="sa-primary"> Action</button>
+                            <button class="sa-secondary"> Action</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Badge Component -->
+            <section class="component-block rating-component">
+                <h2 class="section-heading">Badge</h2>
+
+                <div class="component-row">
+                    <div class="badge">
+                        <span class="badge-text">1</span>
+                    </div>
+                    <div class="badge-primary">
+                        <span class="badge-text">2</span>
+                    </div>
+                    <div class="badge-secondary">
+                        <span class="badge-text">3</span>
+                    </div>
+                    <div class="badge-warning">
+                        <span class="badge-text">4</span>
+                    </div>
+                    <div class="badge-info">
+                        <span class="badge-text">5</span>
+                    </div>
+                    <div class="badge-error">
+                        <span class="badge-text">6</span>
+                    </div>
+                    <div class="badge-success">
+                        <span class="badge-text">7</span>
+                    </div>
+                </div>
+
+                <div class="component-row">
+                    <div class="badge-dot">
+                        <span class="badge-text">1</span>
+                    </div>
+                    <div class="badge-primary-dot">
+                        <span class="badge-text">2</span>
+                    </div>
+                    <div class="badge-secondary-dot">
+                        <span class="badge-text">3</span>
+                    </div>
+                    <div class="badge-warning-dot">
+                        <span class="badge-text">4</span>
+                    </div>
+                    <div class="badge-info-dot">
+                        <span class="badge-text">5</span>
+                    </div>
+                    <div class="badge-error-dot">
+                        <span class="badge-text">6</span>
+                    </div>
+                    <div class="badge-success-dot">
+                        <span class="badge-text">7</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Badge Status Component -->
+            <section class="component-block rating-component">
+                <h2 class="section-heading">Badge Status</h2>
+
+                <div class="component-row">
+                    <span class="badge-status-online"></span>
+                    <span class="badge-status-offline"></span>
+                    <span class="badge-status-away"></span>
+                    <span class="badge-status-busy"></span>
+                </div>
+
+                <div class="component-row">
+                    <span class="badge-status-online status-md"></span>
+                    <span class="badge-status-offline status-md"></span>
+                    <span class="badge-status-away status-md"></span>
+                    <span class="badge-status-busy status-md"></span>
+                </div>
+
+                <div class="component-row">
+                    <span class="badge-status-online status-sm"></span>
+                    <span class="badge-status-offline status-sm"></span>
+                    <span class="badge-status-away status-sm"></span>
+                    <span class="badge-status-busy status-sm"></span>
+                </div>
+            </section>
+
+            <!-- progress - Linear -->
+            <section class="component-block rating-component">
+                <h2 class="section-heading">Progress - Linear</h2>
+
+                <div class="component-row">
+                    <!-- Linear Progress Bar -->
+                    <div class="progress progress-linear-inherit" data-percentage="50"></div>
+                    <div class="progress progress-linear-primary" data-percentage="70"></div>
+                    <div class="progress progress-linear-secondary" data-percentage="90"></div>
+                    <div class="progress progress-linear-info" data-percentage="80"></div>
+                    <div class="progress progress-linear-warning" data-percentage="65"></div>
+                    <div class="progress progress-linear-error" data-percentage="40"></div>
+                </div>
+            </section>
+
+            <!-- progress - Circular -->
+            <section class="component-block rating-component">
+                <h2 class="section-heading">Progress - Circular</h2>
+    
+                <div class="component-row">
+                    <div class="progress-circular-inherit" data-percentage="75">
+                        <span>75%</span>
+                    </div>
+                    <div class="progress-circular-primary" data-percentage="90">
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-circular-secondary" data-percentage="75">
+                        <span>75%</span>
+                    </div>
+                    <div class="progress-circular-warning" data-percentage="90">
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-circular-info" data-percentage="75">
+                        <span>75%</span>
+                    </div>
+                    <div class="progress-circular-error" data-percentage="90">
+                        <span>90%</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Divider -->
+            <section class="component-block rating-component">
+                <h2 class="section-heading">Divider</h2>
+        
+                <div class="component-row">
+                    <span class="divider-v"></span>
+                    <span class="divider-h"></span>                
+                </div>
+            </section>
         </div>
 
         <section class="component-block rating-component">
-            <h2 class="section-heading">Snackbar</h2>
-
+            <h2 class="section-heading">Divider</h2>
+    
             <div class="component-row">
-
+                         
             </div>
         </section>
 

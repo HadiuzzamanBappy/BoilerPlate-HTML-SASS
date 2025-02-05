@@ -235,6 +235,25 @@
   z-index: $z-index;
 }
 
+//Divider Mixin
+@mixin theme-divider($color: $divider) {
+  &-v {
+    width: 1px;
+    height: -webkit-fill-available;
+    min-height: 100px;
+    background-color: $color;
+    margin: 0 !important;
+  }
+
+  &-h {
+    height: 1px;
+    width: -webkit-fill-available;
+    min-width: 100px;
+    background-color: $color;
+    margin: 0 !important;
+  }
+}
+
 // ==========================
 // Animation Utilities
 // ==========================
