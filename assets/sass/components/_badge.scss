@@ -1,77 +1,76 @@
 @use "../abstracts" as *;
 @use "../base" as *;
 
-@mixin component-badge-default {
-    @include theme-badge;
-}
+@mixin component-badge {
+        @include theme-badge;
 
-@mixin component-badge-primary {
-    @include theme-badge($bg-color: $primary-main,
-        $text-color: $primary-contrast-text );
-}
+    &-primary {
+        @include theme-badge($bg-color: $primary-main,
+            $text-color: $primary-contrast-text );
+    }
 
-@mixin component-badge-secondary {
-    @include theme-badge($bg-color: $secondary-main,
-        $text-color: $secondary-contrast-text );
-}
+    &-secondary {
+        @include theme-badge($bg-color: $secondary-main,
+            $text-color: $secondary-contrast-text );
+    }
 
-@mixin component-badge-info {
-    @include theme-badge($bg-color: $info-main,
-        $text-color: $info-contrast-text );
-}
+    &-info {
+        @include theme-badge($bg-color: $info-main,
+            $text-color: $info-contrast-text );
+    }
 
-@mixin component-badge-warning {
-    @include theme-badge($bg-color: $warning-main,
-        $text-color: $warning-contrast-text );
-}
+    &-warning {
+        @include theme-badge($bg-color: $warning-main,
+            $text-color: $warning-contrast-text );
+    }
 
-@mixin component-badge-error {
-    @include theme-badge($bg-color: $error-main,
-        $text-color: $error-contrast-text );
-}
+    &-error {
+        @include theme-badge($bg-color: $error-main,
+            $text-color: $error-contrast-text );
+    }
 
-@mixin component-badge-success {
-    @include theme-badge($bg-color: $success-main,
-        $text-color: $success-contrast-text );
+    &-success {
+        @include theme-badge($bg-color: $success-main,
+            $text-color: $success-contrast-text );
+    }
 }
 
 // Badge Status
-@mixin component-badge-status-sizes($size: $spacing-1-50){
-    &.status-lg{
+@mixin component-badge-status-sizes($size: $spacing-1-50) {
+    &.status-lg {
         height: $size !important;
         width: $size !important;
     }
 
-    &.status-md{
+    &.status-md {
         height: calc($size - $spacing-0-25) !important;
         width: calc($size - $spacing-0-25) !important;
         border-width: 3px;
     }
 
-    &.status-sm{
+    &.status-sm {
         height: calc($size - $spacing-0-50) !important;
         width: calc($size - $spacing-0-50) !important;
         border-width: 2px;
     }
 }
 
-
-@mixin component-badge-status($size: $spacing-1-50){
-    &-online{
+@mixin component-badge-status($size: $spacing-1-50) {
+    &-online {
         @include theme-badge-status;
         @include component-badge-status-sizes($size);
     }
 
-    &-offline{
+    &-offline {
         @include theme-badge-status($bg-color: $global-inherit-color);
         border: $spacing-0-50 solid $action-disabled;
         @include component-badge-status-sizes($size);
     }
 
-    &-away{
-        @include theme-badge-status($bg-color: $warning-main,$size: $size);
-    
-        &::after{
+    &-away {
+        @include theme-badge-status($bg-color: $warning-main, $size: $size);
+
+        &::after {
             content: "";
             width: calc($size / 2 - 2px);
             height: calc($size / 2 - 2px);
@@ -80,16 +79,16 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-25%,-75%);
+            transform: translate(-25%, -75%);
         }
 
         @include component-badge-status-sizes($size);
     }
 
-    &-busy{
-        @include theme-badge-status($bg-color: $error-main,$size: $size);
-    
-        &::after{
+    &-busy {
+        @include theme-badge-status($bg-color: $error-main, $size: $size);
+
+        &::after {
             content: "";
             width: calc($size / 2 - 1px);
             height: calc($size / 2 - 1px);
@@ -98,7 +97,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-75%);
+            transform: translate(-50%, -75%);
         }
 
         @include component-badge-status-sizes($size);

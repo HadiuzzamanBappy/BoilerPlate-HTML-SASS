@@ -2,44 +2,44 @@
 @use "../base" as *;
 
 
-@mixin label-types($bg-color: $text-primary, $color: $global-inherit-color){
-        @include theme-label($bg-color: $bg-color);
+@mixin label-types($bg-color: $text-primary, $color: $global-inherit-color) {
+    @include theme-label($bg-color: $bg-color);
 
-    &-soft{
-        @include theme-label($bg-color: rgba($bg-color,12%), $color: darken($bg-color, 20%));
+    &-soft {
+        @include theme-label($bg-color: rgba($bg-color, 12%), $color: darken($bg-color, 20%));
     }
 
-    &-outlined{
-        @include theme-label($bg-color: transparent, $border: 2px solid $bg-color, $color: $bg-color);
+    &-outlined {
+        @include theme-label($bg-color: transparent, $border: 1px solid $bg-color, $color: $bg-color);
     }
 }
 
-@mixin component-label{
-    &-inherit{
+@mixin component-label {
+    &-inherit {
         @include label-types;
     }
 
-    &-primary{
+    &-primary {
         @include label-types($bg-color: $primary-main, $color: $primary-main);
     }
 
-    &-secondary{
+    &-secondary {
         @include label-types($bg-color: $secondary-main, $color: $secondary-main);
     }
 
-    &-info{
+    &-info {
         @include label-types($bg-color: $info-main, $color: $info-main);
     }
 
-    &-warning{
+    &-warning {
         @include label-types($bg-color: $warning-main, $color: $warning-main);
     }
 
-    &-error{
+    &-error {
         @include label-types($bg-color: $error-main, $color: $error-main);
     }
 
-    &-success{
+    &-success {
         @include label-types($bg-color: $success-main, $color: $success-main);
     }
 }

@@ -1,0 +1,48 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+@mixin tooltip {
+    &-top {
+        @include theme-tooltip;
+
+        &::after {
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: $spacing-0-50;
+        }
+    }
+
+    &-bottom {
+        @include theme-tooltip;
+
+        &::after {
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: $spacing-0-50;
+        }
+    }
+
+    &-left {
+        @include theme-tooltip;
+
+        &::after {
+            right: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-right: $spacing-0-50;
+        }
+    }
+
+    &-right {
+        @include theme-tooltip;
+
+        &::after {
+            left: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: $spacing-0-50;
+        }
+    }
+}

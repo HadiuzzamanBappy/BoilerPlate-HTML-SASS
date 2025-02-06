@@ -57,7 +57,6 @@
     @include toggle-button-active($success-8, $success-main);
 }
 
-
 @mixin toggle-button-group {
     @include display-flex;
     border: 1px solid $button-outline;

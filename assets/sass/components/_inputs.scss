@@ -2,46 +2,51 @@
 @use "../base" as *;
 
 // Input Field Default
-@mixin input-field-outline{
+@mixin component-input-field {
     @include theme-input-field;
-}
+    &-outline {
+        @include theme-input-field;
+    }
 
-// Input Field Soft
-@mixin input-field-soft{
-    @include theme-input-field;
+    // Input Field Soft
+    &-soft {
+        @include theme-input-field;
 
-    .input-main{
-        background-color: $grey-8;
-        border: none;
-        .input-label{
-            background: none;
+        .input-main {
+            background-color: $grey-8;
+            border: none;
+
+            .input-label {
+                background: none;
+            }
+        }
+
+        &.success .input-main {
+            background-color: $success-8;
+        }
+
+        &.error .input-main {
+            background-color: $error-8;
+        }
+
+        &.disabled .input-main {
+            background-color: $grey-8;
         }
     }
 
-    &.success .input-main{
-        background-color: $success-8;
-    }
+    // Input Field Standard
+    &-standard {
+        @include theme-input-field;
 
-    &.error .input-main{
-        background-color: $error-8;
-    }
+        .input-main {
+            border: none;
+            border-bottom: 1px solid $textfield-outline;
+            border-radius: 0;
+            background-color: $grey-8;
 
-    &.disabled .input-main{
-        background-color: $grey-8;
-    }
-}
-
-// Input Field Standard
-@mixin input-field-standard{
-    @include theme-input-field;
-
-    .input-main {
-        border: none ;
-        border-bottom: 1px solid $textfield-outline;
-        border-radius: 0;
-        background-color: $grey-8;
-        .input-label{
-            background: none;
+            .input-label {
+                background: none;
+            }
         }
     }
 }
