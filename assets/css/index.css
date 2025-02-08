@@ -2628,24 +2628,32 @@ select:active {
   font-size: 24px !important;
 }
 
-.icon-xs i {
-  font-size: 16px;
-  font-weight: 400 !important;
-  width: 16px;
+.icon-xsm {
+  padding: 12px !important;
+}
+.icon-xsm i {
+  font-size: 12px;
+  width: 12px;
+}
+.icon-sm {
+  padding: 16px !important;
 }
 .icon-sm i {
   font-size: 16px;
-  font-weight: 400 !important;
   width: 16px;
 }
+.icon-md {
+  padding: 20px !important;
+}
 .icon-md i {
-  font-size: 24px;
-  font-weight: 400 !important;
-  width: 24px;
+  font-size: 20px;
+  width: 20px;
+}
+.icon-lg {
+  padding: 24px !important;
 }
 .icon-lg i {
   font-size: 24px;
-  font-weight: 400 !important;
   width: 24px;
 }
 

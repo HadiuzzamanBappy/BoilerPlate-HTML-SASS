@@ -227,28 +227,28 @@
 //---------------------------------------------------------------
 //Icon Button
 //---------------------------------------------------------------
+
+@mixin icon-variant($padding: $spacing-2, $font-size: $spacing-2){
+  padding: $padding !important;
+  i{
+    font-size: $font-size;
+    width: $font-size;
+  }
+}
 @mixin component-icon {
-  &-xs i {
-    font-size: $spacing-2;
-    font-weight: $fw-regular !important;
-    width: $spacing-2;
+  &-xsm {
+    @include icon-variant($spacing-1-50, $spacing-1-50);
   }
 
-  &-sm i {
-    font-size: $spacing-2;
-    font-weight: $fw-regular !important;
-    width: $spacing-2;
+  &-sm{
+    @include icon-variant($spacing-2, $spacing-2);
   }
 
-  &-md i {
-    font-size: $spacing-3;
-    font-weight: $fw-regular !important;
-    width: $spacing-3;
+  &-md{
+    @include icon-variant($spacing-2-50, $spacing-2-50);
   }
 
-  &-lg i {
-    font-size: $spacing-3;
-    font-weight: $fw-regular !important;
-    width: $spacing-3;
+  &-lg{
+    @include icon-variant($spacing-3, $spacing-3);
   }
 }
