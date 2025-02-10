@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<!-- header part -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>HTML Boilerplate</title>
+</head>
+
+<body>
     <header>
         <h1>HTML5 Elements Coverage</h1>
         <nav>
@@ -10,18 +17,17 @@
                 <li><a href="#section1">Section 1</a></li>
                 <li><a href="#section2">Section 2</a></li>
                 <li><a href="#section3">Section 3</a></li>
+                <li><a href="#section4">Section 4</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- main part -->
     <main>
         <section id="section1">
             <h2>Section 1: Text Content</h2>
             <article>
                 <h3>Article Heading</h3>
-                <p>This is a paragraph demonstrating <strong>bold text</strong>, <em>italic text</em>, and
-                    <mark>highlighted text</mark>. Here's a <a href="#">link</a>.</p>
+                <p>This is a paragraph demonstrating <strong>bold text</strong>, <em>italic text</em>, and <mark>highlighted text</mark>. Here's a <a href="#">link</a>.</p>
                 <blockquote cite="https://example.com">This is a blockquote with a citation.</blockquote>
                 <pre><code>Code block example</code></pre>
                 <ul>
@@ -53,6 +59,7 @@
                 <source src="video.mp4" type="video/mp4">
                 Your browser does not support the video element.
             </video>
+            <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
         </section>
 
         <section id="section3">
@@ -94,13 +101,72 @@
                     <option value="option2">Option 2</option>
                 </select>
 
+                <label for="datalistInput">Datalist Input:</label>
+                <input list="browsers" id="datalistInput" name="datalistInput">
+                <datalist id="browsers">
+                    <option value="Chrome">
+                    <option value="Firefox">
+                    <option value="Safari">
+                </datalist>
+
+                <label for="outputExample">Output Example:</label>
+                <output id="outputExample" for="a b"></output>
+                <input type="number" id="a" name="a" oninput="outputExample.value = parseInt(a.value) + parseInt(b.value)">
+                <input type="number" id="b" name="b" oninput="outputExample.value = parseInt(a.value) + parseInt(b.value)">
+
                 <button type="submit">Submit</button>
                 <button type="reset">Reset</button>
             </form>
         </section>
+
+        <section id="section4">
+            <h2>Section 4: Other Elements</h2>
+            <details>
+                <summary>More Info</summary>
+                <p>This is additional information.</p>
+            </details>
+
+            <dialog open>
+                <p>This is a dialog element.</p>
+                <button>Close</button>
+            </dialog>
+
+            <progress value="70" max="100">70%</progress>
+            <meter value="0.7" min="0" max="1">70%</meter>
+
+            <canvas id="canvasExample" width="400" height="200">Your browser does not support the canvas element.</canvas>
+            <script>
+                const canvas = document.getElementById('canvasExample');
+                if (canvas.getContext) {
+                    const ctx = canvas.getContext('2d');
+                    ctx.fillStyle = 'blue';
+                    ctx.fillRect(50, 50, 200, 100);
+                }
+            </script>
+
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+            </svg>
+
+            <math>
+                <mrow>
+                    <msup>
+                        <mi>x</mi>
+                        <mn>2</mn>
+                    </msup>
+                    <mo>+</mo>
+                    <mi>y</mi>
+                </mrow>
+            </math>
+
+            <iframe src="https://example.com" title="Example"></iframe>
+            <embed src="example.swf" type="application/x-shockwave-flash">
+            <object data="example.pdf" type="application/pdf">
+                <param name="quality" value="high">
+            </object>
+        </section>
     </main>
 
-    <!-- footer part -->
     <aside>
         <h2>Aside Content</h2>
         <p>This is some additional content in an aside element.</p>
@@ -112,33 +178,6 @@
             Contact us at <a href="mailto:info@example.com">info@example.com</a>
         </address>
     </footer>
-
-    <dialog open>
-        <p>This is a dialog element.</p>
-        <button>Close</button>
-    </dialog>
-
-    <details>
-        <summary>More Info</summary>
-        <p>This is additional information.</p>
-    </details>
-
-    <progress value="70" max="100">70%</progress>
-    <meter value="0.7" min="0" max="1">70%</meter>
-
-    <canvas id="canvasExample" width="400" height="200">Your browser does not support the canvas element.</canvas>
-
-    <script>
-        const canvas = document.getElementById('canvasExample');
-        if (canvas.getContext) {
-            const ctx = canvas.getContext('2d');
-            ctx.fillStyle = 'blue';
-            ctx.fillRect(50, 50, 200, 100);
-        }
-    </script>, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
 </body>
+
 </html>

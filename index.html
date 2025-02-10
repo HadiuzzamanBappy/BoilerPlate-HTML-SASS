@@ -1,31 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>HTML Boilerplate</title>
-    <meta name="description" content="">
+
+    <script type="module">
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
     <meta name="author" content="">
-    <!-- icon font CSS here -->
-    <link rel="icon" href="./assets/media/icon/sass.svg" type="image/x-icon">
+    <meta name="description" content="">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#079975" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#07ac75" media="(prefers-color-scheme: light)">
+
+    <!-- Social media metadata (Twitter / Facebook) -->
+    <meta property="og:title" content="Unique page title - My Site">
+    <meta property="og:description" content="Page description">
+    <meta property="og:image" content="https://www.mywebsite.com/image.jpg">
+    <meta property="og:image:alt" content="Image description">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mywebsite.com/page">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:dnt" content="on">
+
+    <!-- Page Icon -->
+    <link rel="icon" type="image/png" href="/assets/media/icon/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/media/icon/favicon/favicon.svg" />
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/media/icon/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/media/icon/fabicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Boiler Plate" />
+    <link rel="manifest" href="/assets/media/icon/fabicon/site.webmanifest" />
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/layout.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/print.css" media="print">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
     <!-- Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"
-        charset="utf-8"></script>
 </head>
 
 <body>
     <div class="component-library">
 
-        <div class="component-section" style="display: flex;">
+        <div class="component-section" style="display: none;">
             <!-- Button Section -->
             <section class="component-block buttons-components">
                 <h2 class="section-heading">Buttons</h2>
@@ -75,7 +106,8 @@
                     </div>
                     <hr>
                     <div class="component-row">
-                        <button class="btn-primary btn-sm icon-sm"><i class="fa-regular fa-chess-king"></i>Small</button>
+                        <button class="btn-primary btn-sm icon-sm"><i
+                                class="fa-regular fa-chess-king"></i>Small</button>
                         <button class="btn-primary btn-md">Medium<i class="fa-regular fa-chess-king"></i></button>
                         <button class="btn-primary btn-lg"><i class="fa-regular fa-chess-king"></i>Large<i
                                 class="fa-regular fa-chess-king"></i></button>
@@ -96,38 +128,24 @@
                         <button class="btn-success icon-md"><i class="fa-regular fa-chess-king"></i></button>
                     </div>
                     <div class="component-row">
-                        <button class="btn btn-soft icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn btn-inherit-soft icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn btn-primary-soft icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn btn-secondary-soft icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
+                        <button class="btn btn-soft icon-md"><i class="fa-regular fa-chess-king"></i></button>
+                        <button class="btn btn-inherit-soft icon-md"><i class="fa-regular fa-chess-king"></i></button>
+                        <button class="btn btn-primary-soft icon-md"><i class="fa-regular fa-chess-king"></i></button>
+                        <button class="btn btn-secondary-soft icon-md"><i class="fa-regular fa-chess-king"></i></button>
                         <button class="btn btn-info-soft icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn btn-warning-soft icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
+                        <button class="btn btn-warning-soft icon-md"><i class="fa-regular fa-chess-king"></i></button>
                         <button class="btn btn-error-soft icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn btn-success-soft icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
+                        <button class="btn btn-success-soft icon-md"><i class="fa-regular fa-chess-king"></i></button>
                     </div>
                     <div class="component-row">
-                        <button class="btn-outlined icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-inherit-outlined icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-primary-outlined icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-secondary-outlined icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-info-outlined icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-warning-outlined icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-error-outlined icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-success-outlined icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
+                        <button class="btn-outlined icon-md"><i class="fa-regular fa-chess-king"></i></button>
+                        <button class="btn-inherit-outlined icon-md"><i class="fa-regular fa-chess-king"></i></button>
+                        <button class="btn-primary-outlined icon-md"><i class="fa-regular fa-chess-king"></i></button>
+                        <button class="btn-secondary-outlined icon-md"><i class="fa-regular fa-chess-king"></i></button>
+                        <button class="btn-info-outlined icon-md"><i class="fa-regular fa-chess-king"></i></button>
+                        <button class="btn-warning-outlined icon-md"><i class="fa-regular fa-chess-king"></i></button>
+                        <button class="btn-error-outlined icon-md"><i class="fa-regular fa-chess-king"></i></button>
+                        <button class="btn-success-outlined icon-md"><i class="fa-regular fa-chess-king"></i></button>
                     </div>
                     <hr>
                     <div class="component-row">
@@ -2048,23 +2066,23 @@
             <!-- Tooltip -->
             <section class="component-block rating-component">
                 <h2 class="section-heading">Tooltip</h2>
-    
+
                 <div class="component-row">
                     <!-- Tooltip with Top Arrow -->
                     <span class="tooltip-top" data-tooltip="Tooltip text">
                         <button class="btn btn-primary-soft">Hover Top</button>
                     </span>
-    
+
                     <!-- Tooltip with Top Arrow -->
                     <span class="tooltip-bottom" data-tooltip="Tooltip text">
                         <button class="btn btn-primary-soft">Hover Bottom</button>
                     </span>
-    
+
                     <!-- Tooltip with Top Arrow -->
                     <span class="tooltip-right" data-tooltip="Tooltip text">
                         <button class="btn btn-primary-soft">Hover Right</button>
                     </span>
-    
+
                     <!-- Tooltip with Top Arrow -->
                     <span class="tooltip-left" data-tooltip="Tooltip text">
                         <button class="btn btn-primary-soft">Hover Left</button>

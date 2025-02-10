@@ -1,0 +1,67 @@
+@use "../abstracts" as *;
+
+// Mixin to generate column classes
+@mixin generate-columns($col, $gutter-width) {
+  @for $i from 1 through $col {
+    .col-#{$i} {
+      flex: 0 0 calc((100% / #{$col}) * #{$i});
+      max-width: calc((100% / #{$col}) * #{$i});
+      padding: 0 #{$gutter-width};
+    }
+  }
+
+  .col {
+    &-1-3 {
+      flex: 0 0 calc(100% / #{$columns} * 4);
+      max-width: calc(100% / #{$columns} * 4);
+    }
+
+    &-2-3 {
+      flex: 0 0 calc(100% / #{$columns} * 8);
+      max-width: calc(100% / #{$columns} * 8);
+    }
+
+    &-1-2 {
+      flex: 0 0 calc(100% / #{$columns} * 6);
+      max-width: calc(100% / #{$columns} * 6);
+    }
+  }
+
+  @for $i from 1 through $col {
+    .col-off-#{$i} {
+      margin-left: calc(100% / #{$columns} * #{$i});
+    }
+  }
+}
+
+// Define the maximum number of columns
+$columns: 12;
+
+// Define the gutter width
+$gutter-width: 2%;
+
+// Base styles for container and row
+.container,
+.row {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; // Assuming $max-container-width is 1200px
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -#{$gutter-width};
+}
+
+.column,
+.columns {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 #{$gutter-width};
+}
+
+// Generate column classes
+@include generate-columns($columns, $gutter-width);

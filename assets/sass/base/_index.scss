@@ -1,5 +1,7 @@
-@forward 'reset'; // Forward reset styles
-@forward 'typography'; // Forward typography styles
-@forward 'mixins/index'; // Forward all mixins from the mixins folder
-@forward 'functions'; // Forward utility functions
-@forward 'base'; // Forward global base styles
+@forward 'reset';
+@forward 'typography';
+@forward 'mixins/index';
+@forward 'functions';
+@forward 'base';
+@forward 'containers';
+@forward 'print';
