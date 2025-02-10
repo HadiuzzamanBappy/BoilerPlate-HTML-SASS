@@ -2,35 +2,38 @@
 <html lang="en" class="no-js">
 
 <head>
+    <!-- Device Attributes -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>HTML Boilerplate</title>
 
+    <!-- Javascript Compatibility -->
     <script type="module">
         document.documentElement.classList.remove('no-js');
         document.documentElement.classList.add('js');
     </script>
 
-    <meta name="author" content="">
-    <meta name="description" content="">
+    <!-- General info -->
+    <meta name="author" content="Hadiuzzaman Bappy">
+    <meta name="description" content="A sample website with proper sass layout and design guide.">
 
     <!-- Theme Color -->
     <meta name="theme-color" content="#079975" media="(prefers-color-scheme: dark)">
     <meta name="theme-color" content="#07ac75" media="(prefers-color-scheme: light)">
 
     <!-- Social media metadata (Twitter / Facebook) -->
-    <meta property="og:title" content="Unique page title - My Site">
-    <meta property="og:description" content="Page description">
-    <meta property="og:image" content="https://www.mywebsite.com/image.jpg">
-    <meta property="og:image:alt" content="Image description">
-    <meta property="og:locale" content="en_GB">
+    <meta property="og:title" content="Boilerplate">
+    <meta property="og:description" content="A sample website with proper sass layout and design guide.">
+    <meta property="og:image" content="/assets/media/icon/favicon/web-app-manifest-192x192.png">
+    <meta property="og:image:alt" content="A sample website with proper sass layout and design guide.">
+    <meta property="og:locale" content="en_BN">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.mywebsite.com/page">
+    <meta property="og:url" content="https://hadiuzzamanbappy.gihub.io/">
 
     <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="A sample website with proper sass layout and design guide.">
     <meta name="twitter:dnt" content="on">
 
     <!-- Page Icon -->
@@ -42,15 +45,19 @@
     <link rel="manifest" href="/assets/media/icon/fabicon/site.webmanifest" />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/layout.css">
-    <link rel="stylesheet" href="./assets/css/print.css" media="print">
-    <link rel="stylesheet" href="./assets/css/main.css">
-
-    <!-- Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+    <!-- FontAwesome: Icons and symbols library -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/fontawesome.min.css">
+    <!-- AOS (Animate On Scroll): Adds animations on page scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css">
+    <!-- DataTables: Styles for interactive tables -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datatables@1.10.18/media/css/jquery.dataTables.min.css">
+    <!-- Select2: Styles for customizable dropdowns with search and tags -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+    <!-- SweetAlert2: Styles for stylish alert pop-ups -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.16.0/dist/sweetalert2.min.css">
+    
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
 <body>
@@ -2099,7 +2106,33 @@
             </div>
         </section> -->
     </div>
-    <!-- script files -->
+
+    <!-- Script -->
+    <!-- FontAwesome: Icons and symbols library -->
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
+    <!-- jQuery: Popular JavaScript library for DOM manipulation and AJAX -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <!-- Lodash: Utility library for working with arrays, objects, and functions -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <!-- Axios: Promise-based HTTP client for API requests -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <!-- Chart.js: Library for creating interactive charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <!-- GSAP: JavaScript animation library for smooth animations -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    <!-- Moment.js: Library for handling and formatting dates -->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
+    <!-- AOS (Animate On Scroll): Adds animations on page scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+    <!-- Three.js: 3D graphics library for WebGL rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
+    <!-- DataTables: jQuery plugin for creating interactive tables -->
+    <script src="https://cdn.jsdelivr.net/npm/datatables@1.10.18/media/js/jquery.dataTables.min.js"></script>
+    <!-- Select2: Customizable dropdowns with search and tags -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- SweetAlert2: Stylish alert pop-ups for notifications -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.16.0/dist/sweetalert2.all.min.js"></script>
+
     <script src="./assets/js/script.js"></script>
 </body>
 

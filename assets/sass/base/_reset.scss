@@ -1,5 +1,10 @@
 @use '../abstracts' as *;
 
+/* 
+Document 
+========================================================================== 
+*/
+
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -12,6 +17,11 @@ html {
 *::after {
     box-sizing: inherit;
 }
+
+/* 
+Sections 
+========================================================================== 
+*/
 
 body {
     margin: 0;
@@ -27,12 +37,22 @@ main {
     display: block;
 }
 
+/* 
+Grouping Content 
+========================================================================== 
+*/
+
 hr {
     box-sizing: content-box;
     height: 0;
     overflow: visible;
     display: block;
 }
+
+/* 
+Text-level semantics 
+========================================================================== 
+*/
 
 a {
     background-color: transparent;
@@ -41,6 +61,7 @@ a {
     -o-transition: $transition-all;
     transition: $transition-all;
 }
+
 span {
     display: inline-block;
 }
@@ -88,6 +109,31 @@ sup {
     top: -0.5em;
 }
 
+/* 
+Embedded Content 
+========================================================================== 
+*/
+
+img {
+    border-style: none;
+}
+
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background: $grey-200;
+    text-shadow: none;
+}
+
+/* 
+Forms 
+========================================================================== 
+*/
+
 button,
 input,
 optgroup,
@@ -114,6 +160,7 @@ button,
 [type="reset"],
 [type="submit"] {
     appearance: button;
+    -webkit-appearance: button;
 }
 
 button::-moz-focus-inner,
@@ -128,7 +175,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText;
+    outline: 1px dotted $button-outline;
 }
 
 fieldset {
@@ -144,6 +191,11 @@ legend {
     max-width: 100%;
     padding: 0;
     white-space: normal;
+    margin-bottom: 1em;
+}
+
+label {
+    display: block;
 }
 
 audio,
@@ -179,6 +231,7 @@ textarea {
 
 [type="search"] {
     appearance: textfield;
+    -webkit-appearance: textfield;
     outline-offset: -2px;
 }
 
@@ -191,6 +244,11 @@ textarea {
     font: inherit;
 }
 
+/* 
+Interactive 
+========================================================================== 
+*/
+
 details {
     display: block;
 }
@@ -199,6 +257,12 @@ summary {
     display: list-item;
 }
 
+
+/* 
+Misc
+========================================================================== 
+*/
+
 template {
     display: none;
 }
@@ -206,13 +270,3 @@ template {
 [hidden] {
     display: none;
 }
-
-figure,
-figcaption {
-    margin: 0;
-    padding: 0;
-}
-::selection {
-    background: $grey-200;
-    text-shadow: none;
-  }

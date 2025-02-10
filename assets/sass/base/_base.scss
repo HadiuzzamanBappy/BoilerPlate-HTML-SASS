@@ -1,24 +1,45 @@
 @use '../abstracts' as *;
 
-legend {
-    margin-bottom: 1em;
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+  font-size: var($body-text-rg);
+  scroll-behavior: smooth;
 }
 
-label {
-    display: block;
+body {
+  font-size: 1.6rem;
+  /* changed from 15px in orig skeleton */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var($text-primary);
+  background-color: var($bg-paper);
+  ;
 }
 
-input,
-select,
-textarea {
-    padding: $spacing-1;
-    color: $white-main;
-    border: .1rem solid $textfield-outline;
-    width: 100%;
-}
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
 input[type="button"],
 input[type="submit"],
-input[type="reset"]{
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
   display: inline-block;
   clear: both;
   width: auto;
@@ -30,18 +51,38 @@ input[type="reset"]{
   color: $global-default-color;
   background-color: $global-default-bg;
   transition: $transition-all;
+  border-radius: 50%;
+  border: 1px solid $button-outline;
+  cursor: pointer;
+  box-sizing: border-box;
+
   &:hover,
   &:active,
   &:focus {
     background-color: lighten($global-default-bg, 5%);
+    outline: 0;
   }
 }
 
-label.hidden {
-    margin-left: -10000em;
-    width: 0;
-    float: none;
-  }
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+select,
+textarea {
+  padding: $spacing-1;
+  color: $white-main;
+  border: 1px solid $textfield-outline;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: none;
+  box-sizing: border-box;
+}
 
 input:hover,
 input:focus,
@@ -53,4 +94,43 @@ select:hover,
 select:focus,
 select:active {
   border-color: $action-hover;
+}
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: circle inside;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+ol,
+ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+th,
+td {
+  padding: $spacing-1-50 $spacing-2;
+  text-align: left;
+  border-bottom: 1px solid $paper-outline;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
 }
