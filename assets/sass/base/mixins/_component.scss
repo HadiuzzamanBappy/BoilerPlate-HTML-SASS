@@ -472,7 +472,7 @@
     $hover-border-color: $text-primary,
     $focus-border-color: $text-primary,
     $main-padding: $spacing-1-50 $spacing-0-50,
-    $icon-color: $action-active,
+    $icon-color: $text-secondary,
     $icon-size: $body-text-rg,
     $font-color: $text-primary,
     $font-size: $body-text-rg,
@@ -703,7 +703,7 @@
     $border-color: transparent,
     $border-radius: $radius-999,
     $icon-size: $spacing-3,
-    $padding: $spacing-1,
+    $padding: $spacing-1 $spacing-2,
 ) {
     display: flex;
     align-items: center;
@@ -715,18 +715,16 @@
     border-radius: $border-radius;
     font-family: Poppins;
     flex-grow: 1;
+    gap: $spacing-2;
 
     .alert-icon {
         font-size: $icon-size;
-        padding: $spacing-0-50;
 
         &.left {
-            margin-right: 0.5rem;
             color: $icon-color;
         }
 
         &.right {
-            margin-left: 0.5rem;
             transition: opacity 0.3s ease;
             cursor: pointer;
 
@@ -743,8 +741,8 @@
 }
 
 // Dialogue Component
-@mixin theme-dialog-title-action($bg-color: $bg-paper,
-    $padding: $spacing-3,
+@mixin theme-dialog-head-action($bg-color: $bg-paper,
+    $padding: $spacing-2 $spacing-3,
     $gap: $spacing-2) {
     display: flex;
     align-items: center;
@@ -761,9 +759,9 @@
     $on-action: $primary-main,
     $icon-size: $spacing-3) {
     display: flex;
-    gap: $spacing-1-50;
+    gap: $spacing-2;
     align-items: center;
-    padding: $spacing-1 $spacing-1-50;
+    padding: $spacing-1 $spacing-2;
     background-color: $main-bg;
     border-radius: $radius-999;
     color: $on-main;
@@ -771,7 +769,6 @@
 
     .snack-icon {
         font-size: $icon-size;
-        padding: $spacing-1;
         color: $on-action;
 
         &.left {
@@ -797,9 +794,10 @@
 
     .snack-text {
         flex-grow: 1;
+        font-size: $body-text-rg;
     }
 
-    .snack-action{
+    .snack-action {
         display: flex;
         gap: $spacing-1;
     }
@@ -818,6 +816,7 @@
     height: $size;
     display: flex;
     align-items: center;
+    cursor: default;
 
     .badge-text,
     p,
@@ -895,6 +894,7 @@
     >* {
         position: relative;
         z-index: 1;
+        font-size: $sub-h1;
     }
 }
 
@@ -931,7 +931,7 @@
 @mixin theme-label($bg-color: $text-primary,
     $color: $global-inherit-color,
     $border: 2px solid transparent,
-    $icon-size: $spacing-2) {
+    $icon-size: $spacing-1-50) {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -942,16 +942,20 @@
     border-radius: $radius-999;
     transition: opacity 0.3s ease-in-out;
 
-    .icon i {
+    .label-icon{
         width: $icon-size;
         height: $icon-size;
         color: $color;
         display: flex;
         justify-content: center;
         align-items: center;
+        &>*{
+            height: 100%;
+            height: 100%;
+        }
     }
 
-    .text {
+    .label-text {
         color: $color;
         font-size: $caption;
         font-weight: $fw-medium;
@@ -961,28 +965,28 @@
 
 // Tooltip
 @mixin theme-tooltip($bg-color: $grey-800,
-$color: $white-main) {
+    $color: $white-main) {
     position: relative;
     display: inline-block;
-  
+
     &::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      background-color: $bg-color;
-      color: $color;
-      font-size: $body-text-sm;
-      padding: $spacing-0-50 $spacing-1;
-      border-radius: $radius-1;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-      white-space: nowrap;
-      z-index: 9;
-      cursor: pointer;
+        content: attr(data-tooltip);
+        position: absolute;
+        background-color: $bg-color;
+        color: $color;
+        font-size: $body-text-sm;
+        padding: $spacing-0-50 $spacing-1;
+        border-radius: $radius-1;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        white-space: nowrap;
+        z-index: 9;
+        cursor: pointer;
     }
-  
+
     &:hover::after {
-      opacity: 1;
-      visibility: visible;
+        opacity: 1;
+        visibility: visible;
     }
-  }
+}

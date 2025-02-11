@@ -56,14 +56,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
     <!-- SweetAlert2: Styles for stylish alert pop-ups -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.16.0/dist/sweetalert2.min.css">
-    
+
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
 <body>
     <div class="component-library">
 
-        <div class="component-section" style="display: none;">
+        <div class="component-section" style="display: flex;">
             <!-- Button Section -->
             <section class="component-block buttons-components">
                 <h2 class="section-heading">Buttons</h2>
@@ -113,12 +113,22 @@
                     </div>
                     <hr>
                     <div class="component-row">
-                        <button class="btn-primary btn-sm icon-sm"><i
-                                class="fa-regular fa-chess-king"></i>Small</button>
-                        <button class="btn-primary btn-md">Medium<i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-primary btn-lg"><i class="fa-regular fa-chess-king"></i>Large<i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn" disabled>Disabled</button>
+                        <button class="btn-primary btn-sm">
+                            <i class="fa-regular fa-chess-king"></i>
+                            Small
+                        </button>
+                        <button class="btn-primary btn-md">
+                            Medium
+                            <i class="fa-regular fa-chess-king"></i>
+                        </button>
+                        <button class="btn-primary btn-lg">
+                            <i class="fa-regular fa-chess-king"></i>
+                            Large
+                            <i class="fa-regular fa-chess-king"></i>
+                        </button>
+                        <button class="btn" disabled>
+                            Disabled
+                        </button>
                     </div>
 
                     <hr>
@@ -1582,13 +1592,14 @@
 
                 <div class="component-row">
                     <div class="dialog">
-                        <div class="dialog-title">
+                        <div class="dialog-head divider">
                             <span class="icon icon-left">
                                 <i class="fa-regular fa-square-check"></i>
                             </span>
-                            <span class="title">
-                                Dialog Title
-                            </span>
+                            <div class="info">
+                                <h6 class="title">Dialog Title</h6>
+                                <p class="description">Description</p>
+                            </div>
                             <span class="icon icon-right">
                                 <i class="fa-solid fa-xmark"></i>
                             </span>
@@ -1979,73 +1990,73 @@
 
                 <div class="component-row">
                     <div class="label-inherit">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-primary">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-secondary">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-warning">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-info">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-error">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-success">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                 </div>
 
                 <div class="component-row">
                     <div class="label-inherit-outlined">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-primary-outlined">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-secondary-outlined">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-warning-outlined">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-info-outlined">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-error-outlined">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-success-outlined">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                 </div>
 
                 <div class="component-row">
                     <div class="label-inherit-soft">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-primary-soft">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-secondary-soft">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-warning-soft">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-info-soft">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-error-soft">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                     <div class="label-success-soft">
-                        <span class="text">Label</span>
+                        <span class="label-text">Label</span>
                     </div>
                 </div>
 
@@ -2053,19 +2064,27 @@
 
                 <div class="component-row">
                     <div class="label-inherit">
-                        <span class="icon"><i class="fa-solid fa-chevron-left"></i></span>
-                        <span class="text">Label</span>
+                        <span class="label-icon">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </span>
+                        <span class="label-text">Label</span>
                     </div>
 
                     <div class="label-inherit">
-                        <span class="text">Label</span>
-                        <span class="icon"><i class="fa-solid fa-chevron-right"></i></span>
+                        <span class="label-text">Label</span>
+                        <span class="label-icon">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </span>
                     </div>
 
                     <div class="label-inherit">
-                        <span class="icon"><i class="fa-solid fa-chevron-left"></i></span>
-                        <span class="text">Label</span>
-                        <span class="icon"><i class="fa-solid fa-chevron-right"></i></span>
+                        <span class="label-icon">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </span>
+                        <span class="label-text">Label</span>
+                        <span class="label-icon">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </span>
                     </div>
                 </div>
             </section>
@@ -2100,9 +2119,8 @@
 
         <!-- <section class="component-block rating-component">
             <h2 class="section-heading">Rating</h2>
-    
-            <div class="component-row">
 
+            <div class="component-row">
             </div>
         </section> -->
     </div>

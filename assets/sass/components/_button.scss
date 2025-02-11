@@ -210,17 +210,17 @@
 @mixin component-button-sizes {
   &-sm {
     padding: $spacing-1 $spacing-2 !important;
-    font-size: $spacing-2 !important;
+    font-size: $spacing-1-75 !important;
   }
 
   &-md {
     padding: $spacing-1-50 $spacing-2-50 !important;
-    font-size: $spacing-3 !important;
+    font-size: $spacing-2 !important;
   }
 
   &-lg {
     padding: $spacing-2 $spacing-3 !important;
-    font-size: $spacing-3 !important;
+    font-size: $spacing-2-25 !important;
   }
 }
 
@@ -230,14 +230,14 @@
 
 @mixin icon-variant($padding: $spacing-2, $font-size: $spacing-2){
   padding: $padding !important;
-  i{
+  i,svg{
     font-size: $font-size;
     width: $font-size;
   }
 }
 @mixin component-icon {
   &-xsm {
-    @include icon-variant($spacing-1-50, $spacing-1-50);
+    @include icon-variant($spacing-1-75, $spacing-1-50);
   }
 
   &-sm{
@@ -245,10 +245,10 @@
   }
 
   &-md{
-    @include icon-variant($spacing-2-50, $spacing-2-50);
+    @include icon-variant($spacing-2-25, $spacing-2-50);
   }
 
   &-lg{
-    @include icon-variant($spacing-3, $spacing-3);
+    @include icon-variant($spacing-2-50, $spacing-3);
   }
 }

@@ -51,7 +51,7 @@ input[type="reset"] {
   color: $global-default-color;
   background-color: $global-default-bg;
   transition: $transition-all;
-  border-radius: 50%;
+  border-radius: $radius-999;
   border: 1px solid $button-outline;
   cursor: pointer;
   box-sizing: border-box;
@@ -79,7 +79,6 @@ textarea {
   color: $white-main;
   border: 1px solid $textfield-outline;
   width: 100%;
-  border-radius: 50%;
   box-shadow: none;
   box-sizing: border-box;
 }

@@ -29,32 +29,38 @@
     }
 }
 
-@mixin toggle-button-active-inherit {
-    @include toggle-button-active();
-}
+@mixin toggle-button {
+    @include toggle-button-default;
 
-@mixin toggle-button-active-primary {
-    @include toggle-button-active($primary-8, $primary-main);
-}
+    &.active {
+        &-inherit {
+            @include toggle-button-active();
+        }
 
-@mixin toggle-button-active-secondary {
-    @include toggle-button-active($secondary-8, $secondary-main);
-}
+        &-primary {
+            @include toggle-button-active($primary-8, $primary-main);
+        }
 
-@mixin toggle-button-active-info {
-    @include toggle-button-active($info-8, $info-main);
-}
+        &-secondary {
+            @include toggle-button-active($secondary-8, $secondary-main);
+        }
 
-@mixin toggle-button-active-warning {
-    @include toggle-button-active($warning-8, $warning-main);
-}
+        &-info {
+            @include toggle-button-active($info-8, $info-main);
+        }
 
-@mixin toggle-button-active-error {
-    @include toggle-button-active($error-8, $error-main);
-}
+        &-warning {
+            @include toggle-button-active($warning-8, $warning-main);
+        }
 
-@mixin toggle-button-active-success {
-    @include toggle-button-active($success-8, $success-main);
+        &-error {
+            @include toggle-button-active($error-8, $error-main);
+        }
+
+        &-success {
+            @include toggle-button-active($success-8, $success-main);
+        }
+    }
 }
 
 @mixin toggle-button-group {
