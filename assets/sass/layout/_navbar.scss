@@ -14,7 +14,7 @@
         top: 0;
         bottom: 0;
         overflow: auto;
-        background-color: $primary-dark;
+        background-color: $text-primary;
 
         header {
             min-height: 84px;
@@ -23,13 +23,7 @@
             display: -webkit-flex;
             display: -ms-flexbox;
             display: flex;
-            -webkit-box-pack: center;
-            -webkit-justify-content: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -webkit-align-items: center;
-            -ms-flex-align: center;
+            justify-content: start;
             align-items: center;
 
             .brand-logo {
@@ -50,7 +44,7 @@
                 &:focus,
                 &:active,
                 &:hover {
-                    *{
+                    * {
                         color: $primary-light;
                         text-decoration: none;
                         transition: $transition-all;
@@ -82,67 +76,82 @@
             -ms-flex-direction: column;
             flex-direction: column;
 
+            li {
+                list-style-type: none;
+                margin: 0;
+                transition: $transition-all;
+            }
+
             .dashboard-nav-title {
                 cursor: default;
                 font-size: $caption;
                 text-transform: uppercase;
                 color: $text-secondary;
                 font-weight: 600;
-                padding: $spacing-1 $spacing-3;
+                padding: $spacing-1-25 $spacing-3;
+                list-style-type: none;
                 -webkit-transition: all 0.3s ease-in-out;
                 transition: all 0.3s ease-in-out;
+                margin: 0;
             }
 
             .dashboard-nav-item {
-                padding: $spacing-1-25 $spacing-2;
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: -ms-flexbox;
-                display: flex;
-                gap: $spacing-1;
-                -webkit-box-align: center;
-                -webkit-align-items: center;
-                -ms-flex-align: center;
-                align-items: center;
-                letter-spacing: 0.02em;
-                white-space: nowrap;
-                -webkit-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
-                line-height: 1;
-                font-weight: 400;                
-                color: $primary-contrast-text;
-                font-size: $body-text-sm;
                 border-left: 3px solid transparent;
-                opacity: 0.6;
+                opacity: 0.5;
+                transition: $transition-all;
 
-                i,
-                svg {
-                    width: 24px;
-                    font-size: 16px;
-                    color: $text-disabled;
+                a {
+                    padding: $spacing-1-50 $spacing-2;
+                    color: $primary-contrast-text;
+                    display: flex;
+                    align-items: center;
+                    gap: $spacing-2;
+                    letter-spacing: 0.02em;
+                    font-family: 'Roboto';
+                    font-weight: light;
+                    white-space: nowrap;
+                    line-height: 1;
+                    font-size: $body-text-sm;
+
+                    i,
+                    svg {
+                        width: 16px;
+                        font-size: 16px;
+                        color: $text-disabled;
+                        transition: $transition-all;
+                    }
+                    .right{
+                        margin-left: auto;
+                    }
                 }
 
-                &:hover {
-                    background: rgba(255, 255, 255, 0.04);
-                }
-
-                &.active {
-                    background: rgba(0, 0, 0, 0.1);
-                    color: $global-inherit-color;
+                &:hover:not(.active) {
                     opacity: 1 !important;
+                    transition: $transition-all;
+
+                    * {
+                        color: $global-inherit-color;
+                        transition: $transition-all;
+                    }
+                }
+
+                &.active{
+                    opacity: 1 !important;
+                    border-left: 3px solid $primary-main;
+
+                    a {
+                        i,
+                        svg {
+                            color: $primary-main !important;
+                        }
+                    }
                 }
             }
 
             .dashboard-nav-dropdown {
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: -ms-flexbox;
                 display: flex;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -webkit-flex-direction: column;
-                -ms-flex-direction: column;
                 flex-direction: column;
+                transition: $transition-all;
 
                 .dashboard-nav-dropdown-toggle:after {
                     content: "";
@@ -152,66 +161,53 @@
                     height: 0;
                     border-left: 5px solid transparent;
                     border-right: 5px solid transparent;
-                    border-top: 5px solid $primary-main;
+                    border-top: 5px solid $text-secondary;
+                    border-radius: 50%;
                     -webkit-transform: rotate(90deg);
                     -o-transform: rotate(90deg);
                     transform: rotate(90deg);
+                    transition: $transition-all;
                 }
 
                 .dashboard-nav-dropdown-menu {
                     display: none;
-                    -webkit-box-orient: vertical;
-                    -webkit-box-direction: normal;
-                    -webkit-flex-direction: column;
-                    -ms-flex-direction: column;
                     flex-direction: column;
-                    padding: $spacing-1 0;;
-                    padding-left:$spacing-2;
+                    padding-left: $spacing-2;
+                    transition: $transition-all;
 
-                    .dashboard-nav-dropdown-item {
-                        padding: $spacing-1 $spacing-2;
-                        padding-left: $spacing-4;
-                        display: -webkit-box;
-                        display: -webkit-flex;
-                        display: -ms-flexbox;
-                        display: flex;
-                        gap: 12px;
-                        -webkit-box-align: center;
-                        -webkit-align-items: center;
-                        -ms-flex-align: center;
-                        align-items: center;
-                        letter-spacing: 0.02em;
-                        white-space: nowrap;
-                        -webkit-transition: all 0.3s ease-in-out;
-                        transition: all 0.3s ease-in-out;
-                        line-height: 1;
-                        font-weight: 400;                
-                        color: $primary-contrast-text;
-                        font-size: $body-text-sm;
-                        border-left: 3px solid transparent;
-                        opacity: 0.6;
+                    .dropdown-item {
+                        padding-left: $spacing-2;
+                        transition: $transition-all;
+
+                        a {
+                            font-size: $body-text-sm;
+                            font-weight: lighter;
+                            padding: $spacing-1-25 $spacing-2;
+                        }
 
                         &:hover {
-                            background: rgba(255, 255, 255, 0.04);
+                            margin-left: 4px;
+                            transition: $transition-all;
                         }
                     }
                 }
 
                 &.show {
-                    background: rgba(255, 255, 255, 0.04);
+                    opacity: 1;
 
                     .dashboard-nav-dropdown-toggle::after {
                         -webkit-transform: none;
                         -o-transform: none;
                         transform: none;
-                        border-top-color: $primary-light;
                     }
 
                     .dashboard-nav-dropdown-menu {
-                        display: -webkit-box;
-                        display: -webkit-flex;
-                        display: -ms-flexbox;
                         display: flex;
+                        transition: $transition-all;
+                    }
+
+                    * {
+                        color: $white-main;
                     }
                 }
             }
@@ -278,13 +274,13 @@
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
-        color: $primary-dark;
+        color: $primary-main;
 
         &:hover,
         &:active,
         &:focus {
             text-decoration: none;
-            color: #875de5;
+            opacity: 0.75;
         }
 
         i,

@@ -817,25 +817,14 @@
     display: flex;
     align-items: center;
     cursor: default;
-
-    .badge-text,
-    p,
-    span {
-        font-size: $caption;
-        line-height: $caption;
-    }
+    font-size: $caption;
+    line-height: $caption;
 
     &-dot {
         background-color: $bg-color;
         width: $dot-size;
         height: $dot-size;
         border-radius: $radius-999;
-
-        .badge-text,
-        p,
-        span {
-            display: none;
-        }
     }
 }
 
@@ -942,14 +931,15 @@
     border-radius: $radius-999;
     transition: opacity 0.3s ease-in-out;
 
-    .label-icon{
+    .label-icon {
         width: $icon-size;
         height: $icon-size;
         color: $color;
         display: flex;
         justify-content: center;
         align-items: center;
-        &>*{
+
+        &>* {
             height: 100%;
             height: 100%;
         }

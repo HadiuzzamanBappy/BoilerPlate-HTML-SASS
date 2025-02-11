@@ -66,111 +66,399 @@
         <div class="dashboard-nav">
             <header>
                 <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
-                <a href="#" class="brand-logo"><i class="fas fa-anchor"></i><span>BRAND</span></a>
+                <a href="#" class="brand-logo"><i class="fas fa-anchor"></i><span>ZEPTO</span></a>
             </header>
             <nav class="dashboard-nav-list">
-                <span class="dashboard-nav-title">General</span>
-                <a href="#" class="dashboard-nav-item"><i class="fas fa-home"></i> Home </a>
-                <a href="#" class="dashboard-nav-item active"><i class="fas fa-tachometer-alt"></i> dashboard </a>
-                <a href="#" class="dashboard-nav-item"><i class="fas fa-file-upload"></i> Upload </a>
-                <div class='dashboard-nav-dropdown'>
-                    <a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-photo-video"></i> Media </a>
-                    <div class='dashboard-nav-dropdown-menu'>
-                        <a href="#" class="dashboard-nav-dropdown-item">All</a>
-                        <a href="#" class="dashboard-nav-dropdown-item">Recent</a>
-                        <a href="#" class="dashboard-nav-dropdown-item">Images</a>
-                        <a href="#" class="dashboard-nav-dropdown-item">Video</a>
-                    </div>
-                </div>
-                <div class='dashboard-nav-dropdown'>
-                    <a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-users"></i>
-                        Users </a>
-                    <div class='dashboard-nav-dropdown-menu'>
-                        <a href="#" class="dashboard-nav-dropdown-item">All</a>
-                        <a href="#" class="dashboard-nav-dropdown-item">Subscribed</a>
-                        <a href="#" class="dashboard-nav-dropdown-item">Non-subscribed</a>
-                        <a href="#" class="dashboard-nav-dropdown-item">Banned</a>
-                        <a href="#" class="dashboard-nav-dropdown-item">New</a>
-                    </div>
-                </div>
-                <div class='dashboard-nav-dropdown'>
-                    <a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
-                            class="fas fa-money-check-alt"></i> Payments </a>
-                    <div class='dashboard-nav-dropdown-menu'>
-                        <a href="#" class="dashboard-nav-dropdown-item">All</a>
-                        <a href="#" class="dashboard-nav-dropdown-item">Recent</a>
-                        <a href="#" class="dashboard-nav-dropdown-item"> Projections</a>
-                    </div>
-                </div>
-                <a href="#" class="dashboard-nav-item"><i class="fas fa-cogs"></i> Settings </a>
-                <a href="#" class="dashboard-nav-item"><i class="fas fa-user"></i> Profile </a>
-                <hr>
-                <a href="#" class="dashboard-nav-item"><i class="fas fa-sign-out-alt"></i> Logout </a>
+
+                <ul class="dashboard-nav-list">
+                    <li class="dashboard-nav-title">General</li>
+                    <li class="dashboard-nav-item active"><a href="#"><i class="fas fa-home"></i> Home </a></li>
+                    <li class="dashboard-nav-item"><a href="#"><i class="fas fa-upload"></i> Upload </a></li>
+
+                    <!-- Products Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown">
+                        <a href="#!" class="dashboard-nav-dropdown-toggle"><i class="fas fa-tshirt"></i> Products </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">List</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Grid</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Details</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Edit</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Create</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Category Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown">
+                        <a href="#!" class="dashboard-nav-dropdown-toggle"><i class="fas fa-clipboard-list"></i>
+                            Category </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">List</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Edit</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Create</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Inventory Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown">
+                        <a href="#!" class="dashboard-nav-dropdown-toggle"><i class="fas fa-box"></i> Inventory </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Warehouse</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Received Orders</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Orders Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown">
+                        <a href="#!" class="dashboard-nav-dropdown-toggle"><i class="fas fa-bag"></i> Orders </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">List</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Details</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Cart</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Check Out</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Purchases Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown">
+                        <a href="#!" class="dashboard-nav-dropdown-toggle"><i class="fas fa-credit-card"></i>
+                            Purchases</a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">List</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Order</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Return</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Attributes Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown">
+                        <a href="#!" class="dashboard-nav-dropdown-toggle"><i class="fas fa-gift"></i> Attributes </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">List</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Edit</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Create</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Invoices Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown">
+                        <a href="#!" class="dashboard-nav-dropdown-toggle"><i class="fas fa-file-invoice"></i> Invoices
+                        </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">List</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Details</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Create</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dashboard-nav-title">Users</li>
+                    <li class="dashboard-nav-item"><a href="#"><i class="fas fa-user"></i> Profile </a></li>
+
+                    <!-- Roles Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown">
+                        <a href="#!" class="dashboard-nav-dropdown-toggle"><i class="fas fa-users-cog"></i> Roles </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">List</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Edit</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Create</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dashboard-nav-item"><a href="#"><i class="fas fa-key"></i> Permissions </a></li>
+
+                    <!-- Customers Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown">
+                        <a href="#!" class="dashboard-nav-dropdown-toggle"><i class="fas fa-users"></i> Customers </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">List</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Details</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Sellers Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown">
+                        <a href="#!" class="dashboard-nav-dropdown-toggle"><i class="fas fa-store"></i> Sellers </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">List</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Details</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Edit</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Create</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dashboard-nav-title">Other</li>
+
+                    <!-- Coupons Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown">
+                        <a href="#!" class="dashboard-nav-dropdown-toggle"><i class="fas fa-leaf"></i> Coupons </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">List</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Add</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dashboard-nav-item"><a href="#"><i class="fas fa-comments"></i> Reviews </a></li>
+
+                    <li class="dashboard-nav-title">Other Apps</li>
+                    <li class="dashboard-nav-item"><a href="#"><i class="fas fa-comment-dots"></i> Chat </a></li>
+                    <li class="dashboard-nav-item"><a href="#"><i class="fas fa-envelope"></i> Email </a></li>
+                    <li class="dashboard-nav-item"><a href="#"><i class="fas fa-calendar-alt"></i> Calendar </a></li>
+                    <li class="dashboard-nav-item"><a href="#"><i class="fas fa-check-square"></i> Todo </a></li>
+
+                    <li class="dashboard-nav-title">Support</li>
+                    <li class="dashboard-nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help Center </a>
+                    </li>
+                    <li class="dashboard-nav-item"><a href="#"><i class="fas fa-info-circle"></i> FAQs </a></li>
+                    <li class="dashboard-nav-item"><a href="#"><i class="fas fa-file-alt"></i> Privacy Policy </a></li>
+
+                    <li class="dashboard-nav-title">Custom</li>
+                    <!-- Pages Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown">
+                        <a href="#!" class="dashboard-nav-dropdown-toggle"><i class="fas fa-gift"></i> Pages </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Welcome</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Coming Soon</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Timeline</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Pricing</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Maintenance</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">404 Error</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">404 Error (alt)</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Authentication Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown">
+                        <a href="#!" class="dashboard-nav-dropdown-toggle"><i class="fas fa-lock"></i> Authentication
+                        </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Sign In</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Sign Up</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Reset Password</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Lock Screen</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dashboard-nav-item"><a href="#"><i class="fas fa-cogs"></i> Widgets </a></li>
+
+                    <li class="dashboard-nav-title">Components</li>
+
+                    <!-- Base UI Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown">
+                        <a href="#!" class="dashboard-nav-dropdown-toggle"><i class="fas fa-bookmark"></i> Base UI </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-accordion.html">Accordion</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-alerts.html">Alerts</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-avatar.html">Avatar</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-badge.html">Badge</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-breadcrumb.html">Breadcrumb</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-buttons.html">Buttons</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-card.html">Card</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-carousel.html">Carousel</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-collapse.html">Collapse</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-dropdown.html">Dropdown</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-list-group.html">List Group</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-modal.html">Modal</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-tabs.html">Tabs</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-offcanvas.html">Offcanvas</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-pagination.html">Pagination</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-placeholders.html">Placeholders</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-popovers.html">Popovers</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-progress.html">Progress</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-scrollspy.html">Scrollspy</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-spinners.html">Spinners</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-toasts.html">Toasts</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="ui-tooltips.html">Tooltips</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Advanced UI Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown">
+                        <a href="#!" class="dashboard-nav-dropdown-toggle"><i class="fas fa-cogs"></i> Advanced UI </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="extended-ratings.html">Ratings</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="extended-sweetalert.html">Sweet
+                                    Alert</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="extended-swiper-silder.html">Swiper
+                                    Slider</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="extended-scrollbar.html">Scrollbar</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="extended-toastify.html">Toastify</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Charts Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown">
+                        <a href="#!" class="dashboard-nav-dropdown-toggle"><i class="fas fa-chart-pie"></i> Charts </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="charts-apex-area.html">Area</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="charts-apex-bar.html">Bar</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="charts-apex-bubble.html">Bubble</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a
+                                    href="charts-apex-candlestick.html">Candlestick</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="charts-apex-column.html">Column</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="charts-apex-heatmap.html">Heatmap</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="charts-apex-line.html">Line</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="charts-apex-mixed.html">Mixed</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a
+                                    href="charts-apex-timeline.html">Timeline</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="charts-apex-boxplot.html">Boxplot</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="charts-apex-treemap.html">Tree map</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="charts-apex-pie.html">Pie</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="charts-apex-radar.html">Radar</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a
+                                    href="charts-apex-radialbar.html">RadialBar</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="charts-apex-scatter.html">Scatter</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="charts-apex-polar-area.html">Polar
+                                    Area</a></li>
+                        </ul>
+
+                    </li> <!-- Forms Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown"> <a href="#!"
+                            class="dashboard-nav-dropdown-toggle"><i class="fas fa-book"></i> Forms </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="forms-basic.html">Basic Elements</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="forms-checkbox-radio.html">Checkbox
+                                    &amp; Radio</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="forms-choices.html">Choice Select</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="forms-clipboard.html">Clipboard</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a
+                                    href="forms-flatepicker.html">Flatepicker</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="forms-validation.html">Validation</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="forms-wizard.html">Wizard</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="forms-fileuploads.html">File
+                                    Upload</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="forms-editors.html">Editors</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="forms-input-mask.html">Input Mask</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="forms-range-slider.html">Slider</a>
+                            </li>
+                        </ul>
+                    </li> <!-- Tables Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown"> <a href="#!"
+                            class="dashboard-nav-dropdown-toggle"><i class="fas fa-table"></i> Tables </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="tables-basic.html">Basic Tables</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="tables-gridjs.html">Grid Js</a></li>
+                        </ul>
+                    </li> <!-- Icons Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown"> <a href="#!"
+                            class="dashboard-nav-dropdown-toggle"><i class="fas fa-icons"></i> Icons </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="icons-boxicons.html">Box icons</a>
+                            </li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="icons-font-awesome.html">Font
+                                    Awesome</a></li>
+                        </ul>
+                    </li> <!-- Maps Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown"> <a href="#!"
+                            class="dashboard-nav-dropdown-toggle"><i class="fas fa-map-marked-alt"></i> Maps </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="maps-google.html">Google Maps</a></li>
+                            <li class="dashboard-nav-item dropdown-item"><a href="maps-vector.html">Vector Maps</a></li>
+                        </ul>
+                    </li> <!-- Badge Menu -->
+                    <li class="dashboard-nav-item"> 
+                        <a href="#">
+                            <i class="fas fa-badge-check"></i> Badge Menu <span class="badge-error right">1</span>
+                        </a> 
+                    </li> <!-- Multi-level Menu -->
+                    <li class="dashboard-nav-item dashboard-nav-dropdown"> <a href="#!"
+                            class="dashboard-nav-dropdown-toggle"><i class="fas fa-share-alt"></i> Menu Item </a>
+                        <ul class="dashboard-nav-dropdown-menu">
+                            <li class="dashboard-nav-item dropdown-item"><a href="#">Menu Item 1</a></li>
+                            <li class="dashboard-nav-item dashboard-nav-dropdown"> <a href="#!"
+                                    class="dashboard-nav-dropdown-toggle"><span> Menu Item 2 </span></a>
+                                <ul class="dashboard-nav-dropdown-menu">
+                                    <li class="dashboard-nav-item dropdown-item"><a href="#">Menu Sub Item</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li> <!-- Disabled Item -->
+                    <li class="dashboard-nav-item"> <a href="javascript:void(0);" class="disabled"><i
+                                class="fas fa-ban"></i> Disable Item </a> </li>
+                </ul>
             </nav>
         </div>
         <div class='dashboard-app'>
             <header class='dashboard-toolbar'>
                 <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
             </header>
-            <div class="dashboard-content component-library">
+            <div class="dashboard-content">
 
-        <div class="component-section" style="display: none;">
-            <!-- Button Section -->
-            <section class="component-block buttons-components">
-                <h2 class="section-heading">Buttons</h2>
+                <div class="component-section" style="display: none;">
+                    <!-- Button Section -->
+                    <section class="component-block buttons-components">
+                        <h2 class="section-heading">Buttons</h2>
 
-                <!-- Button Grid -->
-                <div class="component-grid">
-                    <!-- Default Buttons -->
-                    <div class="component-row">
-                        <button class="btn">Default</button>
-                        <button class="btn-inherit">Inherit</button>
-                        <button class="btn-primary">Primary</button>
-                        <button class="btn-secondary">Secondary</button>
-                        <button class="btn-success">Success</button>
-                        <button class="btn-info">Info</button>
-                        <button class="btn-warning">Warning</button>
-                        <button class="btn-error">Error</button>
-                    </div>
-                    <div class="component-row">
-                        <button class="btn-outlined">Default</button>
-                        <button class="btn-inherit-outlined">Inherit</button>
-                        <button class="btn-primary-outlined">Primary</button>
-                        <button class="btn-secondary-outlined">Secondary</button>
-                        <button class="btn-success-outlined">Success</button>
-                        <button class="btn-info-outlined">Info</button>
-                        <button class="btn-warning-outlined">Warning</button>
-                        <button class="btn-error-outlined">Error</button>
-                    </div>
-                    <div class="component-row">
-                        <button class="btn-soft">Default</button>
-                        <button class="btn-inherit-soft">Inherit</button>
-                        <button class="btn-primary-soft">Primary</button>
-                        <button class="btn-secondary-soft">Secondary</button>
-                        <button class="btn-success-soft">Success</button>
-                        <button class="btn-info-soft">Info</button>
-                        <button class="btn-warning-soft">Warning</button>
-                        <button class="btn-error-soft">Error</button>
-                    </div>
-                    <div class="component-row">
-                        <button class="btn-text">Default</button>
-                        <button class="btn-inherit-text">Inherit</button>
-                        <button class="btn-primary-text">Primary</button>
-                        <button class="btn-secondary-text">Secondary</button>
-                        <button class="btn-success-text">Success</button>
-                        <button class="btn-info-text">Info</button>
-                        <button class="btn-warning-text">Warning</button>
-                        <button class="btn-error-text">Error</button>
-                    </div>
-                    <hr>
-                    <div class="component-row">
-                        <button class="btn-primary btn-sm icon-sm"><i
-                                class="fa-regular fa-chess-king"></i>Small</button>
-                        <button class="btn-primary btn-md">Medium<i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-primary btn-lg"><i class="fa-regular fa-chess-king"></i>Large<i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn" disabled>Disabled</button>
-                    </div>
+                        <!-- Button Grid -->
+                        <div class="component-grid">
+                            <!-- Default Buttons -->
+                            <div class="component-row">
+                                <button class="btn">Default</button>
+                                <button class="btn-inherit">Inherit</button>
+                                <button class="btn-primary">Primary</button>
+                                <button class="btn-secondary">Secondary</button>
+                                <button class="btn-success">Success</button>
+                                <button class="btn-info">Info</button>
+                                <button class="btn-warning">Warning</button>
+                                <button class="btn-error">Error</button>
+                            </div>
+                            <div class="component-row">
+                                <button class="btn-outlined">Default</button>
+                                <button class="btn-inherit-outlined">Inherit</button>
+                                <button class="btn-primary-outlined">Primary</button>
+                                <button class="btn-secondary-outlined">Secondary</button>
+                                <button class="btn-success-outlined">Success</button>
+                                <button class="btn-info-outlined">Info</button>
+                                <button class="btn-warning-outlined">Warning</button>
+                                <button class="btn-error-outlined">Error</button>
+                            </div>
+                            <div class="component-row">
+                                <button class="btn-soft">Default</button>
+                                <button class="btn-inherit-soft">Inherit</button>
+                                <button class="btn-primary-soft">Primary</button>
+                                <button class="btn-secondary-soft">Secondary</button>
+                                <button class="btn-success-soft">Success</button>
+                                <button class="btn-info-soft">Info</button>
+                                <button class="btn-warning-soft">Warning</button>
+                                <button class="btn-error-soft">Error</button>
+                            </div>
+                            <div class="component-row">
+                                <button class="btn-text">Default</button>
+                                <button class="btn-inherit-text">Inherit</button>
+                                <button class="btn-primary-text">Primary</button>
+                                <button class="btn-secondary-text">Secondary</button>
+                                <button class="btn-success-text">Success</button>
+                                <button class="btn-info-text">Info</button>
+                                <button class="btn-warning-text">Warning</button>
+                                <button class="btn-error-text">Error</button>
+                            </div>
+                            <hr>
+                            <div class="component-row">
+                                <button class="btn-primary btn-sm"><i
+                                        class="fa-regular fa-chess-king"></i>Small</button>
+                                <button class="btn-primary btn-md">Medium<i
+                                        class="fa-regular fa-chess-king"></i></button>
+                                <button class="btn-primary btn-lg"><i class="fa-regular fa-chess-king"></i>Large<i
+                                        class="fa-regular fa-chess-king"></i></button>
+                                <button class="btn" disabled>Disabled</button>
+                            </div>
 
                             <hr>
 
@@ -286,8 +574,8 @@
                     <section class="component-block inputs-components">
                         <h2 class="section-heading">Inputs</h2>
 
-                        <div class="component-row">
-                            <div class="col-3">
+                        <div class="component-row" style="gap: 0;">
+                            <div class="col-4">
                                 <div class="input-group">
                                     <div class="input-main">
                                         <span class="icon-left"><i class="fa-solid fa-user"></i></span>
@@ -345,7 +633,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-3">
+                            <div class="col-4">
                                 <div class="input-group-soft">
                                     <div class="input-main">
                                         <span class="icon-left"><i class="fa-solid fa-user"></i></span>
@@ -403,7 +691,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-3">
+                            <div class="col-4">
                                 <div class="input-group-standard">
                                     <div class="input-main">
                                         <span class="icon-left"><i class="fa-solid fa-user"></i></span>
@@ -466,8 +754,8 @@
                     <section class="component-block textareas-components">
                         <h2 class="section-heading">Textarea</h2>
 
-                        <div class="component-row">
-                            <div class="col-3">
+                        <div class="component-row" style="gap: 0;">
+                            <div class="col-4">
                                 <div class="input-group">
                                     <div class="input-main">
                                         <label for="inputs" class="input-label area">Label</label>
@@ -516,7 +804,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-4">
                                 <div class="input-group-soft">
                                     <div class="input-main">
                                         <label for="inputs" class="input-label area">Label</label>
@@ -565,7 +853,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-4">
                                 <div class="input-group-standard">
                                     <div class="input-main">
                                         <label for="inputs" class="input-label area">Label</label>
@@ -1658,30 +1946,30 @@
                     <section class="component-block rating-component">
                         <h2 class="section-heading">Dialog</h2>
 
-                <div class="component-row">
-                    <div class="dialog">
-                        <div class="dialog-title">
-                            <span class="icon icon-left">
-                                <i class="fa-regular fa-square-check"></i>
-                            </span>
-                            <span class="title">
-                                Dialog Title
-                            </span>
-                            <span class="icon icon-right">
-                                <i class="fa-solid fa-xmark"></i>
-                            </span>
+                        <div class="component-row">
+                            <div class="dialog">
+                                <div class="dialog-title">
+                                    <span class="icon icon-left">
+                                        <i class="fa-regular fa-square-check"></i>
+                                    </span>
+                                    <span class="title">
+                                        Dialog Title
+                                    </span>
+                                    <span class="icon icon-right">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </span>
+                                </div>
+                                <div class="dialog-action">
+                                    <button class="btn btn-inherit">Action</button>
+                                    <button class="btn btn-inherit-outlined">Cancel</button>
+                                </div>
+                                <div class="dialog-action full">
+                                    <button class="btn btn-inherit">Action</button>
+                                    <button class="btn btn-inherit-outlined">Cancel</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="dialog-action">
-                            <button class="btn btn-inherit">Action</button>
-                            <button class="btn btn-inherit-outlined">Cancel</button>
-                        </div>
-                        <div class="dialog-action full">
-                            <button class="btn btn-inherit">Action</button>
-                            <button class="btn btn-inherit-outlined">Cancel</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                    </section>
 
                     <!-- Snackbar Component -->
                     <section class="component-block rating-component">
@@ -1708,8 +1996,8 @@
                                     This is an Info Snackbar — check it out!
                                 </span>
                                 <div class="snack-action">
-                                    <button class="btn-primary"> Action</button>
-                                    <button class="btn-outlined"> Action</button>
+                                    <button class="btn-primary btn-md"> Action</button>
+                                    <button class="btn-outlined btn-md"> Action</button>
                                 </div>
                             </div>
                         </div>
@@ -1735,8 +2023,8 @@
                                     This is an Info Snackbar — check it out!
                                 </span>
                                 <div class="snack-action">
-                                    <button class="btn-info"> Action</button>
-                                    <button class="btn-outlined"> Action</button>
+                                    <button class="btn-info btn-md"> Action</button>
+                                    <button class="btn-outlined btn-md"> Action</button>
                                 </div>
                             </div>
                         </div>
@@ -1762,8 +2050,8 @@
                                     This is an Info Snackbar — check it out!
                                 </span>
                                 <div class="snack-action">
-                                    <button class="btn-success"> Action</button>
-                                    <button class="btn-outlined"> Action</button>
+                                    <button class="btn-success btn-md"> Action</button>
+                                    <button class="btn-outlined btn-md"> Action</button>
                                 </div>
                             </div>
                         </div>
@@ -1789,8 +2077,8 @@
                                     This is an Info Snackbar — check it out!
                                 </span>
                                 <div class="snack-action">
-                                    <button class="btn-warning"> Action</button>
-                                    <button class="btn-outlined"> Action</button>
+                                    <button class="btn-warning btn-md"> Action</button>
+                                    <button class="btn-outlined btn-md"> Action</button>
                                 </div>
                             </div>
                         </div>
@@ -1816,8 +2104,8 @@
                                     This is an Info Snackbar — check it out!
                                 </span>
                                 <div class="snack-action">
-                                    <button class="btn-error"> Action</button>
-                                    <button class="btn-outlined"> Action</button>
+                                    <button class="btn-error btn-md"> Action</button>
+                                    <button class="btn-outlined btn-md"> Action</button>
                                 </div>
                             </div>
                         </div>
@@ -1828,51 +2116,23 @@
                         <h2 class="section-heading">Badge</h2>
 
                         <div class="component-row">
-                            <div class="badge">
-                                <span class="badge-text">1</span>
-                            </div>
-                            <div class="badge-primary">
-                                <span class="badge-text">2</span>
-                            </div>
-                            <div class="badge-secondary">
-                                <span class="badge-text">3</span>
-                            </div>
-                            <div class="badge-warning">
-                                <span class="badge-text">4</span>
-                            </div>
-                            <div class="badge-info">
-                                <span class="badge-text">5</span>
-                            </div>
-                            <div class="badge-error">
-                                <span class="badge-text">6</span>
-                            </div>
-                            <div class="badge-success">
-                                <span class="badge-text">7</span>
-                            </div>
+                            <div class="badge">1</div>
+                            <div class="badge-primary">1</div>
+                            <div class="badge-secondary">1</div>
+                            <div class="badge-warning">1</div>
+                            <div class="badge-info">1</div>
+                            <div class="badge-error">1</div>
+                            <div class="badge-success">1</div>
                         </div>
 
                         <div class="component-row">
-                            <div class="badge-dot">
-                                <span class="badge-text">1</span>
-                            </div>
-                            <div class="badge-primary-dot">
-                                <span class="badge-text">2</span>
-                            </div>
-                            <div class="badge-secondary-dot">
-                                <span class="badge-text">3</span>
-                            </div>
-                            <div class="badge-warning-dot">
-                                <span class="badge-text">4</span>
-                            </div>
-                            <div class="badge-info-dot">
-                                <span class="badge-text">5</span>
-                            </div>
-                            <div class="badge-error-dot">
-                                <span class="badge-text">6</span>
-                            </div>
-                            <div class="badge-success-dot">
-                                <span class="badge-text">7</span>
-                            </div>
+                            <div class="badge-dot"></div>
+                            <div class="badge-primary-dot"></div>
+                            <div class="badge-secondary-dot"></div>
+                            <div class="badge-warning-dot"></div>
+                            <div class="badge-info-dot"></div>
+                            <div class="badge-error-dot"></div>
+                            <div class="badge-success-dot"></div>
                         </div>
                     </section>
 
@@ -2055,98 +2315,98 @@
                     <section class="component-block rating-component">
                         <h2 class="section-heading">Label</h2>
 
-                <div class="component-row">
-                    <div class="label-inherit">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-primary">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-secondary">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-warning">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-info">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-error">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-success">
-                        <span class="text">Label</span>
-                    </div>
-                </div>
+                        <div class="component-row">
+                            <div class="label-inherit">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-primary">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-secondary">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-warning">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-info">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-error">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-success">
+                                <span class="label-text">Label</span>
+                            </div>
+                        </div>
 
-                <div class="component-row">
-                    <div class="label-inherit-outlined">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-primary-outlined">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-secondary-outlined">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-warning-outlined">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-info-outlined">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-error-outlined">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-success-outlined">
-                        <span class="text">Label</span>
-                    </div>
-                </div>
+                        <div class="component-row">
+                            <div class="label-inherit-outlined">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-primary-outlined">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-secondary-outlined">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-warning-outlined">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-info-outlined">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-error-outlined">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-success-outlined">
+                                <span class="label-text">Label</span>
+                            </div>
+                        </div>
 
-                <div class="component-row">
-                    <div class="label-inherit-soft">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-primary-soft">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-secondary-soft">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-warning-soft">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-info-soft">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-error-soft">
-                        <span class="text">Label</span>
-                    </div>
-                    <div class="label-success-soft">
-                        <span class="text">Label</span>
-                    </div>
-                </div>
+                        <div class="component-row">
+                            <div class="label-inherit-soft">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-primary-soft">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-secondary-soft">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-warning-soft">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-info-soft">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-error-soft">
+                                <span class="label-text">Label</span>
+                            </div>
+                            <div class="label-success-soft">
+                                <span class="label-text">Label</span>
+                            </div>
+                        </div>
 
                         <hr>
 
-                <div class="component-row">
-                    <div class="label-inherit">
-                        <span class="icon"><i class="fa-solid fa-chevron-left"></i></span>
-                        <span class="text">Label</span>
-                    </div>
+                        <div class="component-row">
+                            <div class="label-inherit">
+                                <span class="label-icon"><i class="fa-solid fa-chevron-left"></i></span>
+                                <span class="label-text">Label</span>
+                            </div>
 
-                    <div class="label-inherit">
-                        <span class="text">Label</span>
-                        <span class="icon"><i class="fa-solid fa-chevron-right"></i></span>
-                    </div>
+                            <div class="label-inherit">
+                                <span class="label-text">Label</span>
+                                <span class="label-icon"><i class="fa-solid fa-chevron-right"></i></span>
+                            </div>
 
-                    <div class="label-inherit">
-                        <span class="icon"><i class="fa-solid fa-chevron-left"></i></span>
-                        <span class="text">Label</span>
-                        <span class="icon"><i class="fa-solid fa-chevron-right"></i></span>
-                    </div>
-                </div>
-            </section>
+                            <div class="label-inherit">
+                                <span class="label-icon"><i class="fa-solid fa-chevron-left"></i></span>
+                                <span class="label-text">Label</span>
+                                <span class="label-icon"><i class="fa-solid fa-chevron-right"></i></span>
+                            </div>
+                        </div>
+                    </section>
 
                     <!-- Tooltip -->
                     <section class="component-block rating-component">
@@ -2176,45 +2436,45 @@
                     </section>
                 </div>
 
-        <!-- <section class="component-block rating-component">
+                <!-- <section class="component-block rating-component">
             <h2 class="section-heading">Rating</h2>
     
             <div class="component-row">
 
             </div>
         </section> -->
-    </div>
+            </div>
 
 
-    <!-- Script -->
-    <!-- FontAwesome: Icons and symbols library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
-        integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- jQuery: Popular JavaScript library for DOM manipulation and AJAX -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <!-- Lodash: Utility library for working with arrays, objects, and functions -->
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
-    <!-- Axios: Promise-based HTTP client for API requests -->
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-    <!-- Chart.js: Library for creating interactive charts -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
-    <!-- GSAP: JavaScript animation library for smooth animations -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
-    <!-- Moment.js: Library for handling and formatting dates -->
-    <script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
-    <!-- AOS (Animate On Scroll): Adds animations on page scroll -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
-    <!-- Three.js: 3D graphics library for WebGL rendering -->
-    <script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
-    <!-- DataTables: jQuery plugin for creating interactive tables -->
-    <script src="https://cdn.jsdelivr.net/npm/datatables@1.10.18/media/js/jquery.dataTables.min.js"></script>
-    <!-- Select2: Customizable dropdowns with search and tags -->
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <!-- SweetAlert2: Stylish alert pop-ups for notifications -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.16.0/dist/sweetalert2.all.min.js"></script>
+            <!-- Script -->
+            <!-- FontAwesome: Icons and symbols library -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+                integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <!-- jQuery: Popular JavaScript library for DOM manipulation and AJAX -->
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+            <!-- Lodash: Utility library for working with arrays, objects, and functions -->
+            <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+            <!-- Axios: Promise-based HTTP client for API requests -->
+            <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+            <!-- Chart.js: Library for creating interactive charts -->
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+            <!-- GSAP: JavaScript animation library for smooth animations -->
+            <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+            <!-- Moment.js: Library for handling and formatting dates -->
+            <script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
+            <!-- AOS (Animate On Scroll): Adds animations on page scroll -->
+            <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+            <!-- Three.js: 3D graphics library for WebGL rendering -->
+            <script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
+            <!-- DataTables: jQuery plugin for creating interactive tables -->
+            <script src="https://cdn.jsdelivr.net/npm/datatables@1.10.18/media/js/jquery.dataTables.min.js"></script>
+            <!-- Select2: Customizable dropdowns with search and tags -->
+            <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+            <!-- SweetAlert2: Stylish alert pop-ups for notifications -->
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.16.0/dist/sweetalert2.all.min.js"></script>
 
-    <script src="./assets/js/script.js"></script>
+            <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
