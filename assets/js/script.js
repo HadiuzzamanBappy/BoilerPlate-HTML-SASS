@@ -73,7 +73,6 @@ $(document).ready(function () {
   });
 
   let styleContent = ""; // Store styles
-
   $("[class*='progress-']").each(function () {
     let percentage = $(this).attr("data-percentage") || 0;
     let classList = $(this).attr("class").split(" ");
@@ -103,4 +102,23 @@ $(document).ready(function () {
   if (styleContent) {
     $("head").append(`<style>${styleContent}</style>`);
   }
+  
+  // Dashboard Collapse and Expand
+  $(".dashboard-nav-dropdown-toggle").click(function () {
+    $(this)
+      .closest(".dashboard-nav-dropdown")
+      .toggleClass("show")
+      .find(".dashboard-nav-dropdown")
+      .removeClass("show");
+    $(this).parent().siblings().removeClass("show");
+  });
+
+  // Menu Toggle
+  $(".menu-toggle").click(function () {
+    if (window.matchMedia("(max-width: 990px )").matches) {
+      $(".dashboard-nav").toggleClass("mobile-show");
+    } else {
+      $(".dashboard").toggleClass("dashboard-compact");
+    }
+  });
 });
