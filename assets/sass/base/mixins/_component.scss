@@ -485,7 +485,7 @@
 
     .input-main {
         position: relative;
-        @include display-flex;
+        @include set-flex;
         border: 1px solid $border-color;
         border-radius: $border-radius;
         transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -502,7 +502,7 @@
 
     .icon-left,
     .icon-right {
-        @include display-flex(row, center, center);
+        @include set-flex(row, center, center);
         padding: 0 $spacing-1;
         color: $icon-color;
         font-size: $icon-size;
@@ -576,7 +576,7 @@
     }
 
     .input-helper {
-        @include display-flex(row, flex-start, center);
+        @include set-flex(row, flex-start, center);
         margin-top: $spacing-1;
         margin-left: $spacing-1;
         font-size: $caption;

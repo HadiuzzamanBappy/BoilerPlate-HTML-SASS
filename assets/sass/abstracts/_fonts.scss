@@ -3,7 +3,7 @@
   $weight,
   $type,
   $style: normal,
-  $path: "fonts/Poppins"
+  $path: "/assets/css/fonts/Poppins"
 ) {
   @font-face {
     font-family: $family;
@@ -25,11 +25,11 @@ $font-weights: (
   900: "Black",
 );
 
-$font-styles: ("", "Italic"); // Define font styles
+$font-styles: (""); // Define font styles
 
 // Loop through font weights and styles to generate includes
 @each $weight, $name in $font-weights {
   @each $style in $font-styles {
-    @include font-face("Poppins", $weight, $name, $style, "fonts/Poppins");
+    @include font-face("Poppins", $weight, $name, $style, "/assets/css/fonts/Poppins");
   }
 }

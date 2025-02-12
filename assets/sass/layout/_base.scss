@@ -1,46 +1,72 @@
 @use "../abstracts" as *;
 @use "../base" as *;
+@use "navbar" as *;
 
 body {
     box-sizing: border-box;
     background-color: $bg-default;
     height: 100vh;
-    display: flex;
+    @include set-flex(row, flex-start);
+
+    .main-nav {
+        @include main-nav-default();
+    }
 
     .main-details {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 2;
-        margin-top: 84px;
+        @include set-flex(column, flex-start);
+        flex-grow: 1;
+        margin-left: 0;
+        @include set-overflow-scroll();
+        @include set-custom-scrollbar($spacing-1, transparent, $action-disabled);
 
         .toolbar {
-            min-height: 84px;
+            @include set-flex(row, flex-start, center);
+            @include set-position(sticky, 0, 0, null, 0,0);
+            min-height: $spacing-10;
             background-color: $bg-paper-alt;
-            display: flex;
-            align-items: center;
-            padding: $spacing-1 $spacing-2;
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
+            padding: $spacing-1 $spacing-3;
+            left: 0 !important;
+
+            .menu-toggle {
+                display: block;
+                color: $text-primary;
+
+                &:hover {
+                    opacity: 0.75;
+                }
+            }
         }
 
         .content {
-            flex-grow: 2;
-            padding: 25px;
+            flex-grow: 1;
+            padding: $spacing-3;
             height: 100%;
-            overflow: auto;
         }
 
         @media screen and (max-width: 768px) {
             .content {
-                padding: 15px 0px;
+                padding: $spacing-2 0;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            margin-left: 224px !important;
+
+            .toolbar {
+                left: 224px !important;
+
+                .menu-toggle {
+                    display: none;
+                }
             }
         }
     }
 
     @media screen and (min-width: 992px) {
         &.main-compact {
+            .main-nav {
+                @include main-nav-compact();
+            }
 
             .main-details {
                 margin-left: $spacing-8 !important;
@@ -48,14 +74,6 @@ body {
                 .toolbar {
                     left: $spacing-8 !important;
                 }
-            }
-        }
-
-        .main-details {
-            margin-left: 224px;
-
-            .toolbar {
-                left: 224px !important;
             }
         }
     }
@@ -90,7 +108,7 @@ body {
     top: -32px;
     /* Adjust to center the heading over the border */
     left: 20px;
-    background-color: #f9f9f9;
+    background-color: $bg-default;
     font-size: 20px;
     padding: 0 16px;
     color: #333;

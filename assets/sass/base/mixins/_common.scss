@@ -3,26 +3,35 @@
 // ==========================
 // General Utilities
 // ==========================
-// Font-family mixin
-@mixin font-family($family, $fallback: sans-serif) {
-  font-family: $family, $fallback;
-}
-
-// Font-style mixin
-@mixin font-style($font-size: $body-text-rg,
-  $font-weight: $fw-regular,
-  $line-height: $line-height-body,
+// Font-style mixin ^
+@mixin set-font-style($family: $font-body,
+  $size: $body-text-rg,
+  $weight: $fw-regular,
+  $l-height: $line-height-body,
   $color: $text-primary,
-  $align: left) {
-  font-size: $font-size;
-  font-weight: $font-weight;
-  line-height: $line-height;
+  $align: left,
+  $spacing: null,
+  $transform: null) {
+
+  font-family: $family, sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $l-height;
   color: $color;
   text-align: $align;
+
+  @if $spacing !=null {
+    letter-spacing: $spacing;
+  }
+
+  @if $transform !=null {
+    text-transform: $transform;
+  }
 }
 
+
 // Text Ellipsis Mixin
-@mixin text-ellipsis($width) {
+@mixin set-text-ellipsis($width: 100%) {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -30,7 +39,7 @@
 }
 
 // Text Truncate Mixin
-@mixin visually-hidden {
+@mixin set-visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -40,22 +49,16 @@
 }
 
 // List style Mixin
-@mixin list-style($list-style-type: none, $margin: 0, $padding: 0, $inline: false) {
+@mixin set-list-style($list-style-type: none, $margin: 0, $padding: 0, $display: flex) {
   list-style-type: $list-style-type;
   margin: $margin;
   padding: $padding;
-
-  @if $inline {
-    display: inline-block;
-  }
-
-  @else {
-    display: block;
-  }
+  display: $display;
 }
 
+
 // Clearfix Mixin
-@mixin clearfix {
+@mixin set-clearfix {
 
   &::before,
   &::after {
@@ -68,33 +71,35 @@
   }
 }
 
-// ==========================
-// Styling Utilities
-// ==========================
-// Background Variant Mixin
-@mixin bg-variant($parent, $color) {
-  #{$parent} {
-    background-color: $color !important;
+//Box-sizing
+@mixin set-box-sizing() {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
   }
 }
 
-// Gradient Mixin
-@mixin gradient-bg($start-color, $end-color, $angle: 45deg) {
-  background: linear-gradient($angle, $start-color, $end-color);
+@mixin set-dimension($width, $height: null) {
+  width: $width;
+
+  @if $height !=null {
+    height: $height;
+  }
 }
 
+// ==========================
+// Styling Utilities
+// ==========================
 // Box-shadow Mixin
-@mixin box-shadow($args) {
+@mixin set-box-shadow($args) {
   -webkit-box-shadow: $args;
   -moz-box-shadow: $args;
   box-shadow: $args;
 }
 
-// Custom scroll bars
-@mixin custom-scrollbar($width, $track-color, $thumb-color) {
-  scrollbar-width: $width;
-  scrollbar-color: $thumb-color $track-color;
-
+// Custom scroll bars - ^
+@mixin set-custom-scrollbar($width: $spacing-0-50, $track-color: transparent, $thumb-color: $primary-32) {
   &::-webkit-scrollbar {
     width: $width;
   }
@@ -105,17 +110,18 @@
 
   &::-webkit-scrollbar-thumb {
     background-color: $thumb-color;
+    border-radius: $radius-999;
   }
 }
 
 // Overflow Scroll Mixin
-@mixin overflow-scroll {
+@mixin set-overflow-scroll {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
 
 // Hero Image Mixin
-@mixin hero-bg-img($image-url, $position: 50% 50%, $repeat: no-repeat, $size: cover) {
+@mixin set-hero-bg-img($image-url, $position: 50% 50%, $repeat: no-repeat, $size: cover) {
   background-image: url($image-url);
   background-position: $position;
   background-repeat: $repeat;
@@ -123,7 +129,7 @@
 }
 
 // Spacing, Border and Radius Mixin
-@mixin spacing-border-radius($padding: 0,
+@mixin set-spacing-border-radius($padding: 0,
   $margin: 0,
   $border: none,
   $border-radius: 0) {
@@ -134,30 +140,30 @@
 }
 
 // Responsive Image Mixin
-@mixin img-responsive {
+@mixin set-img-responsive {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
 // Rotate Mixin
-@mixin rotate($degrees) {
-  -webkit-transform: rotate($degrees);
-  -moz-transform: rotate($degrees);
-  -ms-transform: rotate($degrees);
-  -o-transform: rotate($degrees);
-  transform: rotate($degrees);
+@mixin set-transform($property) {
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  -o-transform: $property;
+  transform: $property;
 }
 
 // Calc Mixin
-@mixin calc($property, $expression) {
+@mixin set-calc($property, $expression) {
   #{$property}: -moz-calc(#{$expression});
   #{$property}: -webkit-calc(#{$expression});
   #{$property}: calc(#{$expression});
 }
 
 // Aspect Ratio Mixin
-@mixin aspect-ratio($width, $height) {
+@mixin set-aspect-ratio($width, $height) {
   position: relative;
 
   &::before {
@@ -168,7 +174,7 @@
 }
 
 // Visibility Mixin
-@mixin visibility($visibility: visible, $display: block, $opacity: 1) {
+@mixin set-visibility($visibility: visible, $display: block, $opacity: 1) {
   visibility: $visibility;
   display: $display;
   opacity: $opacity;
@@ -222,20 +228,14 @@
 }
 
 // Transition Mixin
-@mixin transition($args) {
+@mixin set-transition($args) {
   -webkit-transition: $args;
   -moz-transition: $args;
   -o-transition: $args;
   transition: $args;
 }
 
-// Z-index Mixin
-@mixin z-index($z-index, $position: relative) {
-  position: $position;
-  z-index: $z-index;
-}
-
-//Divider Mixin
+//Divider Mixin ^
 @mixin theme-divider($color: $divider) {
   &-v {
     width: 1px;
@@ -258,7 +258,7 @@
 // Animation Utilities
 // ==========================
 // Keyframe Mixin
-@mixin keyframe($animation-name) {
+@mixin set-keyframe($animation-name) {
   @-webkit-keyframes #{$animation-name} {
     @content;
   }
@@ -273,29 +273,98 @@
 }
 
 // Animate Mixin
-@mixin animate($name, $duration: 1s, $timing-function: ease, $delay: 0s) {
+@mixin set-animate($name, $duration: 1s, $timing-function: ease, $delay: 0s) {
   -webkit-animation: $name $duration $timing-function $delay;
   -moz-animation: $name $duration $timing-function $delay;
   animation: $name $duration $timing-function $delay;
 }
 
 // ==========================
-// Layout Utilities
+// Layout Utilities ^
 // ==========================
 // Flex Mixin
-@mixin display-flex($direction: row, $justify: flex-start, $align: center) {
+@mixin set-flex($direction: null, $justify: null, $align: null, $gap: null) {
+  display: -webkit-flex;
+  display: -moz-flex;
   display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
+
+  @if $direction !=null {
+    -webkit-flex-direction: $direction;
+    -moz-flex-direction: $direction;
+    flex-direction: $direction;
+  }
+
+  @if $justify !=null {
+    -webkit-justify-content: $justify;
+    -moz-justify-content: $justify;
+    justify-content: $justify;
+  }
+
+  @if $align !=null {
+    -webkit-align-items: $align;
+    -moz-align-items: $align;
+    align-items: $align;
+  }
+
+  @if $gap !=null {
+    gap: $gap;
+  }
 }
 
 // Grid Mixin
-@mixin display-grid($columns: 1, $rows: 1, $gap: 0) {
+@mixin set-grid($grid-template-columns: null, $grid-template-rows: null, $gap: null) {
+  display: -ms-grid;
+  display: -webkit-grid;
   display: grid;
-  grid-template-columns: repeat($columns, 1fr);
-  grid-template-rows: repeat($rows, 1fr);
-  gap: $gap;
+
+  @if $grid-template-columns !=null {
+    -webkit-grid-template-columns: $grid-template-columns;
+    -ms-grid-template-columns: $grid-template-columns;
+    grid-template-columns: $grid-template-columns;
+  }
+
+  @if $grid-template-rows !=null {
+    -webkit-grid-template-rows: $grid-template-rows;
+    -ms-grid-template-rows: $grid-template-rows;
+    grid-template-rows: $grid-template-rows;
+  }
+
+  @if $gap !=null {
+    -webkit-gap: $gap;
+    gap: $gap;
+  }
+}
+
+// Absolute, Sticky
+@mixin set-position($position, $top: null, $right: null, $bottom: null, $left: null, $z-index: null) {
+  position: $position;
+
+  // Handle sticky positioning with vendor prefixes
+  @if $position =='sticky' {
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+  }
+
+  @if $top !=null {
+    top: $top;
+  }
+
+  @if $right !=null {
+    right: $right;
+  }
+
+  @if $bottom !=null {
+    bottom: $bottom;
+  }
+
+  @if $left !=null {
+    left: $left;
+  }
+
+  @if $z-index !=null {
+    z-index: $z-index;
+  }
 }
 
 // Responsive Mixin

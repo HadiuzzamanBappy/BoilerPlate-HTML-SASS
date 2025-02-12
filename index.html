@@ -64,7 +64,7 @@
 <body>
     <div class="main-nav">
         <header>
-            <a href="#" class="brand-logo"><i class="fas fa-tint"></i><span>ZEPTO</span></a>
+            <a href="#" class="brand-logo"><i class="fas fa-tint"></i><span> ZEPTO </span></a>
             <a href="#!" class="menu-toggle"><i class="fas fa-backward"></i> </a>
         </header>
         <nav>
@@ -423,9 +423,10 @@
     </div>
     <div class='main-details'>
         <header class='toolbar'>
+            <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i> </a>
         </header>
         <div class="content">
-            <div class="component-section" style="display: none;">
+            <div class="component-section" style="display: flex;">
                 <!-- Button Section -->
                 <section class="component-block buttons-components">
                     <h2 class="section-heading">Buttons</h2>
@@ -1953,13 +1954,14 @@
 
                     <div class="component-row">
                         <div class="dialog">
-                            <div class="dialog-title">
+                            <div class="dialog-head divider">
                                 <span class="icon icon-left">
                                     <i class="fa-regular fa-square-check"></i>
                                 </span>
-                                <span class="title">
-                                    Dialog Title
-                                </span>
+                                <div class="info">
+                                    <span class="title">Dialog Title</span>
+                                    <span class="description">Dialog Description</span>
+                                </div>
                                 <span class="icon icon-right">
                                     <i class="fa-solid fa-xmark"></i>
                                 </span>
@@ -2440,116 +2442,6 @@
                     </div>
                 </section>
             </div>
-
-            <!-- Button Section -->
-            <section class="component-block buttons-components">
-                <h2 class="section-heading">Buttons</h2>
-
-                <!-- Button Grid -->
-                <div class="component-grid">
-                    <!-- Default Buttons -->
-                    <div class="component-row">
-                        <button class="btn">Default</button>
-                        <button class="btn-inherit">Inherit</button>
-                        <button class="btn-primary">Primary</button>
-                        <button class="btn-secondary">Secondary</button>
-                        <button class="btn-success">Success</button>
-                        <button class="btn-info">Info</button>
-                        <button class="btn-warning">Warning</button>
-                        <button class="btn-error">Error</button>
-                    </div>
-                    <div class="component-row">
-                        <button class="btn-outlined">Default</button>
-                        <button class="btn-inherit-outlined">Inherit</button>
-                        <button class="btn-primary-outlined">Primary</button>
-                        <button class="btn-secondary-outlined">Secondary</button>
-                        <button class="btn-success-outlined">Success</button>
-                        <button class="btn-info-outlined">Info</button>
-                        <button class="btn-warning-outlined">Warning</button>
-                        <button class="btn-error-outlined">Error</button>
-                    </div>
-                    <div class="component-row">
-                        <button class="btn-soft">Default</button>
-                        <button class="btn-inherit-soft">Inherit</button>
-                        <button class="btn-primary-soft">Primary</button>
-                        <button class="btn-secondary-soft">Secondary</button>
-                        <button class="btn-success-soft">Success</button>
-                        <button class="btn-info-soft">Info</button>
-                        <button class="btn-warning-soft">Warning</button>
-                        <button class="btn-error-soft">Error</button>
-                    </div>
-                    <div class="component-row">
-                        <button class="btn-text">Default</button>
-                        <button class="btn-inherit-text">Inherit</button>
-                        <button class="btn-primary-text">Primary</button>
-                        <button class="btn-secondary-text">Secondary</button>
-                        <button class="btn-success-text">Success</button>
-                        <button class="btn-info-text">Info</button>
-                        <button class="btn-warning-text">Warning</button>
-                        <button class="btn-error-text">Error</button>
-                    </div>
-                    <hr>
-                    <div class="component-row">
-                        <button class="btn-primary btn-sm"><i class="fa-regular fa-chess-king"></i>Small</button>
-                        <button class="btn-primary btn-md">Medium<i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-primary btn-lg"><i class="fa-regular fa-chess-king"></i>Large<i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn" disabled>Disabled</button>
-                    </div>
-
-                    <hr>
-
-                    <!-- Icon Buttons -->
-                    <div class="component-row">
-                        <button class="btn icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-inherit icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-primary icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-secondary icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-info icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-warning icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-error icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-success icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                    </div>
-                    <div class="component-row">
-                        <button class="btn btn-soft icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn btn-inherit-soft icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn btn-primary-soft icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn btn-secondary-soft icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn btn-info-soft icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn btn-warning-soft icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn btn-error-soft icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn btn-success-soft icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                    </div>
-                    <div class="component-row">
-                        <button class="btn-outlined icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-inherit-outlined icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-primary-outlined icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-secondary-outlined icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-info-outlined icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-warning-outlined icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-error-outlined icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-success-outlined icon-md"><i
-                                class="fa-regular fa-chess-king"></i></button>
-                    </div>
-                    <hr>
-                    <div class="component-row">
-                        <button class="btn-primary icon-xsm"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-primary icon-sm"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-primary icon-md"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn-primary icon-lg"><i class="fa-regular fa-chess-king"></i></button>
-                        <button class="btn icon-md" disabled><i class="fa-regular fa-chess-king"></i></button>
-                    </div>
-                </div>
-            </section>
 
             <!-- <section class="component-block rating-component">
             <h2 class="section-heading">Rating</h2>

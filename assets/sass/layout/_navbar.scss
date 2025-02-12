@@ -1,42 +1,30 @@
 @use "../abstracts" as *;
+@use "../base" as *;
 
-.main-nav {
+@mixin main-nav-default() {
+    @include set-position(absolute, 0, null, 0, 0, 9);
     min-width: 224px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
     overflow: hidden;
     background-color: $text-primary;
-    z-index: 9;
 
     header {
-        min-height: 84px;
+        @include set-position(sticky, 0, null, null, null, 10);
+        @include set-flex(row, space-between, center);
+        min-height: $spacing-10;
         padding: $spacing-1 $spacing-2;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         background-color: $text-primary !important;
-        position: sticky;
-        top: 0;
-        z-index: 10;
 
         .brand-logo {
-            font-family: "Nunito", sans-serif;
-            font-weight: bold;
-            font-size: 20px;
-            display: flex;
-            color: $primary-main;
-            align-items: center;
-            transition: $transition-all;
+            @include set-font-style($family: $font-head, $weight: $fw-bold, $size: $sub-h1, $color: $primary-main);
+            @include set-flex(row, space-between, center);
+            @include set-transition($transition-all);
 
             &:focus,
             &:active,
             &:hover {
                 * {
+                    @include set-transition($transition-all);
                     color: $primary-light;
-                    text-decoration: none;
-                    transition: $transition-all;
                 }
             }
 
@@ -44,100 +32,65 @@
             svg {
                 color: $primary-main;
                 font-size: $spacing-3;
-                margin-right: 10px;
+                margin-right: $spacing-1;
             }
         }
 
         .menu-toggle {
-            position: relative;
-            width: 42px;
-            height: 42px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include set-position(relative);
+            @include set-dimension($spacing-3);
+            @include set-flex(row, center, center);
             color: $text-secondary;
-        
+
             &:hover,
             &:active,
             &:focus {
                 text-decoration: none;
                 opacity: 0.75;
             }
-        
+
             i,
             svg {
-                font-size: 20px;
+                font-size: $sub-h1;
             }
         }
     }
 
     nav {
-        overflow: auto;
-        height: calc(100% - 84px);
-        ;
-
-        &::-webkit-scrollbar {
-            width: $spacing-0-50;
-        }
-
-        &::-webkit-scrollbar-track {
-            background: transparent;
-            /* Background color of the track */
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background-color: $primary-32;
-            /* Color of the scrollbar thumb */
-            border-radius: $radius-999;
-            /* Rounded corners for the thumb */
-        }
+        @include set-overflow-scroll;
+        @include set-calc(height, '100% - 80px');
+        @include set-custom-scrollbar($spacing-0-50, transparent, $primary-32);
 
         .main-nav-list {
-            display: flex;
-            flex-direction: column;
+            @include set-flex($direction: column);
 
             li {
-                list-style-type: none;
-                margin: 0;
-                transition: $transition-all;
+                @include set-list-style();
+                @include set-transition($transition-all);
             }
 
             .main-nav-title {
+                @include set-font-style($weight: $fw-medium, $size: $caption, $color: $text-secondary);
                 cursor: default;
-                font-size: $caption;
-                text-transform: uppercase;
-                color: $text-secondary;
-                font-weight: 600;
                 padding: $spacing-1-25 $spacing-3;
-                list-style-type: none;
-                transition: all 0.3s ease-in-out;
-                margin: 0;
             }
 
             .main-nav-item {
-                border-left: 3px solid transparent;
+                border-left: $spacing-0-25 solid transparent;
                 opacity: 0.5;
-                transition: $transition-all;
+                @include set-transition($transition-all);
 
                 a {
+                    @include set-font-style($weight: $fw-light, $size: $body-text-sm, $color: $primary-contrast-text, $spacing: 0.5px);
+                    @include set-flex(row, flex-start, center, $spacing-2);
                     padding: $spacing-1-50 $spacing-2;
-                    color: $primary-contrast-text;
-                    display: flex;
-                    align-items: center;
-                    gap: $spacing-2;
-                    letter-spacing: 0.02em;
-                    font-family: 'Roboto';
-                    font-weight: light;
                     white-space: nowrap;
-                    line-height: 1;
-                    font-size: $body-text-sm;
 
                     i,
                     svg {
-                        width: 16px;
-                        font-size: 16px;
-                        color: $text-disabled;
-                        transition: $transition-all;
+                        @include set-dimension($spacing-2);
+                        @include set-font-style($size: $body-text-rg, $color: $text-disabled);
+                        @include set-transition($transition-all);
                     }
 
                     .right {
@@ -147,17 +100,16 @@
 
                 &:hover:not(.active) {
                     opacity: 1 !important;
-                    transition: $transition-all;
 
                     * {
                         color: $global-inherit-color;
-                        transition: $transition-all;
+                        @include set-transition($transition-all);
                     }
                 }
 
                 &.active {
                     opacity: 1 !important;
-                    border-left: 3px solid $primary-main;
+                    border-left-color: $primary-main;
 
                     a {
 
@@ -170,9 +122,8 @@
             }
 
             .main-nav-dropdown {
-                display: flex;
-                flex-direction: column;
-                transition: $transition-all;
+                @include set-flex($direction: column);
+                @include set-transition($transition-all);
 
                 .main-nav-dropdown-toggle:after {
                     content: "";
@@ -180,32 +131,30 @@
                     display: inline-block;
                     width: 0;
                     height: 0;
-                    border-left: 5px solid transparent;
-                    border-right: 5px solid transparent;
-                    border-top: 5px solid $text-secondary;
+                    border-left: $spacing-0-50 solid transparent;
+                    border-right: $spacing-0-50 solid transparent;
+                    border-top: $spacing-0-50 solid $text-secondary;
                     border-radius: 50%;
-                    transform: rotate(90deg);
-                    transition: $transition-all;
+                    @include set-transform(rotate(90deg));
+                    @include set-transition($transition-all);
                 }
 
                 .main-nav-dropdown-menu {
+                    @include set-flex($direction: column);
                     display: none;
-                    flex-direction: column;
                     padding-left: $spacing-4;
-                    transition: $transition-all;
 
                     .dropdown-item {
-                        transition: $transition-all;
+                        @include set-transition($transition-all);
 
                         a {
-                            font-size: $body-text-sm;
-                            font-weight: lighter;
-                            padding: $spacing-1-25 $spacing-2;
+                            @include set-font-style($size: $label, $weight: $fw-light, $color: $global-inherit-color);
+                            padding: $spacing-1 $spacing-2;
                         }
 
                         &:hover {
-                            margin-left: 4px;
-                            transition: $transition-all;
+                            margin-left: $spacing-0-50;
+                            @include set-transition($transition-all);
                         }
                     }
                 }
@@ -214,107 +163,21 @@
                     opacity: 1;
 
                     .main-nav-dropdown-toggle::after {
-                        -webkit-transform: none;
-                        -o-transform: none;
-                        transform: none;
+                        @include set-transform(none);
                     }
 
                     .main-nav-dropdown-menu {
-                        display: flex;
-                        transition: $transition-all;
-                    }
-
-                    * {
-                        color: $white-main;
+                        @include set-flex($direction: column);
+                        @include set-transition($transition-all);
                     }
                 }
             }
         }
     }
-}
 
-.main-compact {
-    .main-nav {
-        min-width: $spacing-8;
-
-        header {
-
-            .brand-logo span,
-            .menu-toggle {
-                display: none;
-            }
-        }
-
-        .main-nav-list {
-            .main-nav-item span {
-                display: none;
-            }
-
-            .main-nav-title {
-                display: none;
-            }
-
-            .main-nav-dropdown {
-                .main-nav-dropdown-toggle:after {
-                    display: none !important;
-                }
-
-                &.show .main-nav-dropdown-menu{
-                    display: none !important;
-                }
-            }
-        }
-
-        &:hover {
-            min-width: inherit;
-            transition: .3s all ease-in-out;
-
-            header {
-                
-                .brand-logo span,
-                .menu-toggle {
-                    display: flex;
-                }
-
-                .menu-toggle{
-                    i,svg{
-                        transform: rotate(180deg);
-                    }
-                }
-            }
-
-            .main-nav-list {
-                .main-nav-item span {
-                    display: flex;
-                }
-
-                .main-nav-title {
-                    display: flex;
-                }
-
-                .main-nav-dropdown {
-                    .main-nav-dropdown-toggle:after {
-                        display: inline-flex !important;
-                    }
-    
-                    &.show .main-nav-dropdown-menu{
-                        display: inline-flex !important;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .main-nav {
+    @media screen and (max-width: 992px) {
+        @include set-position(fixed, 0, 0, 0, 0, 100);
         display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 100;
 
         header .menu-toggle {
             display: flex;
@@ -323,6 +186,100 @@
 
         &.mobile-show {
             display: block;
+        }
+    }
+}
+
+@mixin main-nav-compact() {
+    min-width: $spacing-8;
+    @include set-transition(max-width 0.3s ease);
+    overflow: hidden;
+    max-width: $spacing-8;
+
+    header {
+        display: flex;
+        justify-content: center;
+
+        .brand-logo span,
+        .menu-toggle {
+            display: none;
+        }
+    }
+
+    .main-nav-list {
+        .main-nav-item {
+            a {
+                display: flex !important;
+                justify-content: center;
+                width: 100%;
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+        .main-nav-title {
+            display: none;
+        }
+
+        .main-nav-dropdown {
+            .main-nav-dropdown-toggle:after {
+                display: none !important;
+            }
+
+            &.show .main-nav-dropdown-menu {
+                display: none !important;
+            }
+        }
+    }
+
+    &:hover {
+        max-width: 224px;
+        width: 224px;
+
+        opacity: 1;
+
+        header {
+            justify-content: space-between;
+            .brand-logo span,
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu-toggle {
+
+                i,
+                svg {
+                    @include set-transform(rotate(180deg));
+                    transform-origin: center;
+                }
+            }
+        }
+
+        .main-nav-list {
+            .main-nav-item {
+                a{
+                    justify-content: flex-start;
+                }
+                span {
+                    display: inline-flex;
+                }
+            }
+
+            .main-nav-title {
+                display: inline-flex;
+            }
+
+            .main-nav-dropdown {
+                .main-nav-dropdown-toggle:after {
+                    display: inline-flex !important;
+                }
+
+                &.show .main-nav-dropdown-menu {
+                    display: inline-flex !important;
+                }
+            }
         }
     }
 }

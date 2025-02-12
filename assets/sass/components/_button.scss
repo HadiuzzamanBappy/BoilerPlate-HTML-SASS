@@ -237,18 +237,18 @@
 }
 @mixin component-icon {
   &-xsm {
-    @include icon-variant($spacing-1-75, $spacing-1-50);
+    @include icon-variant($spacing-1, $spacing-1-50);
   }
 
   &-sm{
-    @include icon-variant($spacing-2, $spacing-2);
+    @include icon-variant($spacing-1, $spacing-2);
   }
 
   &-md{
-    @include icon-variant($spacing-2-25, $spacing-2-50);
+    @include icon-variant($spacing-1-50, $spacing-2-50);
   }
 
   &-lg{
-    @include icon-variant($spacing-2-50, $spacing-3);
+    @include icon-variant($spacing-1-75, $spacing-3);
   }
 }

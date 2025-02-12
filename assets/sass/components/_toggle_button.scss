@@ -64,7 +64,7 @@
 }
 
 @mixin toggle-button-group {
-    @include display-flex;
+    @include set-flex;
     border: 1px solid $button-outline;
     padding: $spacing-0-50;
     border-radius: $radius-999;
