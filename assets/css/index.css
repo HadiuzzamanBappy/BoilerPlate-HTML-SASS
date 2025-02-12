@@ -8140,7 +8140,7 @@ td:last-child {
 
 body {
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: #e8ebed;
   height: 100vh;
   display: -moz-flex;
   display: flex;
@@ -8429,7 +8429,7 @@ body .main-details .toolbar {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 0;
+  z-index: 5;
   min-height: 80px;
   background-color: #e8ebed;
   padding: 8px 24px;
@@ -8445,7 +8445,6 @@ body .main-details .toolbar .menu-toggle:hover {
 body .main-details .content {
   flex-grow: 1;
   padding: 24px;
-  height: 100%;
 }
 @media screen and (max-width: 768px) {
   body .main-details .content {
@@ -8547,7 +8546,7 @@ body .main-details .content {
 .component-block {
   border: 2px solid #ddd;
   border-radius: 16px;
-  padding: 24px;
+  padding: 40px 24px;
   position: relative;
   width: -moz-fill-available;
   width: -webkit-fill-available;
@@ -8556,6 +8555,7 @@ body .main-details .content {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  background-color: #ffffff;
 }
 
 .section-heading {
@@ -8563,10 +8563,11 @@ body .main-details .content {
   top: -32px;
   /* Adjust to center the heading over the border */
   left: 20px;
-  background-color: #ffffff;
+  background-color: #e8ebed;
   font-size: 20px;
-  padding: 0 16px;
-  color: #333;
+  padding: 4px 16px;
+  color: #303840;
+  border-radius: 8px;
 }
 
 .component-grid {

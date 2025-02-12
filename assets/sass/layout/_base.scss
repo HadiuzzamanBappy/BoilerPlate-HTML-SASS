@@ -4,7 +4,7 @@
 
 body {
     box-sizing: border-box;
-    background-color: $bg-default;
+    background-color: $bg-paper-alt;
     height: 100vh;
     @include set-flex(row, flex-start);
 
@@ -21,7 +21,7 @@ body {
 
         .toolbar {
             @include set-flex(row, flex-start, center);
-            @include set-position(sticky, 0, 0, null, 0,0);
+            @include set-position(sticky, 0, 0, null, 0,5);
             min-height: $spacing-10;
             background-color: $bg-paper-alt;
             padding: $spacing-1 $spacing-3;
@@ -40,7 +40,6 @@ body {
         .content {
             flex-grow: 1;
             padding: $spacing-3;
-            height: 100%;
         }
 
         @media screen and (max-width: 768px) {
@@ -93,7 +92,7 @@ body {
 .component-block {
     border: 2px solid #ddd;
     border-radius: 16px;
-    padding: 24px;
+    padding: 40px 24px;
     position: relative;
     width: -moz-fill-available;
     width: -webkit-fill-available;
@@ -101,6 +100,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    background-color: $bg-default;
 }
 
 .section-heading {
@@ -108,10 +108,11 @@ body {
     top: -32px;
     /* Adjust to center the heading over the border */
     left: 20px;
-    background-color: $bg-default;
+    background-color: $bg-paper-alt;
     font-size: 20px;
-    padding: 0 16px;
-    color: #333;
+    padding: 4px 16px;
+    color: $text-primary;
+    border-radius: 8px;
 }
 
 .component-grid {
