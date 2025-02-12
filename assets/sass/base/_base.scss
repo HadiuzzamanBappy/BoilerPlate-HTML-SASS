@@ -15,7 +15,13 @@ body {
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: var($text-primary);
   background-color: var($bg-paper);
-  ;
+}
+
+hr {
+  height: 1px;
+  color: $divider;
+  margin: 0 !important;
+  opacity: 0.2;
 }
 
 /* Removes awkward default styles on some inputs for iOS */

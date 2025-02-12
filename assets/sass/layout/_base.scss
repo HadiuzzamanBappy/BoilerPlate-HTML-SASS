@@ -1,0 +1,112 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+body {
+    box-sizing: border-box;
+    background-color: $bg-default;
+    height: 100vh;
+    display: flex;
+
+    .main-details {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 2;
+        margin-top: 84px;
+
+        .toolbar {
+            min-height: 84px;
+            background-color: $bg-paper-alt;
+            display: flex;
+            align-items: center;
+            padding: $spacing-1 $spacing-2;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+
+        .content {
+            flex-grow: 2;
+            padding: 25px;
+            height: 100%;
+            overflow: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .content {
+                padding: 15px 0px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        &.main-compact {
+
+            .main-details {
+                margin-left: $spacing-8 !important;
+
+                .toolbar {
+                    left: $spacing-8 !important;
+                }
+            }
+        }
+
+        .main-details {
+            margin-left: 224px;
+
+            .toolbar {
+                left: 224px !important;
+            }
+        }
+    }
+}
+
+
+//Misc
+.component-section {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.component-block {
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    padding: 24px;
+    position: relative;
+    width: -moz-fill-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section-heading {
+    position: absolute;
+    top: -32px;
+    /* Adjust to center the heading over the border */
+    left: 20px;
+    background-color: #f9f9f9;
+    font-size: 20px;
+    padding: 0 16px;
+    color: #333;
+}
+
+.component-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* Gap between rows */
+    padding-top: 24px;
+}
+
+.component-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+}

@@ -104,11 +104,11 @@ $(document).ready(function () {
   }
   
   // Dashboard Collapse and Expand
-  $(".dashboard-nav-dropdown-toggle").click(function () {
+  $(".main-nav-dropdown-toggle").click(function () {
     $(this)
-      .closest(".dashboard-nav-dropdown")
+      .closest(".main-nav-dropdown")
       .toggleClass("show")
-      .find(".dashboard-nav-dropdown")
+      .find(".main-nav-dropdown")
       .removeClass("show");
     $(this).parent().siblings().removeClass("show");
   });
@@ -116,9 +116,9 @@ $(document).ready(function () {
   // Menu Toggle
   $(".menu-toggle").click(function () {
     if (window.matchMedia("(max-width: 990px )").matches) {
-      $(".dashboard-nav").toggleClass("mobile-show");
+      $(".main-nav").toggleClass("mobile-show");
     } else {
-      $(".dashboard").toggleClass("dashboard-compact");
+      $("body").toggleClass("main-compact");
     }
   });
 });

@@ -283,7 +283,7 @@
 // Layout Utilities
 // ==========================
 // Flex Mixin
-@mixin display-flex($direction: row, $justify: flex-start, $align: stretch) {
+@mixin display-flex($direction: row, $justify: flex-start, $align: center) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
