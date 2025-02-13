@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+@mixin main-toolbar() {
+    @include set-flex(row, space-between, center);
+    @include set-position(sticky, 0, 0, null, 0, 5);
+    min-height: $spacing-10;
+    background-color: $bg-paper-alt;
+    padding: $spacing-1 $spacing-3;
+    left: 0 !important;
+
+    *{
+        margin: 0 !important;
+    }
+
+    .left{
+        @include set-flex(row, flex-start, center, $spacing-2);
+        .menu-toggle {
+            color: $text-primary;
+            font-size: $body-text-lg;
+    
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+    }
+    .right{
+        @include set-flex(row, flex-end, center, $spacing-1);
+    }
+
+    @media screen and (min-width: 992px) {
+        left: 224px !important;
+
+        .menu-toggle {
+            display: none;
+        }
+    }
+}

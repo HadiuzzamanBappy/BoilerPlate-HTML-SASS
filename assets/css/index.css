@@ -8225,35 +8225,35 @@ body .main-nav header .menu-toggle i,
 body .main-nav header .menu-toggle svg {
   font-size: 20px;
 }
-body .main-nav nav {
+body .main-nav main {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   height: calc(100% - 80px);
 }
-body .main-nav nav::-webkit-scrollbar {
+body .main-nav main::-webkit-scrollbar {
   width: 4px;
 }
-body .main-nav nav::-webkit-scrollbar-track {
+body .main-nav main::-webkit-scrollbar-track {
   background: transparent;
 }
-body .main-nav nav::-webkit-scrollbar-thumb {
+body .main-nav main::-webkit-scrollbar-thumb {
   background-color: rgba(7, 172, 117, 0.32);
   border-radius: 800px;
 }
-body .main-nav nav .main-nav-list {
+body .main-nav main .main-nav-list {
   display: -moz-flex;
   display: flex;
   -moz-flex-direction: column;
   flex-direction: column;
 }
-body .main-nav nav .main-nav-list li {
+body .main-nav main .main-nav-list li {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
   transition: all 0.3s ease-in-out;
 }
-body .main-nav nav .main-nav-list .main-nav-title {
+body .main-nav main .main-nav-list .main-nav-title {
   font-family: "Poppins", sans-serif;
   font-size: 10px;
   font-weight: 500;
@@ -8263,12 +8263,12 @@ body .main-nav nav .main-nav-list .main-nav-title {
   cursor: default;
   padding: 10px 24px;
 }
-body .main-nav nav .main-nav-list .main-nav-item {
+body .main-nav main .main-nav-list .main-nav-item {
   border-left: 2px solid transparent;
   opacity: 0.5;
   transition: all 0.3s ease-in-out;
 }
-body .main-nav nav .main-nav-list .main-nav-item a {
+body .main-nav main .main-nav-list .main-nav-item a {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -8287,9 +8287,10 @@ body .main-nav nav .main-nav-list .main-nav-item a {
   gap: 16px;
   padding: 12px 16px;
   white-space: nowrap;
+  width: 100%;
 }
-body .main-nav nav .main-nav-list .main-nav-item a i,
-body .main-nav nav .main-nav-list .main-nav-item a svg {
+body .main-nav main .main-nav-list .main-nav-item a i,
+body .main-nav main .main-nav-list .main-nav-item a svg {
   width: 16px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -8299,32 +8300,32 @@ body .main-nav nav .main-nav-list .main-nav-item a svg {
   text-align: left;
   transition: all 0.3s ease-in-out;
 }
-body .main-nav nav .main-nav-list .main-nav-item a .right {
+body .main-nav main .main-nav-list .main-nav-item a .right {
   margin-left: auto;
 }
-body .main-nav nav .main-nav-list .main-nav-item:hover:not(.active) {
+body .main-nav main .main-nav-list .main-nav-item:hover:not(.active) {
   opacity: 1 !important;
 }
-body .main-nav nav .main-nav-list .main-nav-item:hover:not(.active) * {
+body .main-nav main .main-nav-list .main-nav-item:hover:not(.active) * {
   color: #ffffff;
   transition: all 0.3s ease-in-out;
 }
-body .main-nav nav .main-nav-list .main-nav-item.active {
+body .main-nav main .main-nav-list .main-nav-item.active {
   opacity: 1 !important;
   border-left-color: #07ac75;
 }
-body .main-nav nav .main-nav-list .main-nav-item.active a i,
-body .main-nav nav .main-nav-list .main-nav-item.active a svg {
+body .main-nav main .main-nav-list .main-nav-item.active a i,
+body .main-nav main .main-nav-list .main-nav-item.active a svg {
   color: #07ac75 !important;
 }
-body .main-nav nav .main-nav-list .main-nav-dropdown {
+body .main-nav main .main-nav-list .main-nav-dropdown {
   display: -moz-flex;
   display: flex;
   -moz-flex-direction: column;
   flex-direction: column;
   transition: all 0.3s ease-in-out;
 }
-body .main-nav nav .main-nav-list .main-nav-dropdown .main-nav-dropdown-toggle:after {
+body .main-nav main .main-nav-list .main-nav-dropdown .main-nav-dropdown-toggle:after {
   content: "";
   margin-left: auto;
   display: inline-block;
@@ -8337,7 +8338,7 @@ body .main-nav nav .main-nav-list .main-nav-dropdown .main-nav-dropdown-toggle:a
   transform: rotate(90deg);
   transition: all 0.3s ease-in-out;
 }
-body .main-nav nav .main-nav-list .main-nav-dropdown .main-nav-dropdown-menu {
+body .main-nav main .main-nav-list .main-nav-dropdown .main-nav-dropdown-menu {
   display: -moz-flex;
   display: flex;
   -moz-flex-direction: column;
@@ -8345,10 +8346,10 @@ body .main-nav nav .main-nav-list .main-nav-dropdown .main-nav-dropdown-menu {
   display: none;
   padding-left: 32px;
 }
-body .main-nav nav .main-nav-list .main-nav-dropdown .main-nav-dropdown-menu .dropdown-item {
+body .main-nav main .main-nav-list .main-nav-dropdown .main-nav-dropdown-menu .dropdown-item {
   transition: all 0.3s ease-in-out;
 }
-body .main-nav nav .main-nav-list .main-nav-dropdown .main-nav-dropdown-menu .dropdown-item a {
+body .main-nav main .main-nav-list .main-nav-dropdown .main-nav-dropdown-menu .dropdown-item a {
   font-family: "Poppins", sans-serif;
   font-size: 12px;
   font-weight: 300;
@@ -8357,17 +8358,17 @@ body .main-nav nav .main-nav-list .main-nav-dropdown .main-nav-dropdown-menu .dr
   text-align: left;
   padding: 8px 16px;
 }
-body .main-nav nav .main-nav-list .main-nav-dropdown .main-nav-dropdown-menu .dropdown-item:hover {
+body .main-nav main .main-nav-list .main-nav-dropdown .main-nav-dropdown-menu .dropdown-item:hover {
   margin-left: 4px;
   transition: all 0.3s ease-in-out;
 }
-body .main-nav nav .main-nav-list .main-nav-dropdown.show {
+body .main-nav main .main-nav-list .main-nav-dropdown.show {
   opacity: 1;
 }
-body .main-nav nav .main-nav-list .main-nav-dropdown.show .main-nav-dropdown-toggle::after {
+body .main-nav main .main-nav-list .main-nav-dropdown.show .main-nav-dropdown-toggle::after {
   transform: none;
 }
-body .main-nav nav .main-nav-list .main-nav-dropdown.show .main-nav-dropdown-menu {
+body .main-nav main .main-nav-list .main-nav-dropdown.show .main-nav-dropdown-menu {
   display: -moz-flex;
   display: flex;
   -moz-flex-direction: column;
@@ -8414,13 +8415,13 @@ body .main-details::-webkit-scrollbar-thumb {
   background-color: rgba(145, 158, 171, 0.8);
   border-radius: 800px;
 }
-body .main-details .toolbar {
+body .main-details .main-toolbar {
   display: -moz-flex;
   display: flex;
   -moz-flex-direction: row;
   flex-direction: row;
-  -moz-justify-content: flex-start;
-  justify-content: flex-start;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
   -moz-align-items: center;
   align-items: center;
   position: sticky;
@@ -8435,31 +8436,58 @@ body .main-details .toolbar {
   padding: 8px 24px;
   left: 0 !important;
 }
-body .main-details .toolbar .menu-toggle {
-  display: block;
-  color: #303840;
+body .main-details .main-toolbar * {
+  margin: 0 !important;
 }
-body .main-details .toolbar .menu-toggle:hover {
+body .main-details .main-toolbar .left {
+  display: -moz-flex;
+  display: flex;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -moz-justify-content: flex-start;
+  justify-content: flex-start;
+  -moz-align-items: center;
+  align-items: center;
+  gap: 16px;
+}
+body .main-details .main-toolbar .left .menu-toggle {
+  color: #303840;
+  font-size: 18px;
+}
+body .main-details .main-toolbar .left .menu-toggle:hover {
   opacity: 0.75;
 }
-body .main-details .content {
+body .main-details .main-toolbar .right {
+  display: -moz-flex;
+  display: flex;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -moz-justify-content: flex-end;
+  justify-content: flex-end;
+  -moz-align-items: center;
+  align-items: center;
+  gap: 8px;
+}
+@media screen and (min-width: 992px) {
+  body .main-details .main-toolbar {
+    left: 224px !important;
+  }
+  body .main-details .main-toolbar .menu-toggle {
+    display: none;
+  }
+}
+body .main-details .main-content {
   flex-grow: 1;
   padding: 24px;
 }
 @media screen and (max-width: 768px) {
-  body .main-details .content {
+  body .main-details .main-content {
     padding: 16px 0;
   }
 }
 @media screen and (min-width: 992px) {
   body .main-details {
     margin-left: 224px !important;
-  }
-  body .main-details .toolbar {
-    left: 224px !important;
-  }
-  body .main-details .toolbar .menu-toggle {
-    display: none;
   }
 }
 @media screen and (min-width: 992px) {
@@ -8529,7 +8557,7 @@ body .main-details .content {
   body.main-compact .main-details {
     margin-left: 64px !important;
   }
-  body.main-compact .main-details .toolbar {
+  body.main-compact .main-details .main-toolbar {
     left: 64px !important;
   }
 }

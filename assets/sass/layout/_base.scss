@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 @use "../base" as *;
 @use "navbar" as *;
+@use "header" as *;
 
 body {
     box-sizing: border-box;
@@ -19,45 +20,21 @@ body {
         @include set-overflow-scroll();
         @include set-custom-scrollbar($spacing-1, transparent, $action-disabled);
 
-        .toolbar {
-            @include set-flex(row, flex-start, center);
-            @include set-position(sticky, 0, 0, null, 0,5);
-            min-height: $spacing-10;
-            background-color: $bg-paper-alt;
-            padding: $spacing-1 $spacing-3;
-            left: 0 !important;
-
-            .menu-toggle {
-                display: block;
-                color: $text-primary;
-
-                &:hover {
-                    opacity: 0.75;
-                }
-            }
+        .main-toolbar {
+            @include main-toolbar();
         }
 
-        .content {
+        .main-content {
             flex-grow: 1;
             padding: $spacing-3;
-        }
 
-        @media screen and (max-width: 768px) {
-            .content {
+            @media screen and (max-width: 768px) {
                 padding: $spacing-2 0;
             }
         }
 
         @media screen and (min-width: 992px) {
             margin-left: 224px !important;
-
-            .toolbar {
-                left: 224px !important;
-
-                .menu-toggle {
-                    display: none;
-                }
-            }
         }
     }
 
@@ -70,7 +47,7 @@ body {
             .main-details {
                 margin-left: $spacing-8 !important;
 
-                .toolbar {
+                .main-toolbar {
                     left: $spacing-8 !important;
                 }
             }
