@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 @use "../base" as *;
 
-@mixin main-toolbar() {
+@mixin main-header() {
     @include set-flex(row, space-between, center);
     @include set-position(sticky, 0, 0, null, 0, 5);
     min-height: $spacing-10;

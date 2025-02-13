@@ -1,5 +1,32 @@
 @use "../abstracts" as *;
-@use "../base" as *;
+
+// Avatar Component
+@mixin theme-avatar($size: $spacing-5, $shape: 'circle') {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: $size;
+    height: $size;
+    color: $text-secondary;
+    background-color: $grey-8;
+    border-radius: if($shape =='circle', 50%, if($shape =='rounded', $spacing-1, 0));
+    overflow: hidden;
+    padding: $spacing-0-25;
+
+    >* {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    img,
+    svg {
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        object-fit: cover;
+    }
+}
 
 @mixin component-avatar{
 @for $i from 2 through 10 { // 2 * 8 = 16, 10 * 8 = 80

@@ -1,5 +1,68 @@
 @use "../abstracts" as *;
-@use "../base" as *;
+
+//---------------------------------------------------------------
+//Button Mixin
+//---------------------------------------------------------------
+@mixin theme-button($bg-color: $global-default-bg,
+    $text-color: $global-default-color,
+    $hover-bg-color: $global-default-bg-hovered,
+    $hover-text-color: $global-default-color,
+    $pressed-bg-color: $global-default-bg-hovered,
+    $pressed-text-color: $global-default-color,
+    $focus-outline: 0 0 0 3px $action-focus,
+    $border-color: $button-outline,
+    $hover-border-color: $button-outline,
+    $disabled-bg-color: $action-disabled-bg,
+    $disabled-text-color: $action-disabled,
+    $disabled-border-color: $action-disabled-bg,
+    $padding: $spacing-1-50 $spacing-2-50,
+    $font-size: $body-text-rg,
+    $font-weight: $fw-medium,
+    $border-radius: $radius-999,
+    $transition: $transition-all,
+    $icon-spacing: $spacing-1) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: 1px solid $border-color;
+    padding: $padding;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    border-radius: $border-radius;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $icon-spacing;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover:not(:disabled) {
+        background-color: $hover-bg-color;
+        color: $hover-text-color;
+        border-color: $hover-border-color;
+    }
+
+    &:active:not(:disabled) {
+        background-color: $pressed-bg-color;
+        color: $pressed-text-color;
+        transform: scale(0.98);
+    }
+
+    &:focus:not(:disabled) {
+        outline: none;
+        background-color: $hover-bg-color;
+        color: $text-color;
+        box-shadow: $focus-outline;
+    }
+
+    &:disabled {
+        background-color: $disabled-bg-color;
+        color: $disabled-text-color;
+        border-color: $disabled-border-color;
+        cursor: not-allowed;
+    }
+}
 
 //---------------------------------------------------------------
 //Default Button

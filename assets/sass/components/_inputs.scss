@@ -1,5 +1,180 @@
 @use "../abstracts" as *;
-@use "../base" as *;
+
+// Theme Input Field Mixin
+@mixin theme-input-field($label-color: $text-secondary,
+    $label-font-size: $body-text-rg,
+    $label-floating-font-size: $label,
+    $label-floating-bg-color: $bg-paper,
+    $border-color: $button-outline,
+    $border-radius: $spacing-1,
+    $hover-border-color: $text-primary,
+    $focus-border-color: $text-primary,
+    $main-padding: $spacing-2 $spacing-0-50,
+    $icon-color: $text-secondary,
+    $icon-size: $body-text-rg,
+    $font-color: $text-primary,
+    $font-size: $body-text-rg,
+    $success: $success-main,
+    $error: $error-main,
+    $disabled: $action-disabled,
+) {
+    position: relative;
+    width: 100%;
+
+    .input-main {
+        position: relative;
+        @include set-flex;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        padding: $main-padding;
+
+        &:hover {
+            border-color: $hover-border-color;
+        }
+
+        &:focus-within {
+            border-color: $focus-border-color;
+        }
+    }
+
+    .icon-left,
+    .icon-right {
+        @include set-flex(row, center, center);
+        padding: 0 $spacing-1;
+        color: $icon-color;
+        font-size: $icon-size;
+    }
+
+    .icon-left {
+        order: 1;
+
+        i {
+            color: $action-disabled;
+        }
+    }
+
+    .icon-right {
+        order: 3;
+    }
+
+    .input-field {
+        flex: 1;
+        order: 2;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: $font-size;
+        color: $font-color;
+        padding: 0;
+
+        &.area {
+            padding: 0 $spacing-1 !important;
+        }
+
+        &::placeholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        &:focus::placeholder,
+        &:not(:placeholder-shown)::placeholder {
+            opacity: 1;
+        }
+    }
+
+    .input-label {
+        position: absolute;
+        top: 50%;
+        left: $spacing-5;
+        transform: translateY(-50%);
+        color: $label-color;
+        font-size: $label-font-size;
+        pointer-events: none;
+        transition: $transition-all;
+
+        &.area {
+            top: 20% !important;
+            left: 5% !important;
+        }
+    }
+
+    .input-field:focus+.input-label,
+    .input-field:not(:placeholder-shown)+.input-label,
+    .input-label.floating {
+        top: 0 !important;
+        left: 10% !important;
+        font-size: $label-floating-font-size;
+        background-color: $label-floating-bg-color;
+        padding: $spacing-0-25 $spacing-0-50;
+
+        &.area {
+            left: 5% !important;
+        }
+    }
+
+    .input-helper {
+        @include set-flex(row, flex-start, center);
+        margin-top: $spacing-1;
+        margin-left: $spacing-1;
+        font-size: $caption;
+        color: $text-secondary;
+        gap: $spacing-1;
+    }
+
+    &.success {
+        .input-main {
+            border-color: $success;
+
+            .input-field:focus+.input-label,
+            .input-field:not(:placeholder-shown)+.input-label,
+            .input-label.floating {
+                color: $success;
+            }
+        }
+
+        .input-helper {
+            color: $success;
+        }
+    }
+
+    &.error {
+        .input-main {
+            border-color: $error;
+
+            .input-field:focus+.input-label,
+            .input-field:not(:placeholder-shown)+.input-label,
+            .input-label.floating {
+                color: $error;
+            }
+        }
+
+        .input-helper {
+            color: $error;
+        }
+    }
+
+    &.disabled {
+        pointer-events: none;
+
+        .input-main {
+            .input-field {
+                color: $disabled;
+            }
+
+            .icon-left,
+            .icon-right {
+                i {
+                    color: $disabled;
+                }
+            }
+        }
+
+        .input-helper {
+            color: $disabled;
+        }
+    }
+}
 
 // Input Field Default
 @mixin component-input-field {

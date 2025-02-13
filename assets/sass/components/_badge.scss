@@ -1,5 +1,39 @@
 @use "../abstracts" as *;
-@use "../base" as *;
+
+// Badge Component
+@mixin theme-badge($bg-color: $global-default-bg,
+    $text-color: $global-default-color,
+    $size: $spacing-2-50,
+    $dot-size: $spacing-1-25,
+    $status-size: $spacing-1-50) {
+    background-color: $bg-color;
+    color: $text-color;
+    border-radius: $radius-999;
+    padding: 0 $spacing-1;
+    height: $size;
+    display: flex;
+    align-items: center;
+    cursor: default;
+    font-size: $caption;
+    line-height: $caption;
+
+    &-dot {
+        background-color: $bg-color;
+        width: $dot-size;
+        height: $dot-size;
+        border-radius: $radius-999;
+    }
+}
+
+// Badge Status Component
+@mixin theme-badge-status($bg-color: $success-main,
+    $size: $spacing-1-50) {
+    width: $size;
+    height: $size;
+    background-color: $bg-color;
+    border-radius: $radius-999;
+    position: relative;
+}
 
 @mixin component-badge {
         @include theme-badge;

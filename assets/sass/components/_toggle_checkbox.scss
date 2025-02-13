@@ -1,5 +1,128 @@
 @use "../abstracts" as *;
-@use "../base" as *;
+
+// Checkbox Mixin
+@mixin theme-toggle-checkbox($size: $spacing-2-50,
+    $size-sm: $spacing-2,
+    $hover-border-size: $spacing-1,
+    $mark-color: $text-primary,
+    $transition: $transition-all,
+    $label-color: $text-primary,
+    $label-font-size: $body-text-sm) {
+    display: flex;
+    align-items: center;
+    gap: $spacing-1;
+
+    .tgl-checkbox-action {
+        position: relative;
+        display: inline-block;
+        width: $size;
+        height: $size;
+
+        .checkbox-input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+
+            // Checked State
+            &:checked+.checkbox-mark {
+                border-color: $mark-color;
+                background-color: $mark-color;
+
+                &::before {
+                    -webkit-transform: scale(1) rotate(45deg);
+                    -ms-transform: scale(1) rotate(45deg);
+                    transform: scale(1) rotate(45deg);
+                }
+            }
+
+            // Hover State
+            &:hover:not(:disabled)+.checkbox-mark {
+                box-shadow: 0 0 0 $hover-border-size rgba($mark-color, 20%);
+            }
+
+            &:checked:hover:not(:disabled)+.checkbox-mark {
+                box-shadow: 0 0 0 $hover-border-size rgba($mark-color, 20%);
+            }
+
+            // Disabled State
+            &:disabled+.checkbox-mark {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+        }
+
+        .checkbox-mark {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid $mark-color;
+            border-radius: $spacing-0-50;
+            transition: $transition;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            // Inner mark
+            &::before {
+                content: "";
+                width: calc($size / 2) - $spacing-0-25;
+                height: calc($size / 2) + $spacing-0-25;
+                transition: $transition;
+                border: solid $global-inherit-color;
+                border-width: 0 2px 2px 0;
+                position: absolute;
+                top: 5%;
+                left: 25%;
+                transform: scale(0);
+            }
+        }
+    }
+
+    .tgl-checkbox-label {
+        color: $label-color;
+        font-size: $label-font-size;
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+
+        .tgl-checkbox-action {
+            pointer-events: none;
+        }
+
+        .tgl-checkbox-label {
+            pointer-events: none;
+        }
+    }
+
+    &.checkbox-sm {
+        .tgl-checkbox-action {
+            width: $size-sm;
+            height: $size-sm;
+
+            .checkbox-mark::before {
+                width: calc($size-sm / 3);
+                height: calc($size-sm / 2);
+            }
+
+            .checkbox-input {
+
+                // Hover State
+                &:hover:not(:disabled)+.checkbox-mark {
+                    box-shadow: 0 0 0 calc($hover-border-size / 2) rgba($mark-color, 20%) !important;
+                }
+
+                &:checked:hover:not(:disabled)+.checkbox-mark {
+                    box-shadow: 0 0 0 calc($hover-border-size / 2) rgba($mark-color, 20%) !important;
+                }
+            }
+        }
+    }
+}
 
 // Default checkbox Button
 @mixin toggle-checkbox-default {

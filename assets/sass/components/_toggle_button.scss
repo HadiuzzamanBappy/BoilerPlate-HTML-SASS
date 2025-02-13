@@ -1,5 +1,47 @@
 @use "../abstracts" as *;
-@use "../base" as *;
+
+// Toggle Button Mixin
+@mixin theme-toggle-button($bg-color: transparent,
+    $text-color: $text-secondary,
+    $icon-color: $action-active,
+    $border-color: $button-outline,
+    $disabled-bg-color: $action-disabled-bg,
+    $disabled-text-color: $action-disabled,
+) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: 1px solid $text-color;
+    border-radius: $radius-999;
+    padding: $spacing-1-50 $spacing-2-50;
+    font-size: $body-text-rg;
+    font-weight: $fw-medium;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-1;
+    cursor: pointer;
+    transition: $transition-all;
+
+    i {
+        color: $icon-color;
+    }
+
+    &:disabled,
+    &.disabled {
+        background-color: $bg-color !important;
+        color: $disabled-text-color !important;
+        border: 1px solid $disabled-bg-color !important;
+        cursor: not-allowed;
+    }
+
+    &.tgl-group {
+        border: transparent !important;
+    }
+
+    &.tgl-group {
+        border: transparent !important;
+    }
+}
 
 @mixin toggle-button-default {
     @include theme-toggle-button;

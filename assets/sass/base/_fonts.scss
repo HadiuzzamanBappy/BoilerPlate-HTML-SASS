@@ -1,9 +1,9 @@
-@mixin font-face(
-  $family,
+@mixin font-face($family,
   $weight,
   $type,
   $style: normal,
-  $path: "/assets/css/fonts/Poppins"
+  $path: "/assets/fonts/Poppins"
+
 ) {
   @font-face {
     font-family: $family;
@@ -25,11 +25,7 @@ $font-weights: (
   900: "Black",
 );
 
-$font-styles: (""); // Define font styles
-
 // Loop through font weights and styles to generate includes
 @each $weight, $name in $font-weights {
-  @each $style in $font-styles {
-    @include font-face("Poppins", $weight, $name, $style, "/assets/css/fonts/Poppins");
-  }
+  @include font-face("Poppins", $weight, $name, "/assets/fonts/Poppins");
 }

@@ -1,0 +1,16 @@
+%btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+// Mainly to make images as a circle
+%circle {
+  border-radius: 50%;
+}
+
+// Removing default appearance
+%no-appearance {
+  -webkit-appearance: none;
+  appearance: none;
+}

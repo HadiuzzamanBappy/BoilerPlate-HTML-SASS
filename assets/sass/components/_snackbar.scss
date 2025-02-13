@@ -1,6 +1,55 @@
 @use "../abstracts" as *;
-@use "../base" as *;
-@use "button" as *;
+
+// Snackbar Component
+@mixin theme-snackbar($main-bg: $global-default-bg,
+    $on-main: $global-default-color,
+    $action-bg: $primary-8,
+    $on-action: $primary-main,
+    $icon-size: $spacing-3) {
+    display: flex;
+    gap: $spacing-2;
+    align-items: center;
+    padding: $spacing-1 $spacing-2;
+    background-color: $main-bg;
+    border-radius: $radius-999;
+    color: $on-main;
+    box-shadow: $shadow-md;
+
+    .snack-icon {
+        font-size: $icon-size;
+        color: $on-action;
+
+        &.left {
+            display: flex;
+            background-color: $action-bg;
+            border-radius: $radius-999;
+
+            i {
+                width: $icon-size;
+            }
+        }
+
+        &.right {
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+            color: $action-active;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .snack-text {
+        flex-grow: 1;
+        font-size: $body-text-rg;
+    }
+
+    .snack-action {
+        display: flex;
+        gap: $spacing-1;
+    }
+}
 
 @mixin component-snackbar-default{
     @include theme-snackbar;

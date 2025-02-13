@@ -1,5 +1,116 @@
 @use "../abstracts" as *;
-@use "../base" as *;
+
+
+// Theme Toggle Switch
+@mixin theme-toggle-switch($width: $spacing-4,
+    $height: $spacing-2-50,
+    $height-sm: $spacing-2,
+    $slider-size: $spacing-1-75,
+    $slider-size-sm: $spacing-1-50,
+    $slider-padding: $spacing-0-75,
+    $unchecked-bg: $grey-48,
+    $checked-bg: $global-inherit-bg,
+    $slider-color: $white-main,
+    $transition: $transition-all,
+    $title-color: $text-primary,
+    $title-font-size: $body-text-sm,
+    $hover-border-color: $grey-8,
+    $hover-border-size: $spacing-1,
+) {
+    display: flex;
+    align-items: center;
+    gap: $spacing-1;
+
+    .tgl-switch-action {
+        position: relative;
+        display: inline-block;
+        overflow: visible;
+        width: $width;
+        height: $height;
+
+        .switch-input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+
+            &:checked+.switch-slider {
+                background-color: $checked-bg;
+
+                &::before {
+                    transform: translateX($width - $slider-size - $slider-padding);
+                }
+            }
+
+            &:hover:not(:disabled)+.switch-slider {
+                &::before {
+                    box-shadow: 0 0 0 $hover-border-size rgba($hover-border-color, 20%);
+                }
+            }
+
+            &:checked:hover:not(:disabled)+.switch-slider {
+                &::before {
+                    box-shadow: 0 0 0 $spacing-1 rgba($checked-bg, 20%); // Add border outside the circle
+                }
+            }
+        }
+
+        .switch-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $unchecked-bg;
+            transition: $transition;
+            border-radius: $height;
+
+            &::before {
+                position: absolute;
+                content: "";
+                height: $slider-size;
+                width: $slider-size;
+                left: calc(($height - $slider-size) / 2);
+                bottom: calc(($height - $slider-size) / 2);
+                background-color: $slider-color;
+                transition: $transition;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .tgl-switch-label {
+        color: $title-color;
+        font-size: $title-font-size;
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+
+        .tgl-switch-action,
+        .tgl-switch-label {
+            pointer-events: none; // Disable pointer events
+        }
+    }
+
+    &.tgl-sm {
+        .tgl-switch-action {
+            height: $height-sm;
+
+            .switch-input:checked+.switch-slider::before {
+                transform: translateX($width - $slider-size - calc($slider-padding/2));
+            }
+
+            .switch-slider::before {
+                height: $slider-size-sm;
+                width: $slider-size-sm;
+                left: calc(($height-sm - $slider-size-sm) / 2);
+                bottom: calc(($height-sm - $slider-size-sm) / 2);
+            }
+        }
+    }
+}
 
 @mixin toggle-switch-default {
     @include theme-toggle-switch;

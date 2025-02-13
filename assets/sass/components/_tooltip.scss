@@ -1,5 +1,32 @@
 @use "../abstracts" as *;
-@use "../base" as *;
+
+// Tooltip
+@mixin theme-tooltip($bg-color: $grey-800,
+    $color: $white-main) {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        background-color: $bg-color;
+        color: $color;
+        font-size: $body-text-sm;
+        padding: $spacing-0-50 $spacing-1;
+        border-radius: $radius-1;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        white-space: nowrap;
+        z-index: 9;
+        cursor: pointer;
+    }
+
+    &:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+}
 
 @mixin tooltip {
     &-top {

@@ -1,5 +1,123 @@
 @use "../abstracts" as *;
-@use "../base" as *;
+
+// Radio Button Mixin
+@mixin theme-toggle-radio($size: $spacing-2-50,
+    $size-sm: $spacing-2,
+    $hover-border-size: $spacing-1,
+    $dot-color: $text-primary,
+    $transition: $transition-all,
+    $label-color: $text-primary,
+    $label-font-size: $body-text-sm) {
+    display: flex;
+    align-items: center;
+    gap: $spacing-1;
+
+    .tgl-radio-action {
+        position: relative;
+        display: inline-block;
+        width: $size;
+        height: $size;
+
+        .radio-input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+
+            // Checked State
+            &:checked+.radio-dot {
+                border-color: $dot-color;
+
+                &::before {
+                    transform: scale(1);
+                }
+            }
+
+            // Hover State
+            &:hover:not(:disabled)+.radio-dot {
+                box-shadow: 0 0 0 $hover-border-size rgba($dot-color, 20%);
+            }
+
+            &:checked:hover:not(:disabled)+.radio-dot {
+                box-shadow: 0 0 0 $hover-border-size rgba($dot-color, 20%);
+            }
+
+            // Disabled State
+            &:disabled+.radio-dot {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+        }
+
+        .radio-dot {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid $dot-color;
+            border-radius: 50%;
+            transition: $transition;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            // Inner Dot
+            &::before {
+                content: "";
+                transform: scale(0);
+                width: calc($size / 2) + 2px;
+                height: calc($size / 2) + 2px;
+                background-color: $dot-color;
+                border-radius: 50%;
+                transition: $transition;
+            }
+        }
+    }
+
+    .tgl-radio-label {
+        color: $label-color;
+        font-size: $label-font-size;
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+
+        .tgl-radio-action {
+            pointer-events: none;
+        }
+
+        .tgl-radio-label {
+            pointer-events: none;
+        }
+    }
+
+    &.radio-sm {
+        .tgl-radio-action {
+            width: $size-sm;
+            height: $size-sm;
+
+            .radio-dot::before {
+                width: calc($size-sm / 2) + 2px;
+                height: calc($size-sm / 2) + 2px;
+            }
+
+            .radio-input {
+
+                // Hover State
+                &:hover:not(:disabled)+.radio-dot {
+                    box-shadow: 0 0 0 calc($hover-border-size / 2) rgba($dot-color, 20%) !important;
+                }
+
+                &:checked:hover:not(:disabled)+.radio-dot {
+                    box-shadow: 0 0 0 calc($hover-border-size / 2) rgba($dot-color, 20%) !important;
+                }
+            }
+        }
+    }
+}
+
 
 // Default Radio Button
 @mixin toggle-radio-default {

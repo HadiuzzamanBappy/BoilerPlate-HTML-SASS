@@ -1,5 +1,16 @@
 @use "../abstracts" as *;
-@use "../base" as *;
+
+// Dialogue Component
+@mixin theme-dialog-head-action($bg-color: $bg-paper,
+    $padding: $spacing-2 $spacing-3,
+    $gap: $spacing-2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $padding;
+    gap: $gap;
+    background-color: $bg-color;
+}
 
 @mixin component-dialog-head(){
     @include theme-dialog-head-action;
@@ -28,7 +39,7 @@
 
 @mixin component-dialog-action(){
     @include theme-dialog-head-action;
-    justify-content: end;
+    justify-content: flex-end;
 
     &.full{
         .btn{

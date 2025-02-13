@@ -1,5 +1,54 @@
 @use "../abstracts" as *;
-@use "../base" as *;
+
+// Progress Bar
+@mixin theme-linear-progress-bar($color: $text-primary,
+    $height: $spacing-0-50,
+    $border-radius: $radius-999) {
+    width: 100%;
+    height: $height;
+    background-color: rgba($color, 0.3);
+    border-radius: $border-radius;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        background-color: $color;
+        height: 100%;
+        width: 0%;
+        transition: width 1s ease;
+        border-radius: $border-radius;
+    }
+}
+
+@mixin theme-circular-progress-bar($size: $spacing-12,
+    $progress-color: $text-primary,
+    $progress-border: $spacing-0-50) {
+    position: relative;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient($progress-color 3.6deg, $bg-paper 0deg);
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: calc($size - $spacing-1);
+        width: calc($size - $spacing-1);
+        border-radius: 50%;
+        background-color: $bg-paper;
+    }
+
+    >* {
+        position: relative;
+        z-index: 1;
+        font-size: $sub-h1;
+    }
+}
 
 @mixin component-linear-progress {
     &-linear {

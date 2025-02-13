@@ -20,13 +20,14 @@ body {
         @include set-overflow-scroll();
         @include set-custom-scrollbar($spacing-1, transparent, $action-disabled);
 
-        .main-toolbar {
-            @include main-toolbar();
+        .main-header {
+            @include main-header();
         }
 
         .main-content {
             flex-grow: 1;
             padding: $spacing-3;
+            display: flex;
 
             @media screen and (max-width: 768px) {
                 padding: $spacing-2 0;
@@ -47,7 +48,7 @@ body {
             .main-details {
                 margin-left: $spacing-8 !important;
 
-                .main-toolbar {
+                .main-header {
                     left: $spacing-8 !important;
                 }
             }
@@ -71,9 +72,7 @@ body {
     border-radius: 16px;
     padding: 40px 24px;
     position: relative;
-    width: -moz-fill-available;
-    width: -webkit-fill-available;
-    width: fill-available;
+    width: stretch;
     display: flex;
     flex-direction: column;
     gap: 40px;

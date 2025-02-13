@@ -1,5 +1,48 @@
 @use "../abstracts" as *;
-@use "../base" as *;
+
+// Alert Component
+@mixin theme-alert($bg-color: $info-main,
+    $text-color: $info-contrast-text,
+    $icon-color: $info-contrast-text,
+    $border-color: transparent,
+    $border-radius: $radius-999,
+    $icon-size: $spacing-3,
+    $padding: $spacing-1 $spacing-2,
+) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $padding;
+    background-color: $bg-color;
+    color: $text-color;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    font-family: Poppins;
+    flex-grow: 1;
+    gap: $spacing-2;
+
+    .alert-icon {
+        font-size: $icon-size;
+
+        &.left {
+            color: $icon-color;
+        }
+
+        &.right {
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .alert-text {
+        flex-grow: 1;
+        font-size: $body-text-sm;
+    }
+}
 
 @mixin component-alert {
     @include theme-alert;
